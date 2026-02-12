@@ -1,55 +1,17 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770896905
+::res://::1770925607
 icon.svg::CompressedTexture2D::2584161424241762350::1770882303::1770883260::1::::<><><>0<>0<>b8b326bc2eee5bab7c015599a5d2472e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://art/::1770899081
+::res://art/::1770899228
 survivalgame-player-green.png::CompressedTexture2D::3580271310168313325::1770899047::1770899228::1::::<><><>0<>0<>a753d38659ddede169a22e60d5c95d7b<>res://.godot/imported/survivalgame-player-green.png-7e5131fbabb2de1dc96b0d77583fdef6.ctex::
-::res://art/GandalfHardcore Character Asset Pack/::1770886513
+::res://art/GandalfHardcore Character Asset Pack/::1770899864
 READ ME.txt::TextFile::-1::1770886513::0::1::::<><><>0<>0<><>::
-::res://art/GandalfHardcore Character Asset Pack/Character skin colors/::1770886778
-Female Skin1.png::CompressedTexture2D::7115271344155517668::1770886513::1770886514::1::::<><><>0<>0<>4f7a15f6c29d8495f9a668040f98adb8<>res://.godot/imported/Female Skin1.png-b4b2a3fcc860a379eb98a8615f3bf078.ctex::
-Female Skin2.png::CompressedTexture2D::6966928183756150565::1770886513::1770886514::1::::<><><>0<>0<>2e1758be7b5b000d9a0572eb2ee6f0f1<>res://.godot/imported/Female Skin2.png-f14dea43c50d20abfc30abfd2489f308.ctex::
-Female Skin3.png::CompressedTexture2D::6386756616283948168::1770886513::1770886514::1::::<><><>0<>0<>9bd2ba2cc9aaaa443efe1c7228dc592e<>res://.godot/imported/Female Skin3.png-b4df38f33c6d0895be99ebeb87efe974.ctex::
-Female Skin4.png::CompressedTexture2D::3988345921279487425::1770886513::1770886514::1::::<><><>0<>0<>216d662265d30b834785919016501b1d<>res://.godot/imported/Female Skin4.png-f3d0a13653cf644545b6d024432fe6ab.ctex::
-Female Skin5.png::CompressedTexture2D::1416590850000036579::1770886513::1770886514::1::::<><><>0<>0<>aadce4a0c30ddb786a6d8445794f8865<>res://.godot/imported/Female Skin5.png-16245c8e6e89728a2f739fdd201f490c.ctex::
+::res://art/GandalfHardcore Character Asset Pack/Character skin colors/::1770899876
 Male Skin1.png::CompressedTexture2D::862661428718443753::1770886513::1770886514::1::::<><><>0<>0<>cb7859caea05e5e0f3044ce61a895bbe<>res://.godot/imported/Male Skin1.png-5792606c8c3020f5e17eb69febc8fc25.ctex::
 Male Skin2.png::CompressedTexture2D::4151534605821947695::1770886513::1770886514::1::::<><><>0<>0<>7bb249b9ed441b4c50d23ea48bacc313<>res://.godot/imported/Male Skin2.png-eaabacdd362416e02f7a31a62618f507.ctex::
 Male Skin3.png::CompressedTexture2D::7151718960924338083::1770886513::1770886514::1::::<><><>0<>0<>6ffb1a883862b3cc4540a1e420719b99<>res://.godot/imported/Male Skin3.png-db1866b59958c8b49ca6b4971bbbe0b2.ctex::
 Male Skin4 inverse.png::CompressedTexture2D::8147981907828528056::1770886774::1770886778::1::::<><><>0<>0<>0307e3c0be515c189507e30953eaa012<>res://.godot/imported/Male Skin4 inverse.png-9e82087fb19b8576a901817cdc7b5d39.ctex::
 Male Skin4.png::CompressedTexture2D::8204937533133496321::1770886513::1770886514::1::::<><><>0<>0<>61fee65d3a686501a76640e18978aef1<>res://.godot/imported/Male Skin4.png-11fd5d02d3314ddbe7bd355625728e38.ctex::
 Male Skin5.png::CompressedTexture2D::5285039425563858541::1770886513::1770886514::1::::<><><>0<>0<>6e5624b44fe701051915cdecec56226c<>res://.godot/imported/Male Skin5.png-ec8a722b4e17fde7ac1a6516b51d9a3a.ctex::
-::res://art/GandalfHardcore Character Asset Pack/Female Clothing/::1770886515
-Blue Corset v2.png::CompressedTexture2D::6075444662637907547::1770886513::1770886514::1::::<><><>0<>0<>84bfd16177d3a722421c1b43d172d5c2<>res://.godot/imported/Blue Corset v2.png-7abde8d56a2dd7e2564c9e31c872f15c.ctex::
-Blue Corset.png::CompressedTexture2D::338295762778100709::1770886513::1770886514::1::::<><><>0<>0<>a69e41321394b5e2ce72a7658cbff918<>res://.godot/imported/Blue Corset.png-ecf688b716916f3ce17baa3779b9616d.ctex::
-Blue Panties and Bra.png::CompressedTexture2D::3047814640256868355::1770886513::1770886514::1::::<><><>0<>0<>b616fbea3e396d71d2fef250c6d049a4<>res://.godot/imported/Blue Panties and Bra.png-18f69e71937af313b1bfa840cacf546e.ctex::
-Boots.png::CompressedTexture2D::9126412531806680791::1770886513::1770886514::1::::<><><>0<>0<>53a3acf3ac13150a79bab2d141241d70<>res://.godot/imported/Boots.png-6bb5696d773fcdf40b6c163ed932d2d8.ctex::
-Corset v2.png::CompressedTexture2D::1346270671044945579::1770886513::1770886514::1::::<><><>0<>0<>7368ce934dd443b63ba8418a20955881<>res://.godot/imported/Corset v2.png-1ecce3082bf2f503a2a3e6a31b2065fb.ctex::
-Corset.png::CompressedTexture2D::579343960041607958::1770886513::1770886514::1::::<><><>0<>0<>0be9eebfc505c4b89eabff08205b213c<>res://.godot/imported/Corset.png-5a1ca6a107f919e59dce11bb15bc6552.ctex::
-Green Corset v2.png::CompressedTexture2D::7375985658486061040::1770886513::1770886515::1::::<><><>0<>0<>79ee4058b458cc6074977b08390cacc8<>res://.godot/imported/Green Corset v2.png-62b27b7efaf4bd29cc346a514aa321e3.ctex::
-Green Corset.png::CompressedTexture2D::5906300705473764797::1770886513::1770886515::1::::<><><>0<>0<>e0a6d40e9ab60da4df20eaae9a1a82e0<>res://.godot/imported/Green Corset.png-d2dd729058e7a76136d7324a7fb78b39.ctex::
-Green Panties and Bra.png::CompressedTexture2D::7905570474468348772::1770886513::1770886515::1::::<><><>0<>0<>24757999fd4b0194a0f054ba4e8bbaef<>res://.godot/imported/Green Panties and Bra.png-526d88474a0cb8edd29f691cebb61490.ctex::
-Green Socks.png::CompressedTexture2D::6643514943010765454::1770886513::1770886515::1::::<><><>0<>0<>5f1f5ac3cd58c88eb3cc169647b44605<>res://.godot/imported/Green Socks.png-a895bf3713a390e4405e67411498baf5.ctex::
-Orange Corset v2.png::CompressedTexture2D::6654439219436827500::1770886513::1770886515::1::::<><><>0<>0<>4d6e572eee4f5d5b5bb46162849307c9<>res://.godot/imported/Orange Corset v2.png-dc9de3eeaf4b7da3248c95febe6bbbfe.ctex::
-Orange Corset.png::CompressedTexture2D::6209093241241386247::1770886513::1770886515::1::::<><><>0<>0<>da5641c51200c460e9a07e2534633643<>res://.godot/imported/Orange Corset.png-bda2083a68e005646489d15881d873eb.ctex::
-Orange Panties and Bra.png::CompressedTexture2D::8600834700910637079::1770886513::1770886515::1::::<><><>0<>0<>8c9213d0a5b9524eca73812c71430cf2<>res://.godot/imported/Orange Panties and Bra.png-d10462155ba614aba725e53e7933ae0d.ctex::
-Orange Socks.png::CompressedTexture2D::5573645110154935579::1770886513::1770886515::1::::<><><>0<>0<>b1a841dc03ca801dc7a70fb301e44748<>res://.godot/imported/Orange Socks.png-b01f17315e12d4608973c1e972d114ab.ctex::
-Purple Corset v2.png::CompressedTexture2D::4022414198757998585::1770886513::1770886515::1::::<><><>0<>0<>c7131f7c4fd77507846910c6fcaaa20f<>res://.godot/imported/Purple Corset v2.png-0b969d300f681f584d629ba25240554a.ctex::
-Purple Corset.png::CompressedTexture2D::8663121796399495198::1770886513::1770886515::1::::<><><>0<>0<>fdc40cd4a2c0d788511d12f183bc14b2<>res://.godot/imported/Purple Corset.png-fb385f1f1fbd5eea792d71d942728402.ctex::
-Purple Panties and Bra.png::CompressedTexture2D::8354433828092653015::1770886513::1770886514::1::::<><><>0<>0<>8fe2b9a68fa6369005e6c8cca929294f<>res://.godot/imported/Purple Panties and Bra.png-b05b92a2c31c2fa56b101633346ae152.ctex::
-Purple Socks.png::CompressedTexture2D::4189439454899019141::1770886513::1770886514::1::::<><><>0<>0<>9e45f5eae176e61690fb3c10eb3f63e4<>res://.godot/imported/Purple Socks.png-9b8f36a823d5cd7127aba305db756ef0.ctex::
-Red Panties and Bra.png::CompressedTexture2D::6548727611967605073::1770886513::1770886514::1::::<><><>0<>0<>90b3231cc37f936f6e28648f92c28f0c<>res://.godot/imported/Red Panties and Bra.png-692b0d908ff2f14143de3df68f8735f1.ctex::
-Red Socks.png::CompressedTexture2D::204510536868772800::1770886513::1770886514::1::::<><><>0<>0<>eb2244034390f2c9cffefb941fc84dd9<>res://.godot/imported/Red Socks.png-280a5c5bbe4df8ba9b10bc37d2e7f78d.ctex::
-Skirt.png::CompressedTexture2D::197901531748766459::1770886513::1770886514::1::::<><><>0<>0<>482e46a16c4530dd8bf8a8d0b63a97b6<>res://.godot/imported/Skirt.png-f8775574d1be37197c2a5cbe2c59a84a.ctex::
-Skyblue Panties and Bra.png::CompressedTexture2D::3576190086536007560::1770886513::1770886514::1::::<><><>0<>0<>ee107f6d2090ee1fa64fd2a566529f3a<>res://.godot/imported/Skyblue Panties and Bra.png-0b0d96d64ed1562e356fa0c5dde3cd2f.ctex::
-Skyblue Socks.png::CompressedTexture2D::146762019200470475::1770886513::1770886514::1::::<><><>0<>0<>f8b3f4f3312111ae9217db13eebe1e9e<>res://.godot/imported/Skyblue Socks.png-2eb30e87161ca4a5f18533e1ce9cf6a2.ctex::
-Socks.png::CompressedTexture2D::6087114089715440457::1770886513::1770886514::1::::<><><>0<>0<>d1c2202e36d30a79a6c6fedba1d60351<>res://.godot/imported/Socks.png-ec9e7e869c0fdf94a7c9447e35f0a0e7.ctex::
-::res://art/GandalfHardcore Character Asset Pack/Female Hair/::1770886514
-Female Hair1.png::CompressedTexture2D::4826377272402027278::1770886513::1770886514::1::::<><><>0<>0<>95767e984ca484d102f2a2035add4fc7<>res://.godot/imported/Female Hair1.png-0b7047924fb1792d56a887361bf1fd25.ctex::
-Female Hair2.png::CompressedTexture2D::3011361057068525496::1770886513::1770886514::1::::<><><>0<>0<>a3f190e1f00aa951c12d231d8b0afc93<>res://.godot/imported/Female Hair2.png-322f020a8f155783ec40db93e253dbef.ctex::
-Female Hair3.png::CompressedTexture2D::1291144841438459136::1770886513::1770886514::1::::<><><>0<>0<>7ac1f367f19d9054232467f95f199011<>res://.godot/imported/Female Hair3.png-b2c00f3d5e111ff9a5c928185200e5cc.ctex::
-Female Hair4.png::CompressedTexture2D::4809725045498806938::1770886513::1770886514::1::::<><><>0<>0<>13d20870dc27699b7326aa44de850171<>res://.godot/imported/Female Hair4.png-09cd68489d6b64c011cfa0bdafbc4e77.ctex::
-Female Hair5.png::CompressedTexture2D::8953410896539566072::1770886513::1770886514::1::::<><><>0<>0<>05bd0d2cbc575bcced89556db1667a4e<>res://.godot/imported/Female Hair5.png-dd32ae8b538c3eed07fa01709c5609fc.ctex::
-::res://art/GandalfHardcore Character Asset Pack/Female Hand/::1770886514
-Female Sword.png::CompressedTexture2D::6712458880499158835::1770886513::1770886514::1::::<><><>0<>0<>c2410ef6b332f0c4f06bb578f5e401ce<>res://.godot/imported/Female Sword.png-3cc10c8661c99868225ac58f4ac7295f.ctex::
 ::res://art/GandalfHardcore Character Asset Pack/Male Clothing/::1770889919
 Blue Pants.png::CompressedTexture2D::6012710358191329638::1770886513::1770886514::1::::<><><>0<>0<>00b165d7d40c819365045bcd5d3c61f2<>res://.godot/imported/Blue Pants.png-e74bbe456063fec75fffe6922f841cf3.ctex::
 Blue Shirt v2.png::CompressedTexture2D::6816447236685465170::1770886513::1770886514::1::::<><><>0<>0<>57c324c3ef615ccb1d2c08ebc91557d2<>res://.godot/imported/Blue Shirt v2.png-7824ae970d1d2eb1912cf0ff4e11ebf4.ctex::
@@ -402,8 +364,8 @@ kitchen_LRK.png::CompressedTexture2D::1795626563428856732::1770885064::177088506
 license.txt::TextFile::-1::1770885064::0::1::::<><><>0<>0<><>::
 livingroom_LRK.png::CompressedTexture2D::535706046151609269::1770885064::1770885065::1::::<><><>0<>0<>c58693f1a3a49b3ea37e3635531e8636<>res://.godot/imported/livingroom_LRK.png-a2cc7431ffb910274d0eb87d6a1495ff.ctex::
 ::res://inventory/::1770883236
-::res://scenes/::1770898378
-GroundRoom1.tscn::PackedScene::7841525457330304053::1770898378::0::1::::<><><>0<>0<><>::uid://bvyrkiy12e1sl::::res://scenes/player.tscn<>uid://k717nlnncaah::::res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png<>uid://0sv5lfl1vqn8::::res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png<>uid://q5p6j730ylap::::res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png<>uid://cx2u6gnovk1m3::::res://art/pixelinterior_BR_v1.1/wardrobes_BR.png<>uid://boeoeu7rw0jlk::::res://art/pixelinterior_BR_v1.1/beds_BR.png<>uid://b8kgp5b8cp11g::::res://art/pixelinterior_BR_v1.1/decorations_BR.png<>uid://danc3663efm::::res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png
+::res://scenes/::1770924395
+GroundRoom1.tscn::PackedScene::7841525457330304053::1770924395::0::1::::<><><>0<>0<><>::uid://bvyrkiy12e1sl::::res://scenes/player.tscn<>uid://k717nlnncaah::::res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png<>uid://0sv5lfl1vqn8::::res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png<>uid://q5p6j730ylap::::res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png<>uid://cx2u6gnovk1m3::::res://art/pixelinterior_BR_v1.1/wardrobes_BR.png<>uid://boeoeu7rw0jlk::::res://art/pixelinterior_BR_v1.1/beds_BR.png<>uid://b8kgp5b8cp11g::::res://art/pixelinterior_BR_v1.1/decorations_BR.png<>uid://danc3663efm::::res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png
 player.tscn::PackedScene::3910981971484991719::1770892721::0::1::::<><><>0<>0<><>::uid://d0gt76s1eayqi::::res://scripts/player.gd<>uid://do5sefrmxdwr6::::res://art/GandalfHardcore Character Asset Pack/Character skin colors/Male Skin4.png<>uid://doc7co0wejvgq::::res://art/GandalfHardcore Character Asset Pack/Character skin colors/Male Skin4 inverse.png<>uid://c120rk6yhkbpj::::res://art/GandalfHardcore Character Asset Pack/Male Clothing/Shirt.png<>uid://dptoeju07ewyn::::res://art/GandalfHardcore Character Asset Pack/Male Clothing/ShirtInverse.png<>uid://c01ephixm0r8k::::res://art/GandalfHardcore Character Asset Pack/Male Clothing/Purple Pants.png<>uid://bcsuwg8ssl4w7::::res://art/GandalfHardcore Character Asset Pack/Male Clothing/PantPurpleInverse.png<>uid://cmuu3ngbrkgf5::::res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5.png<>uid://bf8e86jsq5ydm::::res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5 Inverse.png
 ::res://scripts/::1770892699
 player.gd::GDScript::8927581834039019528::1770892699::0::1::::<>CharacterBody2D<><>0<>0<><>::
