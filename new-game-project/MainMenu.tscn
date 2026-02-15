@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://cv74w5igteoxc"]
+
+[ext_resource type="Texture2D" uid="uid://b8fmjrtkyovqy" path="res://asset/front page.jpg" id="1_i26rj"]
+[ext_resource type="Script" uid="uid://bp4pk2scio4r5" path="res://texture_rect_2.gd" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://c6l5esi2msg01" path="res://asset/startttt.png" id="3_cqjrg"]
+[ext_resource type="Script" uid="uid://fpmppg6yjfds" path="res://start.gd" id="4_cqjrg"]
+[ext_resource type="Script" uid="uid://dqb7xp775y7bg" path="res://quit.gd" id="4_iwfq2"]
+[ext_resource type="Script" uid="uid://egrovh1ytx4n" path="res://settings.gd" id="5_7r1g0"]
+[ext_resource type="Texture2D" uid="uid://bqoiktw1758oy" path="res://asset/quit.png" id="5_e2xy7"]
+[ext_resource type="Script" uid="uid://j0dk1sqj1aon" path="res://setting.gd" id="6_7r1g0"]
+[ext_resource type="Texture2D" uid="uid://cb4o62qn4h5va" path="res://asset/menu.png" id="7_fimr5"]
+[ext_resource type="Texture2D" uid="uid://doo811v6yugcu" path="res://settings.png" id="9_u7cqb"]
+
+[node name="Control" type="Control" unique_id=677829265]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1225467107]
+clip_contents = true
+layout_direction = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i26rj")
+
+[node name="TextureRect2" type="Label" parent="." unique_id=430935202]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -23.0
+offset_right = 628.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "flood guard 2d"
+uppercase = true
+script = ExtResource("2_eiy7p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1802481196]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -79.0
+offset_right = -11.0
+offset_bottom = 79.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=940502647]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 30
+text = "Start"
+icon = ExtResource("3_cqjrg")
+alignment = 2
+script = ExtResource("4_cqjrg")
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1481574777]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+icon = ExtResource("5_e2xy7")
+script = ExtResource("4_iwfq2")
+
+[node name="menu" type="Button" parent="VBoxContainer" unique_id=1171643339]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+icon = ExtResource("7_fimr5")
+script = ExtResource("5_7r1g0")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1351146068]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Setting" type="Button" parent="VBoxContainer2" unique_id=2082100497]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+icon = ExtResource("9_u7cqb")
+script = ExtResource("6_7r1g0")
