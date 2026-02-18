@@ -1,18 +1,18 @@
 [gd_scene format=4 uid="uid://djyq1qc6kkp6l"]
 
-[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="1_1w01n"]
-[ext_resource type="Texture2D" uid="uid://k717nlnncaah" path="res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png" id="2_hdm55"]
-[ext_resource type="Texture2D" uid="uid://0sv5lfl1vqn8" path="res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png" id="3_axyix"]
-[ext_resource type="Texture2D" uid="uid://q5p6j730ylap" path="res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png" id="4_q0037"]
-[ext_resource type="Texture2D" uid="uid://cx2u6gnovk1m3" path="res://art/pixelinterior_BR_v1.1/wardrobes_BR.png" id="5_aok0h"]
-[ext_resource type="Texture2D" uid="uid://boeoeu7rw0jlk" path="res://art/pixelinterior_BR_v1.1/beds_BR.png" id="6_ckhkm"]
-[ext_resource type="Texture2D" uid="uid://b8kgp5b8cp11g" path="res://art/pixelinterior_BR_v1.1/decorations_BR.png" id="7_bwgey"]
-[ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="8_f0qk3"]
-[ext_resource type="Texture2D" uid="uid://hvraamjt35an" path="res://art/pixelinterior_LRK_v1.1/livingroom_LRK.png" id="8_hdm55"]
-[ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="10_axyix"]
+[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="1_esnyd"]
+[ext_resource type="Texture2D" uid="uid://k717nlnncaah" path="res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png" id="2_6xvi4"]
+[ext_resource type="Texture2D" uid="uid://0sv5lfl1vqn8" path="res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png" id="3_y3iw4"]
+[ext_resource type="Texture2D" uid="uid://q5p6j730ylap" path="res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png" id="4_mq7n1"]
+[ext_resource type="Texture2D" uid="uid://cx2u6gnovk1m3" path="res://art/pixelinterior_BR_v1.1/wardrobes_BR.png" id="5_0v1wc"]
+[ext_resource type="Texture2D" uid="uid://boeoeu7rw0jlk" path="res://art/pixelinterior_BR_v1.1/beds_BR.png" id="6_yqui7"]
+[ext_resource type="Texture2D" uid="uid://b8kgp5b8cp11g" path="res://art/pixelinterior_BR_v1.1/decorations_BR.png" id="7_lswxg"]
+[ext_resource type="Texture2D" uid="uid://hvraamjt35an" path="res://art/pixelinterior_LRK_v1.1/livingroom_LRK.png" id="8_r2gas"]
+[ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="9_527ww"]
+[ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="10_sophu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axyix"]
-texture = ExtResource("2_hdm55")
+texture = ExtResource("2_6xvi4")
 0:0/0 = 0
 0:1/0 = 0
 2:0/0 = 0
@@ -47,7 +47,7 @@ texture = ExtResource("2_hdm55")
 0:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0037"]
-texture = ExtResource("3_axyix")
+texture = ExtResource("3_y3iw4")
 0:0/0 = 0
 0:1/0 = 0
 0:2/0 = 0
@@ -66,12 +66,12 @@ texture = ExtResource("3_axyix")
 3:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aok0h"]
-texture = ExtResource("4_q0037")
+texture = ExtResource("4_mq7n1")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckhkm"]
-texture = ExtResource("5_aok0h")
+texture = ExtResource("5_0v1wc")
 margins = Vector2i(13, 0)
 0:0/0 = 0
 1:0/0 = 0
@@ -535,7 +535,7 @@ margins = Vector2i(13, 0)
 19:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwgey"]
-texture = ExtResource("6_ckhkm")
+texture = ExtResource("6_yqui7")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -551,7 +551,7 @@ texture_region_size = Vector2i(64, 64)
 2:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0qk3"]
-texture = ExtResource("7_bwgey")
+texture = ExtResource("7_lswxg")
 1:1/0 = 0
 2:1/0 = 0
 2:2/0 = 0
@@ -634,7 +634,7 @@ texture = ExtResource("7_bwgey")
 2:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5y3p"]
-texture = ExtResource("8_hdm55")
+texture = ExtResource("8_r2gas")
 9:1/0 = 0
 10:1/0 = 0
 12:1/0 = 0
@@ -1023,7 +1023,7 @@ texture = ExtResource("8_hdm55")
 24:24/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0p0r"]
-texture = ExtResource("8_f0qk3")
+texture = ExtResource("9_527ww")
 27:0/0 = 0
 28:0/0 = 0
 33:0/0 = 0
@@ -1464,7 +1464,7 @@ texture = ExtResource("8_f0qk3")
 25:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xvhas"]
-texture = ExtResource("10_axyix")
+texture = ExtResource("10_sophu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1702,7 +1702,7 @@ sources/6 = SubResource("TileSetAtlasSource_e5y3p")
 sources/8 = SubResource("TileSetAtlasSource_xvhas")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdm55"]
-texture = ExtResource("8_hdm55")
+texture = ExtResource("8_r2gas")
 9:1/0 = 0
 10:1/0 = 0
 12:1/0 = 0
@@ -2093,9 +2093,9 @@ texture = ExtResource("8_hdm55")
 [sub_resource type="TileSet" id="TileSet_axyix"]
 sources/0 = SubResource("TileSetAtlasSource_hdm55")
 
-[node name="GroundRoom1" type="Node2D" unique_id=47868988]
+[node name="Ground_Living" type="Node2D" unique_id=47868988]
 
-[node name="Player" parent="." unique_id=1725910629 instance=ExtResource("1_1w01n")]
+[node name="Player" parent="." unique_id=1725910629 instance=ExtResource("1_esnyd")]
 position = Vector2(-52, -34)
 
 [node name="CollisionShape2D" parent="Player" index="4"]

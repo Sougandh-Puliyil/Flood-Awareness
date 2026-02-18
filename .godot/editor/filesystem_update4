@@ -1,3 +1,6 @@
-res://scenes/bathroom1.tscn
 res://scenes/GroundRoom1.tscn
-res://scenes/kitchen.tscn
+res://scenes/Ground_Bathroom_1.tscn
+res://scenes/Ground_Bathroom_2.tscn
+res://scenes/Ground_Bedroom_1.tscn
+res://scenes/Ground_Bedroom_2.tscn
+res://scenes/Ground_Living.tscn
