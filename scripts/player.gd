@@ -32,15 +32,28 @@ func play_anim(dir):
 			$Pant.play("IdleR")
 			$Hair.play("IdleR")
 	if player_state=="Walking":
-		if dir.x==-1:
+		if dir.x<0:
 			$Body.play("WalkL")
 			$Shirt.play("WalkL")
 			$Pant.play("WalkL")
 			$Hair.play("WalkL")
 			last_dir=-1
-		else:
+		elif dir.x>0:
 			$Body.play("WalkR")
 			$Shirt.play("WalkR")
 			$Pant.play("WalkR")
 			$Hair.play("WalkR")
 			last_dir=1
+		else:
+			if last_dir==1:
+				$Body.play("WalkR")
+				$Shirt.play("WalkR")
+				$Pant.play("WalkR")
+				$Hair.play("WalkR")
+				last_dir=1
+			else:
+				$Body.play("WalkL")
+				$Shirt.play("WalkL")
+				$Pant.play("WalkL")
+				$Hair.play("WalkL")
+				last_dir=-1
