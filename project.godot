@@ -18,6 +18,15 @@ config/name="Flood-Awareness"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneManager="*uid://itxbqitibfhl"
+
 [dotnet]
 
 project/assembly_name="Flood-Awareness"
+
+[layer_names]
+
+2d_physics/layer_1="Doors"
+2d_physics/layer_2="Player"

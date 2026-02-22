@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dlbwefyktiffi" path="res://assets/doorswindowsstairs_LRK.png" id="3_i2vuv"]
 [ext_resource type="Texture2D" uid="uid://dx77xytb5eex4" path="res://assets/cabinets_LRK.png" id="3_ixmio"]
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="4_snk3i"]
+[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="7_jc8rh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_vhubc")
@@ -2382,5 +2383,19 @@ tile_set = SubResource("TileSet_1e0to")
 [node name="doors" type="TileMapLayer" parent="TileMap" unique_id=1593732880]
 position = Vector2(-1357.0001, -363)
 scale = Vector2(2.5, 2.5)
-tile_map_data = PackedByteArray("AAAnABMAAAAHAAsAAAAnABQAAAAHAAwAAAAnABUAAAAHAA0AAAAoABMAAAAIAAsAAAAoABQAAAAIAAwAAAAoABUAAAAIAA0AAAA3ABMAAAAHAAsAAAA3ABQAAAAHAAwAAAA3ABUAAAAHAA0AAAA4ABMAAAAIAAsAAAA4ABQAAAAIAAwAAAA4ABUAAAAIAA0AAAAvABMAAAAHAAYAAAAvABQAAAAHAAcAAAAvABUAAAAHAAgAAAAwABMAAAAIAAYAAAAwABQAAAAIAAcAAAAwABUAAAAIAAgAAAAtAAgAAAARAAEAAAAtAAkAAAARAAIAAAAuAAgAAAASAAEAAAAuAAkAAAASAAIAAAArAAgAAAAYAAEAAAArAAkAAAAYAAIAAAAsAAgAAAAZAAEAAAAsAAkAAAAZAAIAAAAiAA4AAAAHAAsAAAAiAA8AAAAHAAwAAAAiABAAAAAHAA0AAAAjAA4AAAAIAAsAAAAjAA8AAAAIAAwAAAAjABAAAAAIAA0AAAA=")
+tile_map_data = PackedByteArray("AAAtAAgAAAARAAEAAAAtAAkAAAARAAIAAAAuAAgAAAASAAEAAAAuAAkAAAASAAIAAAArAAgAAAAYAAEAAAArAAkAAAAYAAIAAAAsAAgAAAAZAAEAAAAsAAkAAAAZAAIAAAA=")
 tile_set = SubResource("TileSet_ixmio")
+
+[node name="Door2" parent="." unique_id=771510446 instance=ExtResource("7_jc8rh")]
+position = Vector2(526, 517)
+
+[node name="Door" parent="." unique_id=2103237742 instance=ExtResource("7_jc8rh")]
+position = Vector2(207, 517)
+room_name = "bedroom4"
+
+[node name="Door3" parent="." unique_id=512652642 instance=ExtResource("7_jc8rh")]
+position = Vector2(846, 516)
+room_name = "bedroom3"
+
+[node name="Door4" parent="." unique_id=176318527 instance=ExtResource("7_jc8rh")]
+position = Vector2(3, 318)
