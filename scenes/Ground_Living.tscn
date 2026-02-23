@@ -2160,9 +2160,16 @@ texture = ExtResource("8_r2gas")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hdm55")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esnyd"]
+size = Vector2(31.5, 47.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xvi4"]
+size = Vector2(30.5, 65)
+
 [node name="Ground_Living" type="Node2D" unique_id=47868988]
 
 [node name="Player" parent="." unique_id=1725910629 instance=ExtResource("1_esnyd")]
+z_index = 3
 position = Vector2(-52, -34)
 
 [node name="CollisionShape2D" parent="Player" index="4"]
@@ -2192,5 +2199,33 @@ scale = Vector2(1.18, 1.18)
 tile_map_data = PackedByteArray("AADz//T/AAAWABcAAADz//X/AAAWABgAAAD0//T/AAAXABcAAAD0//X/AAAXABgAAAD1//T/AAAYABcAAAD1//X/AAAYABgAAADz//f/AAAFAAYAAADz//j/AAAFAAcAAAD0//f/AAAGAAYAAAD0//j/AAAGAAcAAAD1//f/AAAHAAYAAAD1//j/AAAHAAcAAADu////AAAJAAEAAADu/wAAAAAJAAIAAADu/wEAAAAJAAMAAADv////AAAKAAEAAADv/wAAAAAKAAIAAADv/wEAAAAKAAMAAAA=")
 tile_set = SubResource("TileSet_axyix")
 collision_visibility_mode = 1
+
+[node name="Door1" type="Area2D" parent="." unique_id=112690294]
+position = Vector2(-148, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=887574305]
+position = Vector2(-3.75, 5.25)
+shape = SubResource("RectangleShape2D_esnyd")
+
+[node name="Door2" type="Area2D" parent="." unique_id=1241517184]
+position = Vector2(-212, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2" unique_id=756067515]
+position = Vector2(-3.75, 5.25)
+shape = SubResource("RectangleShape2D_esnyd")
+
+[node name="Door3" type="Area2D" parent="." unique_id=1554169026]
+position = Vector2(-356, -63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door3" unique_id=1593677240]
+position = Vector2(-3.75, 5.25)
+shape = SubResource("RectangleShape2D_esnyd")
+
+[node name="Door4" type="Area2D" parent="." unique_id=174807088]
+position = Vector2(-324, -240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door4" unique_id=674636612]
+position = Vector2(-4.25, 15.5)
+shape = SubResource("RectangleShape2D_6xvi4")
 
 [editable path="Player"]
