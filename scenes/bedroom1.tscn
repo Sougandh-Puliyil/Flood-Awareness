@@ -10,8 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="7_5jkw5"]
 [ext_resource type="Texture2D" uid="uid://dkusnsqxxt7oa" path="res://assets/decorations_BR.png" id="7_txfl5"]
 [ext_resource type="Texture2D" uid="uid://cjno3om54gk4g" path="res://assets/decorations_LRK.png" id="8_1x1nc"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://d0gt76s1eayqi" path="res://scripts/player.gd" id="11_rufp4"]
 [ext_resource type="Texture2D" uid="uid://do5sefrmxdwr6" path="res://art/GandalfHardcore Character Asset Pack/Character skin colors/Male Skin4.png" id="12_1tub8"]
 [ext_resource type="Texture2D" uid="uid://doc7co0wejvgq" path="res://art/GandalfHardcore Character Asset Pack/Character skin colors/Male Skin4 inverse.png" id="13_0qqlv"]
@@ -21,10 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://bcsuwg8ssl4w7" path="res://art/GandalfHardcore Character Asset Pack/Male Clothing/PantPurpleInverse.png" id="17_kdqkn"]
 [ext_resource type="Texture2D" uid="uid://cmuu3ngbrkgf5" path="res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5.png" id="18_p0p7x"]
 [ext_resource type="Texture2D" uid="uid://bf8e86jsq5ydm" path="res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5 Inverse.png" id="19_20bct"]
-=======
->>>>>>> 0b1bf9e0c795f1fe5ecb5d7810f13284bd2e6dee
-=======
->>>>>>> 0b1bf9e0c795f1fe5ecb5d7810f13284bd2e6dee
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
 tile_size = Vector2i(40, 40)
@@ -11092,8 +11086,6 @@ sources/0 = SubResource("TileSetAtlasSource_q0aob")
 sources/1 = SubResource("TileSetAtlasSource_wkcl3")
 sources/2 = SubResource("TileSetAtlasSource_5jkw5")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_5b3th"]
 atlas = ExtResource("12_1tub8")
 region = Rect2(0, 0, 80, 64)
@@ -11917,10 +11909,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxnf1"]
 size = Vector2(51, 97.125)
 
-=======
->>>>>>> 0b1bf9e0c795f1fe5ecb5d7810f13284bd2e6dee
-=======
->>>>>>> 0b1bf9e0c795f1fe5ecb5d7810f13284bd2e6dee
 [node name="main" type="Node2D" unique_id=869319662]
 
 [node name="upperFloor" type="TileMap" parent="." unique_id=1019231593]
@@ -11961,8 +11949,6 @@ position = Vector2(614.00006, 560)
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAEAPT/AAAGAAMAAAAEAPX/AAAGAAQAAAD6//T/AAAGAAMAAAD6//X/AAAGAAQAAAAIAP3/AgADAAcAAAAIAP7/AgADAAgAAAA=")
 tile_set = SubResource("TileSet_e3kcx")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=781753931]
 position = Vector2(673, 418)
@@ -11991,7 +11977,3 @@ animation = &"IdleR"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1566582059]
 position = Vector2(1.5, 48.5625)
 shape = SubResource("RectangleShape2D_oxnf1")
-=======
->>>>>>> 0b1bf9e0c795f1fe5ecb5d7810f13284bd2e6dee
-=======
->>>>>>> 0b1bf9e0c795f1fe5ecb5d7810f13284bd2e6dee
