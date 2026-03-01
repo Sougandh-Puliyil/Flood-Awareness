@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dkusnsqxxt7oa" path="res://assets/decorations_BR.png" id="7_ksqid"]
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="8_onm5g"]
 [ext_resource type="Texture2D" uid="uid://cjno3om54gk4g" path="res://assets/decorations_LRK.png" id="9_ibclb"]
+[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="11_b8ijm"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
 tile_size = Vector2i(40, 40)
@@ -11067,3 +11068,12 @@ position = Vector2(614.00006, 560)
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAEAPT/AAAGAAMAAAAEAPX/AAAGAAQAAAD6//T/AAAGAAMAAAD6//X/AAAGAAQAAAAIAP3/AgADAAcAAAAIAP7/AgADAAgAAAA=")
 tile_set = SubResource("TileSet_e3kcx")
+
+[node name="BedD4" parent="." unique_id=771510446 instance=ExtResource("11_b8ijm")]
+position = Vector2(528, 659)
+scale = Vector2(4, 4)
+room_name = "upperFloor"
+entry_name = "bedroomD4"
+
+[node name="bedD4" type="Area2D" parent="." unique_id=684804553]
+position = Vector2(581, 423)

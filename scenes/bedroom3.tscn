@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bcsuwg8ssl4w7" path="res://art/GandalfHardcore Character Asset Pack/Male Clothing/PantPurpleInverse.png" id="17_kdqkn"]
 [ext_resource type="Texture2D" uid="uid://cmuu3ngbrkgf5" path="res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5.png" id="18_p0p7x"]
 [ext_resource type="Texture2D" uid="uid://bf8e86jsq5ydm" path="res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5 Inverse.png" id="19_20bct"]
+[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="20_u3gv0"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
 tile_size = Vector2i(40, 40)
@@ -11977,3 +11978,12 @@ animation = &"IdleR"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1566582059]
 position = Vector2(1.5, 48.5625)
 shape = SubResource("RectangleShape2D_oxnf1")
+
+[node name="BedD3" parent="." unique_id=771510446 instance=ExtResource("20_u3gv0")]
+position = Vector2(543, 652)
+scale = Vector2(4, 4)
+room_name = "upperFloor"
+entry_name = "bedroomD3"
+
+[node name="bedD3" type="Area2D" parent="." unique_id=1843539560]
+position = Vector2(602, 441)
