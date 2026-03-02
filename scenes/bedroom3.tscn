@@ -11952,7 +11952,7 @@ tile_map_data = PackedByteArray("AAAEAPT/AAAGAAMAAAAEAPX/AAAGAAQAAAD6//T/AAAGAAM
 tile_set = SubResource("TileSet_e3kcx")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=781753931]
-position = Vector2(673, 418)
+position = Vector2(604, 443)
 script = ExtResource("11_rufp4")
 
 [node name="Body" type="AnimatedSprite2D" parent="Player" unique_id=1524233226]
@@ -11980,7 +11980,7 @@ position = Vector2(1.5, 48.5625)
 shape = SubResource("RectangleShape2D_oxnf1")
 
 [node name="BedD3" parent="." unique_id=771510446 instance=ExtResource("20_u3gv0")]
-position = Vector2(543, 652)
+position = Vector2(541, 659)
 scale = Vector2(4, 4)
 room_name = "upperFloor"
 entry_name = "bedroomD3"

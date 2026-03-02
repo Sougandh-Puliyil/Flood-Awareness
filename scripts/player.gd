@@ -16,8 +16,11 @@ func _physics_process(delta:):
 	
 	velocity = direction * speed
 	move_and_slide()
-	
 	play_anim(direction)
+
+func teleport(to_pos: Vector2) -> void:
+	global_position = to_pos
+	velocity = Vector2.ZERO
 
 func play_anim(dir):
 	if player_state=="Idle":
