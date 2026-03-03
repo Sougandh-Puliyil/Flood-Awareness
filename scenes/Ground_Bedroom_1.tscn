@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://hvraamjt35an" path="res://art/pixelinterior_LRK_v1.1/livingroom_LRK.png" id="7_bys7p"]
 [ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="8_62k4s"]
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="9_shs63"]
+[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="10_s4wia"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogy2b"]
 texture = ExtResource("1_wnsi1")
@@ -1923,3 +1924,12 @@ position = Vector2(-52, -238)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2" unique_id=34573333]
 position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_wnsi1")
+
+[node name="Player" parent="Door2" unique_id=1314570691 instance=ExtResource("10_s4wia")]
+z_index = 3
+position = Vector2(-52, -34)
+
+[node name="CollisionShape2D" parent="Door2/Player" index="4" unique_id=1842225013]
+position = Vector2(0, 19)
+
+[editable path="Door2/Player"]

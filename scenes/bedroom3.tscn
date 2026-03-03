@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="7_5jkw5"]
 [ext_resource type="Texture2D" uid="uid://dkusnsqxxt7oa" path="res://assets/decorations_BR.png" id="7_txfl5"]
 [ext_resource type="Texture2D" uid="uid://cjno3om54gk4g" path="res://assets/decorations_LRK.png" id="8_1x1nc"]
-[ext_resource type="Script" uid="uid://d0gt76s1eayqi" path="res://scripts/player.gd" id="11_rufp4"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="11_u3gv0"]
 [ext_resource type="Texture2D" uid="uid://do5sefrmxdwr6" path="res://art/GandalfHardcore Character Asset Pack/Character skin colors/Male Skin4.png" id="12_1tub8"]
 [ext_resource type="Texture2D" uid="uid://doc7co0wejvgq" path="res://art/GandalfHardcore Character Asset Pack/Character skin colors/Male Skin4 inverse.png" id="13_0qqlv"]
 [ext_resource type="Texture2D" uid="uid://c120rk6yhkbpj" path="res://art/GandalfHardcore Character Asset Pack/Male Clothing/Shirt.png" id="14_5auff"]
@@ -11953,7 +11953,7 @@ tile_set = SubResource("TileSet_e3kcx")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=781753931]
 position = Vector2(604, 443)
-script = ExtResource("11_rufp4")
+script = ExtResource("11_u3gv0")
 
 [node name="Body" type="AnimatedSprite2D" parent="Player" unique_id=1524233226]
 scale = Vector2(3, 3)

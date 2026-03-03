@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="4_snk3i"]
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="7_jc8rh"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="8_yvdv1"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_sqwav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_vhubc")
@@ -2898,7 +2899,9 @@ scale = Vector2(2.5, 2.5)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1818775648]
+position = Vector2(0, -50)
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("8_yvdv1")]
 position = Vector2(-482, -110)
 scale = Vector2(2.5, 2.5)
+script = ExtResource("10_sqwav")
