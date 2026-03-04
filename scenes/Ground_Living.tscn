@@ -2177,9 +2177,9 @@ position = Vector2(-52, -34)
 position = Vector2(0, 19)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=51357941]
-position = Vector2(-153, -22)
+position = Vector2(-149.00002, -51)
 scale = Vector2(0.95227, 1.2399611)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2, 2)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1794614068]
 position = Vector2(-9, 39)
@@ -2210,7 +2210,7 @@ position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_esnyd")
 
 [node name="Bed2" type="CollisionShape2D" parent="Door1" unique_id=1969183882]
-position = Vector2(0, -30)
+position = Vector2(0, -60)
 
 [node name="Door2" type="Area2D" parent="." unique_id=1241517184]
 position = Vector2(-213, 91)
@@ -2223,7 +2223,7 @@ position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_esnyd")
 
 [node name="Bed1" type="CollisionShape2D" parent="Door2" unique_id=1913629]
-position = Vector2(0, -30)
+position = Vector2(0, -60)
 
 [node name="Door3" type="Area2D" parent="." unique_id=1554169026]
 position = Vector2(-357, -7)
@@ -2242,13 +2242,13 @@ position = Vector2(22, 4)
 position = Vector2(-326, -184)
 script = ExtResource("11_6xvi4")
 room_name = "upperFloor"
-entry_name = "ups"
+entry_name = "Stairs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door4" unique_id=674636612]
 position = Vector2(-4.25, 15.5)
 shape = SubResource("RectangleShape2D_6xvi4")
 
-[node name="ups" type="CollisionShape2D" parent="Door4" unique_id=506449183]
+[node name="Stairs" type="CollisionShape2D" parent="Door4" unique_id=506449183]
 position = Vector2(-1, 57)
 
 [node name="Door5" type="Area2D" parent="." unique_id=2145018005]

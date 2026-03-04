@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="7_jc8rh"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="8_yvdv1"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_sqwav"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_ac8ao"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_vhubc")
@@ -2830,6 +2831,9 @@ texture = ExtResource("3_i2vuv")
 [sub_resource type="TileSet" id="TileSet_ixmio"]
 sources/0 = SubResource("TileSetAtlasSource_ri8ma")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqwav"]
+size = Vector2(153, 78)
+
 [node name="UpperFloor" type="Node2D" unique_id=1492530650]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=862411]
@@ -2905,3 +2909,16 @@ position = Vector2(0, -50)
 position = Vector2(-482, -110)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("10_sqwav")
+
+[node name="DownStairs" type="Area2D" parent="." unique_id=1281334028]
+position = Vector2(-158, -308)
+script = ExtResource("11_ac8ao")
+room_name = "Living"
+entry_name = "Stairs"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownStairs" unique_id=1997981133]
+position = Vector2(-1, -15)
+shape = SubResource("RectangleShape2D_sqwav")
+
+[node name="Stairs" type="CollisionShape2D" parent="DownStairs" unique_id=1043144821]
+position = Vector2(-1, 33)
