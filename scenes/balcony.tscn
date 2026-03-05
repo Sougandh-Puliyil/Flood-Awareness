@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="6_qnn56"]
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="8_srgyy"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="9_i56gf"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_6ngso")
@@ -2389,3 +2390,4 @@ scale = Vector2(4, 4)
 [node name="Player" parent="TileMap" unique_id=1314570691 instance=ExtResource("9_i56gf")]
 position = Vector2(582, 433)
 scale = Vector2(4, 4)
+script = ExtResource("10_iuwhd")

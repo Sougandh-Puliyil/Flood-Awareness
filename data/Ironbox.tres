@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bi6833ihvrlkg"]
+
+[ext_resource type="Texture2D" uid="uid://dhxxcplm1yg10" path="res://assets/Collectibles/No Choose/hot-iron-laundry-game-pixel-art-illustration-vector-removebg-preview.png" id="1_hy2l5"]
+[ext_resource type="Script" uid="uid://mug06uqihe31" path="res://scripts/item_data.gd" id="1_l76ts"]
+
+[resource]
+script = ExtResource("1_l76ts")
+item_name = "Ironbox"
+icon = ExtResource("1_hy2l5")
+metadata/_custom_type_script = "uid://mug06uqihe31"

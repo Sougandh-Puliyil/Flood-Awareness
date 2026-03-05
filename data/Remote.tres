@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dq8rcywg3dksh"]
+
+[ext_resource type="Texture2D" uid="uid://dyrheh25borsw" path="res://assets/Collectibles/No Choose/remote-control-device-pixel-art-600nw-2596585931-removebg-preview.png" id="1_enkch"]
+[ext_resource type="Script" uid="uid://mug06uqihe31" path="res://scripts/item_data.gd" id="1_hb485"]
+
+[resource]
+script = ExtResource("1_hb485")
+item_name = "Remote"
+icon = ExtResource("1_enkch")
+metadata/_custom_type_script = "uid://mug06uqihe31"

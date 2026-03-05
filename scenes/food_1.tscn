@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bsuj8a5ucx5y5"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_20rui"]
+[ext_resource type="Resource" uid="uid://cr8624f7lhqd1" path="res://data/Food.tres" id="2_lfawd"]
+[ext_resource type="Texture2D" uid="uid://c3ej04nuagafc" path="res://assets/Ghostpixxells_pixelfood/66_loafbread_dish.png" id="3_uke8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs8bs"]
+size = Vector2(28, 26)
+
+[node name="Food1" type="Area2D" unique_id=1438286392]
+script = ExtResource("1_20rui")
+item = ExtResource("2_lfawd")
+item_id = "Food_collectible"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=64535566]
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_uke8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=995254487]
+position = Vector2(0, 0.5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_bs8bs")

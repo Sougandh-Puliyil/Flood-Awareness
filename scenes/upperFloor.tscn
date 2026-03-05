@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="8_yvdv1"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_sqwav"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_ac8ao"]
+[ext_resource type="PackedScene" uid="uid://d2kjkxfy81ufj" path="res://scenes/torch.tscn" id="12_f035a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_vhubc")
@@ -2922,3 +2923,6 @@ shape = SubResource("RectangleShape2D_sqwav")
 
 [node name="Stairs" type="CollisionShape2D" parent="DownStairs" unique_id=1043144821]
 position = Vector2(-1, 33)
+
+[node name="Torch" parent="." unique_id=316296084 instance=ExtResource("12_f035a")]
+position = Vector2(-400, -254)

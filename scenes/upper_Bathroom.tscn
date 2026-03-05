@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dlbwefyktiffi" path="res://assets/doorswindowsstairs_LRK.png" id="13_bjofa"]
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="14_pbbhy"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="15_5wh4j"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="16_paurr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfwhe"]
 texture = ExtResource("1_sk8oi")
@@ -2479,3 +2480,4 @@ entry_name = "BDoor"
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("15_5wh4j")]
 position = Vector2(-51, -121)
+script = ExtResource("16_paurr")

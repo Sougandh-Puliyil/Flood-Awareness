@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="9_ex4gi"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="10_4ovws"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="10_dh67v"]
+[ext_resource type="PackedScene" uid="uid://bj8mw0ce1ykti" path="res://scenes/FirstAid.tscn" id="12_u581x"]
+[ext_resource type="PackedScene" uid="uid://d4d6ilkj7ox4i" path="res://scenes/Dumbbel.tscn" id="13_5gjsw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjt31"]
 texture = ExtResource("1_8i10n")
@@ -1936,5 +1938,13 @@ position = Vector2(-38, -132)
 
 [node name="CollisionShape2D" parent="Player" index="4" unique_id=1842225013]
 position = Vector2(0, 19)
+
+[node name="Area2D" parent="." unique_id=183748409 instance=ExtResource("12_u581x")]
+position = Vector2(-78, -240)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D2" parent="." unique_id=700114706 instance=ExtResource("13_5gjsw")]
+position = Vector2(34, -228)
+scale = Vector2(0.27, 0.27)
 
 [editable path="Player"]

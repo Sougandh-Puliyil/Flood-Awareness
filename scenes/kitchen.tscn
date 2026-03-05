@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="12_k1jr4"]
 [ext_resource type="Texture2D" uid="uid://d4ayxd0qtqgeg" path="res://art/pixelinterior_LRK_v1.1/cabinets_LRK.png" id="12_ktc20"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="12_umms5"]
+[ext_resource type="Texture2D" uid="uid://cwel66rkusjwy" path="res://assets/Ghostpixxells_pixelfood/04_bowl.png" id="15_88wuv"]
+[ext_resource type="Texture2D" uid="uid://dpgmsywiaxjwb" path="res://assets/Ghostpixxells_pixelfood/03_dish_pile.png" id="15_bs8bs"]
+[ext_resource type="PackedScene" uid="uid://bsuj8a5ucx5y5" path="res://scenes/food_1.tscn" id="16_acu1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_87bic"]
 texture = ExtResource("2_cwf2y")
@@ -2621,6 +2624,9 @@ sources/10 = SubResource("TileSetAtlasSource_bs8bs")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpxcu"]
 size = Vector2(31.5, 47.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs8bs"]
+size = Vector2(28, 26)
+
 [node name="Kitchen" type="Node2D" unique_id=1594383965]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1657532730]
@@ -2658,5 +2664,47 @@ shape = SubResource("RectangleShape2D_vpxcu")
 
 [node name="Kitch" type="CollisionShape2D" parent="Door1" unique_id=1971940367]
 position = Vector2(-37, 11)
+
+[node name="Food2" type="Area2D" parent="." unique_id=675726767]
+position = Vector2(-129, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Food2" unique_id=171572642]
+position = Vector2(-145, -138)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_bs8bs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food2" unique_id=391945569]
+position = Vector2(-145, -138)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_bs8bs")
+
+[node name="Food3" type="Area2D" parent="." unique_id=450188694]
+position = Vector2(-175, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Food3" unique_id=993466538]
+position = Vector2(-145, -138)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_bs8bs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food3" unique_id=1798801550]
+position = Vector2(-145, -138)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_bs8bs")
+
+[node name="Food4" type="Area2D" parent="." unique_id=781093318]
+position = Vector2(-62, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Food4" unique_id=1072563967]
+position = Vector2(-145, -138)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_88wuv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Food4" unique_id=1829587737]
+position = Vector2(-145, -138)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_bs8bs")
+
+[node name="Food1" parent="." unique_id=1438286392 instance=ExtResource("16_acu1m")]
+position = Vector2(-72, -140)
 
 [editable path="Player"]

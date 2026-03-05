@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="9_shs63"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="10_jl4qs"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="10_s4wia"]
+[ext_resource type="PackedScene" uid="uid://rhfhhu47yo8b" path="res://scenes/File.tscn" id="12_lqh8i"]
+[ext_resource type="PackedScene" uid="uid://b7b0avg47nfpf" path="res://scenes/Basketball.tscn" id="13_80ahv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogy2b"]
 texture = ExtResource("1_wnsi1")
@@ -1944,5 +1946,13 @@ position = Vector2(-58, -214)
 
 [node name="CollisionShape2D" parent="Player" index="4" unique_id=1842225013]
 position = Vector2(0, 19)
+
+[node name="Area2D" parent="." unique_id=989562620 instance=ExtResource("12_lqh8i")]
+position = Vector2(-127.99999, -234)
+scale = Vector2(0.735, 0.735)
+
+[node name="Area2D2" parent="." unique_id=1893941895 instance=ExtResource("13_80ahv")]
+position = Vector2(28.999985, -175)
+scale = Vector2(0.17, 0.17)
 
 [editable path="Player"]

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c8m6wvg6wwocg"]
+
+[ext_resource type="Script" uid="uid://d42nlfrpwi2f" path="res://scripts/inventory_toggle.gd" id="1_ju2k0"]
+[ext_resource type="Script" uid="uid://nhlfa5g8l8j5" path="res://scripts/inventory_list.gd" id="2_ju2k0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faaib"]
+bg_color = Color(0.17283267, 0.17283267, 0.17283261, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.54896253, 0.5489626, 0.5489625, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="InventoryToggle" type="CanvasLayer" unique_id=1090243687]
+layer = 10
+scale = Vector2(0.75, 0.75)
+transform = Transform2D(0.75, 0, 0, 0.75, 0, 0)
+script = ExtResource("1_ju2k0")
+
+[node name="Panel" type="Panel" parent="." unique_id=1373371630]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 292.0
+offset_top = 169.33334
+offset_right = 292.0
+offset_bottom = 169.33337
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme_override_styles/panel = SubResource("StyleBoxFlat_faaib")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1489511801]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InventoryCount" type="Label" parent="Panel/MarginContainer" unique_id=1335801012]
+layout_mode = 2
+
+[node name="ItemGrid" type="GridContainer" parent="Panel/MarginContainer" unique_id=1460386451]
+layout_mode = 2
+columns = 5
+script = ExtResource("2_ju2k0")
+metadata/_edit_use_anchors_ = true
