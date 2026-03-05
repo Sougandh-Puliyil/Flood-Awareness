@@ -9,7 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://hvraamjt35an" path="res://art/pixelinterior_LRK_v1.1/livingroom_LRK.png" id="7_bys7p"]
 [ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="8_62k4s"]
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="9_shs63"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="10_jl4qs"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="10_s4wia"]
+[ext_resource type="PackedScene" uid="uid://rhfhhu47yo8b" path="res://scenes/File.tscn" id="12_lqh8i"]
+[ext_resource type="PackedScene" uid="uid://b7b0avg47nfpf" path="res://scenes/Basketball.tscn" id="13_80ahv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogy2b"]
 texture = ExtResource("1_wnsi1")
@@ -1913,23 +1916,43 @@ layer_2/tile_data = PackedInt32Array(-393217, 589829, 3, -327681, 589829, 4, -45
 
 [node name="Door1" type="Area2D" parent="." unique_id=509469351]
 position = Vector2(-259, -143)
+script = ExtResource("10_jl4qs")
+room_name = "Gbathroom1"
+entry_name = "Bdoor"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=338813891]
 position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_wnsi1")
 
+[node name="Bdoor" type="CollisionShape2D" parent="Door1" unique_id=1397151177]
+position = Vector2(26, 8)
+
 [node name="Door2" type="Area2D" parent="." unique_id=920184402]
 position = Vector2(-52, -238)
+script = ExtResource("10_jl4qs")
+room_name = "Living"
+entry_name = "Bed1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2" unique_id=34573333]
 position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_wnsi1")
 
-[node name="Player" parent="Door2" unique_id=1314570691 instance=ExtResource("10_s4wia")]
-z_index = 3
-position = Vector2(-52, -34)
+[node name="Bed1" type="CollisionShape2D" parent="Door2" unique_id=1546517858]
+position = Vector2(0, 30)
 
-[node name="CollisionShape2D" parent="Door2/Player" index="4" unique_id=1842225013]
+[node name="Player" parent="." unique_id=1314570691 instance=ExtResource("10_s4wia")]
+z_index = 3
+position = Vector2(-58, -214)
+
+[node name="CollisionShape2D" parent="Player" index="4" unique_id=1842225013]
 position = Vector2(0, 19)
 
-[editable path="Door2/Player"]
+[node name="Area2D" parent="." unique_id=989562620 instance=ExtResource("12_lqh8i")]
+position = Vector2(-127.99999, -234)
+scale = Vector2(0.735, 0.735)
+
+[node name="Area2D2" parent="." unique_id=1893941895 instance=ExtResource("13_80ahv")]
+position = Vector2(28.999985, -175)
+scale = Vector2(0.17, 0.17)
+
+[editable path="Player"]

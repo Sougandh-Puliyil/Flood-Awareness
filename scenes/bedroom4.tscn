@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cjno3om54gk4g" path="res://assets/decorations_LRK.png" id="9_ibclb"]
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="11_b8ijm"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="12_dfswu"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="13_r0xdg"]
+[ext_resource type="PackedScene" uid="uid://d07a0olble3ji" path="res://scenes/IronBox.tscn" id="14_umhkr"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
 tile_size = Vector2i(40, 40)
@@ -11082,3 +11084,8 @@ position = Vector2(581, 423)
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("12_dfswu")]
 position = Vector2(589, 445)
 scale = Vector2(3, 3)
+script = ExtResource("13_r0xdg")
+
+[node name="Area2D" parent="." unique_id=1392212767 instance=ExtResource("14_umhkr")]
+position = Vector2(944, 531)
+scale = Vector2(2.535, 2.535)

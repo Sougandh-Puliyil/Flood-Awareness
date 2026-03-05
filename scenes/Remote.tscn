@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b6orbmao4ps67"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_hlggl"]
+[ext_resource type="Resource" uid="uid://dq8rcywg3dksh" path="res://data/Remote.tres" id="2_241l1"]
+[ext_resource type="Texture2D" uid="uid://dyrheh25borsw" path="res://assets/Collectibles/No Choose/remote-control-device-pixel-art-600nw-2596585931-removebg-preview.png" id="3_0s55h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lktqo"]
+size = Vector2(2, 4)
+
+[node name="Area2D" type="Area2D" unique_id=1653915721]
+script = ExtResource("1_hlggl")
+item = ExtResource("2_241l1")
+item_id = "Remote"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=554974323]
+position = Vector2(-4.7683716e-07, -4.7683716e-07)
+scale = Vector2(0.010000032, 0.010000032)
+texture = ExtResource("3_0s55h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=411821421]
+shape = SubResource("RectangleShape2D_lktqo")

@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="6_qnn56"]
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="8_srgyy"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="9_i56gf"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
+[ext_resource type="PackedScene" uid="uid://c26ogaaf4d606" path="res://scenes/rain.tscn" id="11_qnn56"]
+[ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://scripts/balconytrigger.gd" id="12_dl05h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_6ngso")
@@ -2354,6 +2357,15 @@ sources/1 = SubResource("TileSetAtlasSource_eg20t")
 sources/2 = SubResource("TileSetAtlasSource_0x020")
 sources/3 = SubResource("TileSetAtlasSource_nen5j")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnn56"]
+size = Vector2(1094, 276)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl05h"]
+size = Vector2(419.5, 241)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dl05h"]
+font_color = Color(0, 0, 0, 1)
+
 [node name="UpperFloor" type="Node2D" unique_id=1492530650]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=862411]
@@ -2389,3 +2401,31 @@ scale = Vector2(4, 4)
 [node name="Player" parent="TileMap" unique_id=1314570691 instance=ExtResource("9_i56gf")]
 position = Vector2(582, 433)
 scale = Vector2(4, 4)
+script = ExtResource("10_iuwhd")
+
+[node name="Rain" parent="." unique_id=711994084 instance=ExtResource("11_qnn56")]
+position = Vector2(3, 4)
+scale = Vector2(1.96, 1.96)
+drop_color = Color(0.026174778, 0.44751817, 0.40811956, 1)
+
+[node name="BalconyTrigger" type="Area2D" parent="." unique_id=2017610770]
+script = ExtResource("12_dl05h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BalconyTrigger" unique_id=665305376]
+position = Vector2(581, 232)
+shape = SubResource("RectangleShape2D_qnn56")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BalconyTrigger" unique_id=1228683245]
+position = Vector2(245.25, 491)
+shape = SubResource("RectangleShape2D_dl05h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BalconyTrigger" unique_id=264306572]
+position = Vector2(913, 486)
+shape = SubResource("RectangleShape2D_dl05h")
+
+[node name="MessageLabel" type="Label" parent="." unique_id=1605959725]
+offset_left = 563.0
+offset_top = 320.0
+offset_right = 603.0
+offset_bottom = 343.0
+label_settings = SubResource("LabelSettings_dl05h")

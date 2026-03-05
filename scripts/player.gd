@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 var speed=100
-
+func _ready():
+	add_to_group("player")
 var player_state
 
 var last_dir=1

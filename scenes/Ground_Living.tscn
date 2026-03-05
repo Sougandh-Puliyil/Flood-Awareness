@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="9_527ww"]
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="10_sophu"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_6xvi4"]
+[ext_resource type="PackedScene" uid="uid://x2wfy320y16t" path="res://scenes/Teddy.tscn" id="12_y3iw4"]
+[ext_resource type="PackedScene" uid="uid://b6orbmao4ps67" path="res://scenes/Remote.tscn" id="13_mq7n1"]
+[ext_resource type="PackedScene" uid="uid://dm62784ly7i6y" path="res://scenes/Sanitizer.tscn" id="14_0v1wc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axyix"]
 texture = ExtResource("2_6xvi4")
@@ -2177,9 +2180,9 @@ position = Vector2(-52, -34)
 position = Vector2(0, 19)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=51357941]
-position = Vector2(-153, -22)
+position = Vector2(-149.00002, -51)
 scale = Vector2(0.95227, 1.2399611)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2, 2)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1794614068]
 position = Vector2(-9, 39)
@@ -2210,7 +2213,7 @@ position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_esnyd")
 
 [node name="Bed2" type="CollisionShape2D" parent="Door1" unique_id=1969183882]
-position = Vector2(0, -30)
+position = Vector2(0, -60)
 
 [node name="Door2" type="Area2D" parent="." unique_id=1241517184]
 position = Vector2(-213, 91)
@@ -2223,7 +2226,7 @@ position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_esnyd")
 
 [node name="Bed1" type="CollisionShape2D" parent="Door2" unique_id=1913629]
-position = Vector2(0, -30)
+position = Vector2(0, -60)
 
 [node name="Door3" type="Area2D" parent="." unique_id=1554169026]
 position = Vector2(-357, -7)
@@ -2242,13 +2245,13 @@ position = Vector2(22, 4)
 position = Vector2(-326, -184)
 script = ExtResource("11_6xvi4")
 room_name = "upperFloor"
-entry_name = "ups"
+entry_name = "Stairs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door4" unique_id=674636612]
 position = Vector2(-4.25, 15.5)
 shape = SubResource("RectangleShape2D_6xvi4")
 
-[node name="ups" type="CollisionShape2D" parent="Door4" unique_id=506449183]
+[node name="Stairs" type="CollisionShape2D" parent="Door4" unique_id=506449183]
 position = Vector2(-1, 57)
 
 [node name="Door5" type="Area2D" parent="." unique_id=2145018005]
@@ -2258,5 +2261,17 @@ script = ExtResource("11_6xvi4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door5" unique_id=1631637619]
 position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_esnyd")
+
+[node name="Area2D" parent="." unique_id=822286630 instance=ExtResource("12_y3iw4")]
+position = Vector2(-327, 36)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D2" parent="." unique_id=1653915721 instance=ExtResource("13_mq7n1")]
+position = Vector2(-202, -150)
+scale = Vector2(1.755, 1.755)
+
+[node name="Area2D3" parent="." unique_id=1185945861 instance=ExtResource("14_0v1wc")]
+position = Vector2(-28.999998, -35.999996)
+scale = Vector2(0.22, 0.22)
 
 [editable path="Player"]
