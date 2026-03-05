@@ -1944,7 +1944,7 @@ position = Vector2(-78, -240)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D2" parent="." unique_id=700114706 instance=ExtResource("13_5gjsw")]
-position = Vector2(34, -228)
+position = Vector2(34, -228.00002)
 scale = Vector2(0.27, 0.27)
 
 [editable path="Player"]

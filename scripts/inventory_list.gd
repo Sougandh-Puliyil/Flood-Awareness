@@ -14,20 +14,31 @@ func update_inventory():
 	info.add_theme_font_size_override("font_size", 28)
 	add_child(info)
 
-	for item in Inventory.items:
+	for i in range(Inventory.items.size()):
+
+		var item = Inventory.items[i]
+
+		var slot = Button.new()
+		slot.custom_minimum_size = Vector2(64,64)
+		slot.flat = true
 
 		var texture_rect = TextureRect.new()
 		texture_rect.texture = item.icon
-
-	# ✅ FORCE SLOT SIZE
-		texture_rect.custom_minimum_size = Vector2(64, 64)
-
-	# ✅ prevent stretching container
-		texture_rect.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		texture_rect.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-
-	# ✅ scale image properly
-		texture_rect.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+		texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		texture_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		texture_rect.anchor_right = 1
+		texture_rect.anchor_bottom = 1
 
-		add_child(texture_rect)
+		slot.add_child(texture_rect)
+
+		slot.pressed.connect(_on_item_pressed.bind(i))
+
+		add_child(slot)
+func _on_item_pressed(index):
+	print("CLICKED SLOT", index)
+
+	var player = get_tree().get_first_node_in_group("player")
+	print("PLAYER:", player)
+
+	if player:
+		Inventory.drop_item(index, player)

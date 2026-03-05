@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_aegfn")
-item_name = "Du,bell"
+item_name = "Dumbell"
 icon = ExtResource("1_kpbgs")
+world_scale = Vector2(0.05, 0.05)
 metadata/_custom_type_script = "uid://mug06uqihe31"

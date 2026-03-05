@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="10_sophu"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_6xvi4"]
 [ext_resource type="PackedScene" uid="uid://x2wfy320y16t" path="res://scenes/Teddy.tscn" id="12_y3iw4"]
-[ext_resource type="PackedScene" uid="uid://b6orbmao4ps67" path="res://data/Remote.tscn" id="13_mq7n1"]
+[ext_resource type="PackedScene" uid="uid://b6orbmao4ps67" path="res://scenes/Remote.tscn" id="13_mq7n1"]
 [ext_resource type="PackedScene" uid="uid://dm62784ly7i6y" path="res://scenes/Sanitizer.tscn" id="14_0v1wc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axyix"]
@@ -2271,7 +2271,7 @@ position = Vector2(-202, -150)
 scale = Vector2(1.755, 1.755)
 
 [node name="Area2D3" parent="." unique_id=1185945861 instance=ExtResource("14_0v1wc")]
-position = Vector2(-28.999998, -36)
+position = Vector2(-28.999998, -35.999996)
 scale = Vector2(0.22, 0.22)
 
 [editable path="Player"]

@@ -10,7 +10,7 @@ size = Vector2(42, 15)
 [node name="Torch" type="Area2D" unique_id=316296084]
 script = ExtResource("1_bkg8t")
 item = ExtResource("2_o2tjn")
-item_id = "Torch"
+item_id = "torch"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=277296319]
 scale = Vector2(0.1, 0.1)

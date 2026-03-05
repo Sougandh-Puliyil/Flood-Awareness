@@ -2926,3 +2926,4 @@ position = Vector2(-1, 33)
 
 [node name="Torch" parent="." unique_id=316296084 instance=ExtResource("12_f035a")]
 position = Vector2(-400, -254)
+scale = Vector2(0.475, 0.475)

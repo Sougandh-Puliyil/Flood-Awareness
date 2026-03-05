@@ -4,7 +4,12 @@ extends Area2D
 @export var item_id: String
 func _ready():
 	input_pickable = true
-	if Inventory.collected_items.has(item_id):
+
+	# apply icon if sprite exists
+	if has_node("Sprite2D") and item:
+		$Sprite2D.texture = item.icon
+
+	if item_id != "" and Inventory.collected_items.has(item_id):
 		queue_free()
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:

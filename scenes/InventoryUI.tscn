@@ -47,3 +47,5 @@ layout_mode = 2
 columns = 5
 script = ExtResource("2_ju2k0")
 metadata/_edit_use_anchors_ = true
+
+[node name="WorldDrops" type="Node2D" parent="." unique_id=563182391]
