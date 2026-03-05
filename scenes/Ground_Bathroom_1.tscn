@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="10_itan0"]
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="11_pr6bu"]
 [ext_resource type="Texture2D" uid="uid://dsilqpt3evln" path="res://art/pixelinterior_BA_v1.0/cabinets_BA.png" id="12_gnn8f"]
+[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="13_jyuvu"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="13_x0ypd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfwhe"]
 texture = ExtResource("1_vgaah")
@@ -2021,7 +2023,22 @@ layer_2/name = "Layer2"
 
 [node name="Door1" type="Area2D" parent="." unique_id=1075729568]
 position = Vector2(60, -150)
+script = ExtResource("13_x0ypd")
+room_name = "bedroom1"
+entry_name = "Bdoor"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=1835183823]
 position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_vgaah")
+
+[node name="Bathdoor" type="CollisionShape2D" parent="Door1" unique_id=710884379]
+position = Vector2(-31, 10)
+
+[node name="Player" parent="." unique_id=1314570691 instance=ExtResource("13_jyuvu")]
+z_index = 3
+position = Vector2(27, -155)
+
+[node name="CollisionShape2D" parent="Player" index="4" unique_id=1842225013]
+position = Vector2(0, 19)
+
+[editable path="Player"]

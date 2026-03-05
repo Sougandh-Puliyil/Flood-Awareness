@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d2kjkxfy81ufj"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_bkg8t"]
+[ext_resource type="Resource" uid="uid://yt7dhj38pmjn" path="res://data/item.tres" id="2_o2tjn"]
+[ext_resource type="Texture2D" uid="uid://bh8wus2am2wud" path="res://assets/Collectibles/Choose/pixel-flashlight-9800821_1280-removebg-preview.png" id="3_r3k50"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccurp"]
+size = Vector2(42, 15)
+
+[node name="Torch" type="Area2D" unique_id=316296084]
+script = ExtResource("1_bkg8t")
+item = ExtResource("2_o2tjn")
+item_id = "torch"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=277296319]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_r3k50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=849399099]
+shape = SubResource("RectangleShape2D_ccurp")

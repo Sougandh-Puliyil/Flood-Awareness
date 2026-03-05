@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-var speed=200
-
+var speed=100
+func _ready():
+	add_to_group("player")
 var player_state
 
 var last_dir=1
@@ -16,8 +17,11 @@ func _physics_process(delta:):
 	
 	velocity = direction * speed
 	move_and_slide()
-	
 	play_anim(direction)
+
+func teleport(to_pos: Vector2) -> void:
+	global_position = to_pos
+	velocity = Vector2.ZERO
 
 func play_anim(dir):
 	if player_state=="Idle":
