@@ -24,6 +24,7 @@ config/icon="res://icon.svg"
 SceneManager="*uid://itxbqitibfhl"
 TimerManager="*uid://dwkwttkhkr3ll"
 Game_Manager="*uid://cvct3wrvjh8dq"
+Global_Logic="*uid://beldkryk48732"
 
 [dotnet]
 

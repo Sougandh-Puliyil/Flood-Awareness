@@ -20,7 +20,7 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	timer.start()
 	is_running = true
-	print("TimerManager: Global timer started - counting up to 20 minutes")
+	print("TimerManager: Global timer started - counting up to 15 minutes")
 	
 
 	
