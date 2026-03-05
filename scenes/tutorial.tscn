@@ -1,9 +1,9 @@
-[gd_scene format=4 uid="uid://wo6ffsumtax7"]
+[gd_scene format=4 uid="uid://clet8frrn54it"]
 
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="1_py1tg"]
 [ext_resource type="Texture2D" uid="uid://df4lvyxfx64ks" path="res://assets/floor_wood_planks.png" id="2_fiukk"]
 [ext_resource type="Texture2D" uid="uid://b5b2vic8wldf5" path="res://assets/floorswalls_LRK.png" id="3_uqyj1"]
-[ext_resource type="Script" uid="uid://b26nxpd1rm4cw" path="res://scripts/tutorial.gd" id="4_4kmhl"]
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="4_4kmhl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jh7ng"]
 texture = ExtResource("2_fiukk")
@@ -338,8 +338,9 @@ text = "← Left Arrow = Move Left"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=105320164]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 2.0
+offset_right = 93.0
+offset_bottom = 33.0
 
 [node name="BackButton" type="Button" parent="CanvasLayer/Control/VBoxContainer3" unique_id=1911364141]
 layout_mode = 2
@@ -352,3 +353,11 @@ offset_top = 32.0
 offset_right = 1017.0
 offset_bottom = 72.0
 color = Color(0.23137255, 0.5882353, 0.32941177, 0.7529412)
+
+[node name="Bg" type="ColorRect" parent="CanvasLayer/Control" unique_id=509963076]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 32.0
+offset_right = 1017.0
+offset_bottom = 72.0
+color = Color(0.18461773, 0.54370695, 0.71589434, 0.7529412)
