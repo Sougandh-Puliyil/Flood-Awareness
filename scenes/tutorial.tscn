@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="1_py1tg"]
 [ext_resource type="Texture2D" uid="uid://df4lvyxfx64ks" path="res://assets/floor_wood_planks.png" id="2_fiukk"]
 [ext_resource type="Texture2D" uid="uid://b5b2vic8wldf5" path="res://assets/floorswalls_LRK.png" id="3_uqyj1"]
+[ext_resource type="Script" uid="uid://b26nxpd1rm4cw" path="res://scripts/tutorial.gd" id="4_4kmhl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jh7ng"]
 texture = ExtResource("2_fiukk")
@@ -262,6 +263,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_chjcb")
 
 [node name="Tutorial" type="Node2D" unique_id=883383689]
+script = ExtResource("4_4kmhl")
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("1_py1tg")]
 position = Vector2(621, 181)
@@ -339,9 +341,9 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer3" unique_id=1911364141]
+[node name="BackButton" type="Button" parent="CanvasLayer/Control/VBoxContainer3" unique_id=1911364141]
 layout_mode = 2
-text = "Step into interactive mode"
+text = "Back"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1348335072]
 layout_mode = 0
