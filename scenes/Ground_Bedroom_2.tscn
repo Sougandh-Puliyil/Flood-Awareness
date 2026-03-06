@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="10_dh67v"]
 [ext_resource type="PackedScene" uid="uid://bj8mw0ce1ykti" path="res://scenes/FirstAid.tscn" id="12_u581x"]
 [ext_resource type="PackedScene" uid="uid://d4d6ilkj7ox4i" path="res://scenes/Dumbbel.tscn" id="13_5gjsw"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="15_ex4gi"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="16_flomx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjt31"]
 texture = ExtResource("1_8i10n")
@@ -1887,10 +1889,13 @@ sources/8 = SubResource("TileSetAtlasSource_n7c7t")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i10n"]
 size = Vector2(31.5, 47.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtawv"]
+shader = ExtResource("15_ex4gi")
+
 [node name="Ground_Bedroom_2" type="Node2D" unique_id=846116402]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=852126407]
-position = Vector2(-106.000015, -150)
+position = Vector2(-106, -164.00002)
 scale = Vector2(0.95227, 1.2399611)
 zoom = Vector2(2.5, 2.5)
 
@@ -1946,5 +1951,15 @@ scale = Vector2(0.5, 0.5)
 [node name="Area2D2" parent="." unique_id=700114706 instance=ExtResource("13_5gjsw")]
 position = Vector2(34, -228.00002)
 scale = Vector2(0.27, 0.27)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2110400262]
+material = SubResource("ShaderMaterial_mtawv")
+offset_left = -344.0
+offset_top = -36.0
+offset_right = 111.0
+offset_bottom = 304.0
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("16_flomx")
+metadata/_edit_use_anchors_ = true
 
 [editable path="Player"]

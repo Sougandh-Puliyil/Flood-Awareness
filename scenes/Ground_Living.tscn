@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://djyq1qc6kkp6l"]
 
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="1_esnyd"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="1_lswxg"]
 [ext_resource type="Texture2D" uid="uid://k717nlnncaah" path="res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png" id="2_6xvi4"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="2_r2gas"]
 [ext_resource type="Texture2D" uid="uid://0sv5lfl1vqn8" path="res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png" id="3_y3iw4"]
 [ext_resource type="Texture2D" uid="uid://q5p6j730ylap" path="res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png" id="4_mq7n1"]
 [ext_resource type="Texture2D" uid="uid://cx2u6gnovk1m3" path="res://art/pixelinterior_BR_v1.1/wardrobes_BR.png" id="5_0v1wc"]
@@ -2170,7 +2172,11 @@ size = Vector2(31.5, 47.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xvi4"]
 size = Vector2(30.5, 65)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_527ww"]
+shader = ExtResource("1_lswxg")
+
 [node name="Ground_Living" type="Node2D" unique_id=47868988]
+position = Vector2(-33, 219)
 
 [node name="Player" parent="." unique_id=1725910629 instance=ExtResource("1_esnyd")]
 z_index = 3
@@ -2273,5 +2279,15 @@ scale = Vector2(1.755, 1.755)
 [node name="Area2D3" parent="." unique_id=1185945861 instance=ExtResource("14_0v1wc")]
 position = Vector2(-28.999998, -35.999996)
 scale = Vector2(0.22, 0.22)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1914564294]
+material = SubResource("ShaderMaterial_527ww")
+offset_left = -380.0
+offset_top = 117.0
+offset_right = 75.0
+offset_bottom = 457.0
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("2_r2gas")
+metadata/_edit_use_anchors_ = true
 
 [editable path="Player"]

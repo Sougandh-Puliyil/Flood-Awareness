@@ -17,7 +17,7 @@ size = Vector2(33, 26)
 size = Vector2(1171, 620)
 
 [node name="node" type="Node2D" unique_id=14757399]
-position = Vector2(-3, -3)
+position = Vector2(-9, 744)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=328910201]
 position = Vector2(580, 326.00003)
@@ -32,6 +32,7 @@ offset_right = 1163.0
 offset_bottom = 1287.0
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("3_k3tth")
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=97055439]
 

@@ -2465,7 +2465,6 @@ text = "YOU HAVE BEEN RESCUED!!"
 label_settings = SubResource("LabelSettings_oiq0a")
 
 [node name="PopupScore" type="Control" parent="." unique_id=934018137]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -2480,16 +2479,21 @@ offset_bottom = 473.0
 
 [node name="ScoreLabel" type="Label" parent="PopupScore/Panel" unique_id=418511353]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 5.0
-offset_right = 691.0
-offset_bottom = 72.0
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 723.0
+offset_bottom = 76.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MeaningLabel" type="Label" parent="PopupScore/Panel" unique_id=1867442444]
 layout_mode = 0
+offset_left = -7.0
 offset_top = 63.0
 offset_right = 724.0
 offset_bottom = 163.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ItemsLabel" type="Label" parent="PopupScore/Panel" unique_id=1569754436]
 layout_mode = 0
@@ -2497,3 +2501,5 @@ offset_left = 5.0
 offset_top = 159.0
 offset_right = 724.0
 offset_bottom = 282.0
+horizontal_alignment = 1
+vertical_alignment = 1

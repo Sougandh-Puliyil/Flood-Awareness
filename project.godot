@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Flood-Awareness"
-run/main_scene="uid://djyq1qc6kkp6l"
+run/main_scene="uid://cv74w5igteoxc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
