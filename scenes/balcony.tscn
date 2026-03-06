@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="6_qnn56"]
 [ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="8_srgyy"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="9_i56gf"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
+[ext_resource type="PackedScene" uid="uid://c26ogaaf4d606" path="res://scenes/rain.tscn" id="11_qnn56"]
+[ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://scripts/balconytrigger.gd" id="12_dl05h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_6ngso")
@@ -2354,6 +2357,18 @@ sources/1 = SubResource("TileSetAtlasSource_eg20t")
 sources/2 = SubResource("TileSetAtlasSource_0x020")
 sources/3 = SubResource("TileSetAtlasSource_nen5j")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnn56"]
+size = Vector2(1094, 276)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl05h"]
+size = Vector2(419.5, 241)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dl05h"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oiq0a"]
+font_size = 31
+
 [node name="UpperFloor" type="Node2D" unique_id=1492530650]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=862411]
@@ -2389,3 +2404,102 @@ scale = Vector2(4, 4)
 [node name="Player" parent="TileMap" unique_id=1314570691 instance=ExtResource("9_i56gf")]
 position = Vector2(582, 433)
 scale = Vector2(4, 4)
+script = ExtResource("10_iuwhd")
+
+[node name="Rain" parent="." unique_id=711994084 instance=ExtResource("11_qnn56")]
+position = Vector2(3, 4)
+scale = Vector2(1.96, 1.96)
+drop_color = Color(0.026174778, 0.44751817, 0.40811956, 1)
+
+[node name="BalconyTrigger" type="Area2D" parent="." unique_id=2017610770 node_paths=PackedStringArray("popup_rescue", "popup_score", "player")]
+script = ExtResource("12_dl05h")
+popup_rescue = NodePath("../PopupRescue")
+popup_score = NodePath("../PopupScore")
+player = NodePath("../TileMap/Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BalconyTrigger" unique_id=665305376]
+position = Vector2(581, 232)
+shape = SubResource("RectangleShape2D_qnn56")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BalconyTrigger" unique_id=1228683245]
+position = Vector2(245.25, 491)
+shape = SubResource("RectangleShape2D_dl05h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BalconyTrigger" unique_id=264306572]
+position = Vector2(913, 486)
+shape = SubResource("RectangleShape2D_dl05h")
+
+[node name="MessageLabel" type="Label" parent="." unique_id=1605959725]
+offset_left = 563.0
+offset_top = 320.0
+offset_right = 603.0
+offset_bottom = 343.0
+label_settings = SubResource("LabelSettings_dl05h")
+
+[node name="PopupRescue" type="Control" parent="." unique_id=817680282]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="PopupRescue" unique_id=1480173781]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -5.65
+anchor_top = 5.175
+anchor_right = -5.65
+anchor_bottom = 5.175
+offset_left = 466.0
+offset_top = -61.0
+offset_right = 1156.0
+offset_bottom = 292.0
+
+[node name="Label" type="Label" parent="PopupRescue/Panel" unique_id=904612258]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 44.0
+offset_right = 562.0
+offset_bottom = 173.0
+text = "YOU HAVE BEEN RESCUED!!"
+label_settings = SubResource("LabelSettings_oiq0a")
+
+[node name="PopupScore" type="Control" parent="." unique_id=934018137]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="PopupScore" unique_id=312808970]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 185.0
+offset_right = 916.0
+offset_bottom = 473.0
+
+[node name="ScoreLabel" type="Label" parent="PopupScore/Panel" unique_id=418511353]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 723.0
+offset_bottom = 76.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeaningLabel" type="Label" parent="PopupScore/Panel" unique_id=1867442444]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 63.0
+offset_right = 724.0
+offset_bottom = 163.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemsLabel" type="Label" parent="PopupScore/Panel" unique_id=1569754436]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 159.0
+offset_right = 724.0
+offset_bottom = 282.0
+horizontal_alignment = 1
+vertical_alignment = 1

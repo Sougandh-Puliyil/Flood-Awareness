@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var room_name: String = ""
-@export var entry_name: String = "" # name of matching entry node in destination scene
+@export var entry_name: String = "" 
 
 var _transition_in_progress: bool = false
 
