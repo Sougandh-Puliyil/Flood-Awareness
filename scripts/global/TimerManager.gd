@@ -23,7 +23,6 @@ func _ready():
 	print("TimerManager: Global timer started - counting up to 15 minutes")
 	
 
-	
 #	Calling for Pop up
 	_setup_alert_ui()
 

@@ -11,9 +11,9 @@ var water_level: float = 0.0 #(Scale of 0.0 to 1.0)
 
 
 var session_log: Array = []
-func record_event(action_name: String, safety_impact: String):
+func record_event(time: String, action_name: String, safety_impact: String):
 	var new_entry = {
-		"time": TimerManager.get_formatted_time(), # Get time from TimerManager
+		"time":time,
 		"action": action_name,
 		"impact": safety_impact
 	}
@@ -47,7 +47,8 @@ func _process(_delta):
 		
 		# 3. Log the start once
 		if not has_meta("flood_started"):
-			record_event("Flood Ingress", "Non-linear water rise initiated")
+			var time_string = "%02d:%02d" % [int(flood_start_time) / 60, int(flood_start_time) % 60]
+			record_event(time_string, "Flood Ingress", "Non-linear water rise initiated")
 			set_meta("flood_started", true)
 	else:
 		water_current_speed = 0.0
