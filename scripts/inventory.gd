@@ -46,7 +46,8 @@ func add_item(item):
 
 	print("Picked up:", item.item_name)
 	print("Inventory now:", items)
-	#GameManager.collect_item(item.item_id)
+	Game_Manager.collect_item(item.item_id)
+	print("item name is:"+item.item_id)
 	emit_signal("inventory_updated")
 
 	return true 
@@ -57,7 +58,7 @@ func drop_item(index:int, player):
 
 	var item = items[index]
 	items.remove_at(index)
-	#GameManager.remove_item(item.item_id)
+	Game_Manager.remove_item(item.item_id)
 	print("Dropping:", item.item_name)
 
 	# -------- CREATE COLLECTIBLE --------

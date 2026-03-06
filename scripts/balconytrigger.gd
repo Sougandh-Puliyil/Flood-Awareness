@@ -29,7 +29,7 @@ func _input(event):
 func check_torch():
 
 	if Inventory.has_item("torch"):
-	#	GameManager.record_torch_activation()
+		Game_Manager.record_torch_activation()
 		disable_player()
 		hide_message()
 		await(get_tree().create_timer(3).timeout)
@@ -52,8 +52,9 @@ func show_rescue_popup():
 	popup_rescue.visible = true
 	popup_rescue.get_node("Panel/Label").text = "You have been rescued!"
 func show_score_popup():
+	Game_Manager.calculate_metrics()
 	popup_score.visible = true
 	popup_rescue.visible=false
-	popup_score.get_node("Panel/ScoreLabel").text ="Score is 573" #str(GameManager.get_score())
-	popup_score.get_node("Panel/MeaningLabel").text = "Score meaning goes here"
-	popup_score.get_node("Panel/ItemsLabel").text = "Collected these items"#Inventory.get_collected_items_text()
+	popup_score.get_node("Panel/ScoreLabel").text =str(Game_Manager.final_safety_score*100)
+	popup_score.get_node("Panel/MeaningLabel").text = str(Game_Manager.risk_level_string)
+	popup_score.get_node("Panel/ItemsLabel").text = Global_Logic.get_collected_items_text()

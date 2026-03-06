@@ -7,5 +7,6 @@
 script = ExtResource("1_2lo85")
 item_name = "FirstAid"
 icon = ExtResource("1_g1ge2")
+item_id = "FirstAid"
 world_scale = Vector2(0.5, 0.5)
 metadata/_custom_type_script = "uid://mug06uqihe31"

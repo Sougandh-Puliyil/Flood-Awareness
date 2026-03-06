@@ -1,5 +1,4 @@
 extends ColorRect
-
 var rise_speed = 5
 
 func _process(delta):

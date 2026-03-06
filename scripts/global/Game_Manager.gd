@@ -4,14 +4,14 @@ extends Node
 var right_item_count: int = 0
 
 # The "Master List" of what counts as a correct item
-var required_items = ["FirstAid", "File", "Food_collectible
-","torch","Phone","Sanitizer
+var required_items = ["FirstAid", "File", "Food_collectible","torch","Phone","Sanitizer
 ","WaterBottle"]
 
 # --- 1. FUNCTION FOR ADDING ---
 func collect_item(item_name: String):
 	var collected_time:int =TimerManager.get_elapsed_time()
 	var format_collected_time: String =TimerManager.get_formatted_time();
+	#print("collected item is"+ item_name)
 	if item_name in required_items:
 		right_item_count += 1
 		
@@ -118,6 +118,8 @@ func calculate_metrics():
 	norm_items = clamp(float(item_collection_score), 0.0, 1.0)
 	# 4. Overall Safety Index Calculation 
 	final_safety_score = (norm_rt * 0.30) + (norm_items * 0.45) + (norm_ed * 0.25)
+	final_safety_score=snapped(final_safety_score,0.01)
+	print(final_safety_score)
 	# 5. RISK LEVEL MAPPING
 	risk_level_string = _map_score_to_risk(final_safety_score)
 	

@@ -1,11 +1,7 @@
-extends Node2D
-
-@onready var rect = $ColorRect
-@onready var collision = $StaticBody2D/CollisionShape2D
-
+extends ColorRect
 var rise_speed = 5
 
 func _process(delta):
-	if rect.position.y > -rect.size.y:
-		rect.position.y -= rise_speed * delta
-		collision.position.y = rect.position.y
+	await get_tree().create_timer(5.0).timeout
+	if position.y > -size.y+110:
+		position.y -= rise_speed * delta
