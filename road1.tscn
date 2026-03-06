@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://biumjftvfofr4"]
+
+[ext_resource type="Texture2D" uid="uid://dl5s3h41swwgv" path="res://assets/road.jpg" id="1_n1odi"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="2_xdvsw"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="3_k3tth"]
+[ext_resource type="Script" uid="uid://d2l6uiudvdsde" path="res://car.gd" id="4_tcnrg"]
+[ext_resource type="Texture2D" uid="uid://dtdw5sy2u1tbv" path="res://assets/car.jpg" id="5_v4pp4"]
+[ext_resource type="Script" uid="uid://bpoxjpap7ay3m" path="res://area_2d.gd" id="6_vgjsj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_twbfo"]
+shader = ExtResource("2_xdvsw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pidm3"]
+size = Vector2(33, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocm6w"]
+size = Vector2(1171, 620)
+
+[node name="node" type="Node2D" unique_id=14757399]
+position = Vector2(-3, -3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=328910201]
+position = Vector2(580, 326.00003)
+scale = Vector2(0.19066665, 0.1406667)
+texture = ExtResource("1_n1odi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1959349097]
+material = SubResource("ShaderMaterial_twbfo")
+offset_left = 11.0
+offset_top = 646.0
+offset_right = 1163.0
+offset_bottom = 1287.0
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("3_k3tth")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=97055439]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1289316339]
+position = Vector2(-33.06681, -0.00036621102)
+scale = Vector2(5.7834096, 1.0000007)
+polygon = PackedVector2Array(7.1007957, 17.000355, 7.792429, 199.00023, 41.336655, 199.00023, 41.336655, 20.000353)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=506977324]
+polygon = PackedVector2Array(275, 20, 275, 199, 605, 195, 608, 20)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1223138190]
+polygon = PackedVector2Array(674, 17, 677, 199, 1010, 202, 1006, 17)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1239719650]
+polygon = PackedVector2Array(1082, 20, 1082, 192, 1145, 192, 1154, 17)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=80116228]
+polygon = PackedVector2Array(12, 255, 15, 490, 203, 490, 203, 264)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=234166343]
+polygon = PackedVector2Array(278, 255, 278, 494, 608, 497, 605, 252)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1147009978]
+polygon = PackedVector2Array(680, 261, 683, 497, 1003, 487, 1013, 252)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=212484909]
+polygon = PackedVector2Array(1079, 252, 1082, 484, 1148, 487, 1151, 243)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=390643412]
+polygon = PackedVector2Array(15, 559, 206, 553, 209, 629, 12, 625)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1047024437]
+polygon = PackedVector2Array(275, 553, 278, 619, 602, 619, 602, 544)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1846102719]
+polygon = PackedVector2Array(680, 547, 680, 619, 1138, 616, 1138, 553)
+
+[node name="car" type="CharacterBody2D" parent="." unique_id=1451078615]
+script = ExtResource("4_tcnrg")
+
+[node name="Sprite2D" type="Sprite2D" parent="car" unique_id=752719336]
+position = Vector2(66.5, 521)
+scale = Vector2(0.10947713, 0.097561)
+texture = ExtResource("5_v4pp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="car" unique_id=773740442]
+position = Vector2(55.5, 513)
+shape = SubResource("RectangleShape2D_pidm3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1485678041]
+script = ExtResource("6_vgjsj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=107409355]
+position = Vector2(575.5, 969)
+shape = SubResource("RectangleShape2D_ocm6w")
+
+[connection signal="body_shape_entered" from="Area2D" to="car" method="_on_area_2d_body_shape_entered"]

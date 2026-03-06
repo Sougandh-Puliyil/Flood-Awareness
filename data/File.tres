@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c3i1fict2p3yh"]
+
+[ext_resource type="Script" uid="uid://mug06uqihe31" path="res://scripts/item_data.gd" id="1_8huij"]
+[ext_resource type="Texture2D" uid="uid://cscggahr6gee8" path="res://assets/Collectibles/Choose/pixel-art-illustration-folder-icon-pixelated-folder-folder-office-icon-landmark_1038602-564-removebg-preview.png" id="1_12q3u"]
+
+[resource]
+script = ExtResource("1_8huij")
+item_name = "File"
+icon = ExtResource("1_12q3u")
+world_scale = Vector2(0.05, 0.05)
+metadata/_custom_type_script = "uid://mug06uqihe31"

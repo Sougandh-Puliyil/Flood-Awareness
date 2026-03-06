@@ -5,7 +5,14 @@ var scenes: Dictionary={
 	"bedroom4":"res://scenes/bedroom4.tscn",
 	"upper_bathroom":"res://scenes/upper_Bathroom.tscn",
 	"balcony":"res://scenes/balcony.tscn",
-	"upperFloor":"res://scenes/upperFloor.tscn"
+	"upperFloor":"res://scenes/upperFloor.tscn",
+	"kitchen":"res://scenes/kitchen.tscn",
+	"bedroom1":"res://scenes/Ground_Bedroom_1.tscn",
+	"bedroom2":"res://scenes/Ground_Bedroom_2.tscn",
+	"Gbathroom1":"res://scenes/Ground_Bathroom_1.tscn",
+	"Gbathroom2":"res://scenes/Ground_Bathroom_2.tscn",
+	"Living":"res://scenes/Ground_Living.tscn"
+	#"outdoor":"NOT DEFINED YET"
 }
 
 # helper: search for a node entry case-insensitively
