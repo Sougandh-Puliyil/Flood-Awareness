@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dqr4txog5n8jy"]
 
-[ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://asset/unnamed.png" id="1_kp1co"]
-[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://button.gd" id="2_4qoh7"]
-[ext_resource type="Script" uid="uid://beybblgg6wr8m" path="res://button_2.gd" id="3_5gx03"]
+[ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="1_kp1co"]
+[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://ui/tutorial_mode.gd" id="2_4qoh7"]
+[ext_resource type="Script" uid="uid://beybblgg6wr8m" path="res://ui/interactive_mode.gd" id="3_5gx03"]
 
 [node name="Control" type="Control" unique_id=849453812]
 layout_mode = 3
@@ -14,8 +14,10 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1711852060]
 layout_mode = 0
-offset_right = 1536.0
-offset_bottom = 1024.0
+offset_left = 17.0
+offset_top = 31.0
+offset_right = 1553.0
+offset_bottom = 1055.0
 texture = ExtResource("1_kp1co")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=20622584]
@@ -32,7 +34,7 @@ offset_bottom = 311.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1415904990]
+[node name="TutorialMode" type="Button" parent="VBoxContainer" unique_id=1415904990]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -40,7 +42,7 @@ text = "TUTORIAL MODE"
 icon_alignment = 1
 script = ExtResource("2_4qoh7")
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=169676385]
+[node name="InteractiveMode" type="Button" parent="VBoxContainer" unique_id=169676385]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50

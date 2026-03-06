@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cid0xa8esk6if"
-path="res://.godot/imported/unnamed.png-d98ad15d56f86f6f86083ac3d7c8f8d8.ctex"
+uid="uid://daluncxge4kor"
+path="res://.godot/imported/a-flooded-street-with-cars-driving-through-it-photo.jpeg-7094618ce3f5077bf9d2eeef7a39c430.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/unnamed.png"
-dest_files=["res://.godot/imported/unnamed.png-d98ad15d56f86f6f86083ac3d7c8f8d8.ctex"]
+source_file="res://ui/asset/a-flooded-street-with-cars-driving-through-it-photo.jpeg"
+dest_files=["res://.godot/imported/a-flooded-street-with-cars-driving-through-it-photo.jpeg-7094618ce3f5077bf9d2eeef7a39c430.ctex"]
 
 [params]
 
