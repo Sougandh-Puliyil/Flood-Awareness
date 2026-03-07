@@ -52,3 +52,11 @@ func _process(_delta):
 			set_meta("flood_started", true)
 	else:
 		water_current_speed = 0.0
+
+func get_collected_items_text():
+	var text = ""
+
+	for i in session_log:
+		text += i["time"] + " - " + i["action"] + "\n"
+
+	return text

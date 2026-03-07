@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="10_nx040"]
 [ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="11_kns0f"]
 [ext_resource type="Texture2D" uid="uid://dsilqpt3evln" path="res://art/pixelinterior_BA_v1.0/cabinets_BA.png" id="12_ke8cv"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="13_nrhm0"]
+[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="13_rtig5"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="16_jnuw8"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="17_yjq2o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2m62"]
 texture = ExtResource("1_spwqu")
@@ -1997,6 +2001,9 @@ sources/11 = SubResource("TileSetAtlasSource_8weu7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spwqu"]
 size = Vector2(31.5, 47.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1tae"]
+shader = ExtResource("16_jnuw8")
+
 [node name="Ground_Bathroom_2" type="Node2D" unique_id=864622644]
 scale = Vector2(-1, 1)
 
@@ -2018,7 +2025,32 @@ layer_2/name = "Layer2"
 
 [node name="Door1" type="Area2D" parent="." unique_id=1360061384]
 position = Vector2(58, -151)
+script = ExtResource("13_nrhm0")
+room_name = "bedroom2"
+entry_name = "Bdoor"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=277512608]
 position = Vector2(-3.75, 5.25)
 shape = SubResource("RectangleShape2D_spwqu")
+
+[node name="Bathdoor" type="CollisionShape2D" parent="Door1" unique_id=1638721446]
+position = Vector2(-35, 10)
+
+[node name="Player" parent="." unique_id=1314570691 instance=ExtResource("13_rtig5")]
+z_index = 3
+position = Vector2(21, -155)
+
+[node name="CollisionShape2D" parent="Player" index="4" unique_id=1842225013]
+position = Vector2(0, 19)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=887779972]
+material = SubResource("ShaderMaterial_y1tae")
+offset_left = -301.0
+offset_top = -38.0
+offset_right = 154.0
+offset_bottom = 302.0
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("17_yjq2o")
+metadata/_edit_use_anchors_ = true
+
+[editable path="Player"]

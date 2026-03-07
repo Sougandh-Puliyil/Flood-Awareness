@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cr8624f7lhqd1"]
+
+[ext_resource type="Script" uid="uid://mug06uqihe31" path="res://scripts/item_data.gd" id="1_m4v5t"]
+[ext_resource type="Texture2D" uid="uid://c3ej04nuagafc" path="res://assets/Ghostpixxells_pixelfood/66_loafbread_dish.png" id="1_u8q8d"]
+
+[resource]
+script = ExtResource("1_m4v5t")
+item_name = "Food"
+icon = ExtResource("1_u8q8d")
+item_id = "Food_collectible"
+world_scale = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://mug06uqihe31"

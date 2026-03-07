@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bmvpx235e4kwp"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_ypxwd"]
+[ext_resource type="Texture2D" uid="uid://dmvgvddhpexo3" path="res://assets/Collectibles/Choose/Mne plevcat.png" id="2_t5lxn"]
+[ext_resource type="Resource" uid="uid://bhuwd0nm66wbk" path="res://data/Phone.tres" id="2_ypxwd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spd4q"]
+size = Vector2(31, 64)
+
+[node name="Area2D" type="Area2D" unique_id=600016296]
+script = ExtResource("1_ypxwd")
+item = ExtResource("2_ypxwd")
+item_id = "Phone"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=31373857]
+texture = ExtResource("2_t5lxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1701043113]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_spd4q")
