@@ -34,6 +34,10 @@ DropManager="*uid://4qsfuvgy7aot"
 
 project/assembly_name="Flood-Awareness"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
+
 [global_group]
 
 player=""
