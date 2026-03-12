@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cnvwnqbuqk76k"]
+
+[ext_resource type="Texture2D" uid="uid://cuqksaqm54ssi" path="res://assets/Collectibles/No Choose/colorful-simple-vector-flat-pixel-art-illustration-red-basketball-ball-simple-vector-flat-pixel-art-illustration-red-245224005-removebg-preview.png" id="1_2u6wx"]
+[ext_resource type="Script" uid="uid://mug06uqihe31" path="res://scripts/item_data.gd" id="1_j33nb"]
+
+[resource]
+script = ExtResource("1_j33nb")
+item_name = "bask"
+icon = ExtResource("1_2u6wx")
+item_id = "Baskball"
+world_scale = Vector2(0.05, 0.05)
+metadata/_custom_type_script = "uid://mug06uqihe31"

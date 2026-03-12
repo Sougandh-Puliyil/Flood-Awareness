@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cgqueqn8n80pd"]
+
+[ext_resource type="Script" uid="uid://mug06uqihe31" path="res://scripts/item_data.gd" id="1_aegfn"]
+[ext_resource type="Texture2D" uid="uid://dnvil78tx7w8s" path="res://assets/Collectibles/No Choose/pixel-art-illustration-barbell-pixelated-600nw-2494523027-removebg-preview.png" id="1_kpbgs"]
+
+[resource]
+script = ExtResource("1_aegfn")
+item_name = "Dumbell"
+icon = ExtResource("1_kpbgs")
+item_id = "Dumbbel"
+world_scale = Vector2(0.05, 0.05)
+metadata/_custom_type_script = "uid://mug06uqihe31"

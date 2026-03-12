@@ -16,7 +16,7 @@ func collect_item(item_name: String):
 		right_item_count += 1
 		
 		Global_Logic.record_event(format_collected_time,"Correct item ADDED: " + item_name, "Positive")
-		print("Correct item ADDED! ", item_name)
+		print("Correct item ADDED!", item_name)
 		
 		# Check for victory/objective completion
 		_check_objective_status()
