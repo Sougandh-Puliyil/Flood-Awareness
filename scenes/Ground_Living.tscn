@@ -2290,4 +2290,9 @@ color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("2_r2gas")
 metadata/_edit_use_anchors_ = true
 
+[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_entered" from="Door2" to="Door2" method="_on_body_entered"]
+[connection signal="body_entered" from="Door3" to="Door3" method="_on_body_entered"]
+[connection signal="body_entered" from="Door4" to="Door4" method="_on_body_entered"]
+
 [editable path="Player"]

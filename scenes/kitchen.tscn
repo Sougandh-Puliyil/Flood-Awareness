@@ -2635,9 +2635,9 @@ shader = ExtResource("18_3fy06")
 [node name="Kitchen" type="Node2D" unique_id=1594383965]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1657532730]
-position = Vector2(-151.00002, -69)
+position = Vector2(-149, -59)
 scale = Vector2(0.95227, 1.2399611)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2.6, 2.5)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1470684844]
 position = Vector2(-8, -1)
@@ -2721,5 +2721,7 @@ offset_bottom = 418.0
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("19_e7cmp")
 metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
 
 [editable path="Player"]

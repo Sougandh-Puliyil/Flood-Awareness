@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cjno3om54gk4g" path="res://assets/decorations_LRK.png" id="4_i56gf"]
 [ext_resource type="Texture2D" uid="uid://dx77xytb5eex4" path="res://assets/cabinets_LRK.png" id="5_iuwhd"]
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="6_qnn56"]
-[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="8_srgyy"]
+[ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="8_srgyy"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="9_i56gf"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="9_oiq0a"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
 [ext_resource type="PackedScene" uid="uid://c26ogaaf4d606" path="res://scenes/rain.tscn" id="11_qnn56"]
 [ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://scripts/balconytrigger.gd" id="12_dl05h"]
@@ -2357,11 +2358,14 @@ sources/1 = SubResource("TileSetAtlasSource_eg20t")
 sources/2 = SubResource("TileSetAtlasSource_0x020")
 sources/3 = SubResource("TileSetAtlasSource_nen5j")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qv0a"]
+size = Vector2(30, 48)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnn56"]
-size = Vector2(1094, 276)
+size = Vector2(1094, 184)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dl05h"]
-size = Vector2(419.5, 241)
+size = Vector2(424.75, 331.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dl05h"]
 font_color = Color(0, 0, 0, 1)
@@ -2397,12 +2401,24 @@ scale = Vector2(4, 4)
 room_name = "upperFloor"
 entry_name = "BalcD"
 
+[node name="Area2D" type="Area2D" parent="TileMap/BalcDoor" unique_id=1032401167]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("9_oiq0a")
+room_name = "upperFloor"
+entry_name = "BalcD"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/BalcDoor/Area2D" unique_id=1080492007]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_3qv0a")
+
 [node name="balcDoor" type="Area2D" parent="TileMap" unique_id=1923888964]
-position = Vector2(582, 433)
+position = Vector2(581, 318)
 scale = Vector2(4, 4)
 
 [node name="Player" parent="TileMap" unique_id=1314570691 instance=ExtResource("9_i56gf")]
-position = Vector2(582, 433)
+position = Vector2(581, 318)
 scale = Vector2(4, 4)
 script = ExtResource("10_iuwhd")
 
@@ -2418,15 +2434,15 @@ popup_score = NodePath("../PopupScore")
 player = NodePath("../TileMap/Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BalconyTrigger" unique_id=665305376]
-position = Vector2(581, 232)
+position = Vector2(581, 186)
 shape = SubResource("RectangleShape2D_qnn56")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="BalconyTrigger" unique_id=1228683245]
-position = Vector2(245.25, 491)
+position = Vector2(249, 442)
 shape = SubResource("RectangleShape2D_dl05h")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="BalconyTrigger" unique_id=264306572]
-position = Vector2(913, 486)
+position = Vector2(910.375, 440.75)
 shape = SubResource("RectangleShape2D_dl05h")
 
 [node name="MessageLabel" type="Label" parent="." unique_id=1605959725]
@@ -2465,6 +2481,7 @@ text = "YOU HAVE BEEN RESCUED!!"
 label_settings = SubResource("LabelSettings_oiq0a")
 
 [node name="PopupScore" type="Control" parent="." unique_id=934018137]
+visible = false
 z_index = 11
 layout_mode = 3
 anchors_preset = 0
@@ -2504,3 +2521,5 @@ offset_right = 717.0
 offset_bottom = 212.0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="body_entered" from="TileMap/BalcDoor/Area2D" to="TileMap/BalcDoor/Area2D" method="_on_body_entered"]

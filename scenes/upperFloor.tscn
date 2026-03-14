@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dlbwefyktiffi" path="res://assets/doorswindowsstairs_LRK.png" id="3_i2vuv"]
 [ext_resource type="Texture2D" uid="uid://dx77xytb5eex4" path="res://assets/cabinets_LRK.png" id="3_ixmio"]
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="4_snk3i"]
-[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="7_jc8rh"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="8_yvdv1"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_sqwav"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_ac8ao"]
@@ -2832,6 +2831,9 @@ texture = ExtResource("3_i2vuv")
 [sub_resource type="TileSet" id="TileSet_ixmio"]
 sources/0 = SubResource("TileSetAtlasSource_ri8ma")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f035a"]
+size = Vector2(30, 48)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqwav"]
 size = Vector2(153, 78)
 
@@ -2863,43 +2865,142 @@ scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAtAAgAAAARAAEAAAAtAAkAAAARAAIAAAAuAAgAAAASAAEAAAAuAAkAAAASAAIAAAArAAgAAAAYAAEAAAArAAkAAAAYAAIAAAAsAAgAAAAZAAEAAAAsAAkAAAAZAAIAAAA=")
 tile_set = SubResource("TileSet_ixmio")
 
-[node name="BathDoor" parent="." unique_id=771510446 instance=ExtResource("7_jc8rh")]
+[node name="BathDoor" type="Area2D" parent="." unique_id=771510446]
+z_index = 1
 position = Vector2(-34, 184.00002)
+scale = Vector2(2.5, 2.5)
+collision_mask = 2
+script = ExtResource("11_ac8ao")
 room_name = "upper_bathroom"
 entry_name = "BDoor"
 
+[node name="Area2D" type="Area2D" parent="BathDoor" unique_id=1674890665]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("11_ac8ao")
+room_name = "upper_bathroom"
+entry_name = "BDoor"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BathDoor/Area2D" unique_id=1229764689]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_f035a")
+
+[node name="Sprite2D" type="Sprite2D" parent="BathDoor" unique_id=708255774]
+position = Vector2(15, -24)
+texture = ExtResource("3_i2vuv")
+region_enabled = true
+region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
+
 [node name="BDoor" type="Area2D" parent="BathDoor" unique_id=821684294]
-position = Vector2(13.6, -63.600006)
+position = Vector2(15.2, -84.00001)
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="BedDoor3" parent="." unique_id=2103237742 instance=ExtResource("7_jc8rh")]
+[node name="BedDoor3" type="Area2D" parent="." unique_id=2103237742]
+z_index = 1
 position = Vector2(-393.00003, 184)
+scale = Vector2(2.5, 2.5)
+collision_mask = 2
+script = ExtResource("11_ac8ao")
 room_name = "bedroom3"
-entry_name = "bedroomD3"
+entry_name = "bedD3"
+
+[node name="Sprite2D" type="Sprite2D" parent="BedDoor3" unique_id=552395048]
+position = Vector2(15, -24)
+texture = ExtResource("3_i2vuv")
+region_enabled = true
+region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
 
 [node name="bedroomD3" type="Area2D" parent="BedDoor3" unique_id=1723063755]
-position = Vector2(15.200011, -55.6)
+position = Vector2(14.800011, -83.6)
 
-[node name="BedDoor4" parent="." unique_id=512652642 instance=ExtResource("7_jc8rh")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedDoor3" unique_id=1909560021]
+position = Vector2(15, -24)
+shape = SubResource("RectangleShape2D_f035a")
+
+[node name="Area2D" type="Area2D" parent="BedDoor3" unique_id=1005600490]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("11_ac8ao")
+room_name = "bedroom3"
+entry_name = "bedD3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedDoor3/Area2D" unique_id=639872176]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_f035a")
+
+[node name="BedDoor4" type="Area2D" parent="." unique_id=512652642]
+z_index = 1
 position = Vector2(320, 183.00002)
+scale = Vector2(2.5, 2.5)
+collision_mask = 2
+script = ExtResource("11_ac8ao")
 room_name = "bedroom4"
 entry_name = "bedD4"
 
+[node name="Sprite2D" type="Sprite2D" parent="BedDoor4" unique_id=899961888]
+position = Vector2(15, -24)
+texture = ExtResource("3_i2vuv")
+region_enabled = true
+region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
+
 [node name="bedroomD4" type="Area2D" parent="BedDoor4" unique_id=733446733]
 position = Vector2(13.199999, -82.40001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedDoor4" unique_id=1772991407]
+position = Vector2(15, -24)
+shape = SubResource("RectangleShape2D_f035a")
+
+[node name="Area2D" type="Area2D" parent="BedDoor4" unique_id=1505622548]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("11_ac8ao")
+room_name = "bedroom4"
+entry_name = "bedD4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedDoor4/Area2D" unique_id=899147106]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_f035a")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1137627137]
 position = Vector2(-486, -112)
 scale = Vector2(2.5, 2.5)
 
-[node name="Balcony" parent="." unique_id=176318527 instance=ExtResource("7_jc8rh")]
+[node name="Balcony" type="Area2D" parent="." unique_id=176318527]
+z_index = 1
 position = Vector2(-580.00006, -59.00001)
 scale = Vector2(2.4999998, 2.4999998)
+collision_mask = 2
+script = ExtResource("11_ac8ao")
 room_name = "balcony"
 entry_name = "balcDoor"
 
+[node name="Sprite2D" type="Sprite2D" parent="Balcony" unique_id=750036138]
+position = Vector2(15, -24)
+texture = ExtResource("3_i2vuv")
+region_enabled = true
+region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcony" unique_id=803569148]
+position = Vector2(15, -24)
+shape = SubResource("RectangleShape2D_f035a")
+
+[node name="Area2D" type="Area2D" parent="Balcony" unique_id=210513773]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("11_ac8ao")
+room_name = "balcony"
+entry_name = "balcDoor"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balcony/Area2D" unique_id=1316690914]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_f035a")
+
 [node name="BalcD" type="Area2D" parent="." unique_id=1713090731]
-position = Vector2(-482.00003, -109.99999)
+position = Vector2(-467.00003, -108.00001)
 scale = Vector2(2.5, 2.5)
 metadata/_edit_group_ = true
 
@@ -2907,7 +3008,7 @@ metadata/_edit_group_ = true
 position = Vector2(0, -50)
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("8_yvdv1")]
-position = Vector2(-482, -110)
+position = Vector2(-436.99997, -151.00005)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("10_sqwav")
 
@@ -2922,8 +3023,22 @@ position = Vector2(-1, -15)
 shape = SubResource("RectangleShape2D_sqwav")
 
 [node name="Stairs" type="CollisionShape2D" parent="DownStairs" unique_id=1043144821]
-position = Vector2(-1, 33)
+position = Vector2(2, 79)
 
 [node name="Torch" parent="." unique_id=316296084 instance=ExtResource("12_f035a")]
 position = Vector2(-400, -254)
 scale = Vector2(0.475, 0.475)
+
+[connection signal="body_entered" from="BathDoor" to="BathDoor" method="_on_body_entered"]
+[connection signal="input_event" from="BathDoor" to="BathDoor" method="_on_input_event"]
+[connection signal="body_entered" from="BathDoor/Area2D" to="BathDoor/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="BedDoor3" to="BedDoor3" method="_on_body_entered"]
+[connection signal="input_event" from="BedDoor3" to="BedDoor3" method="_on_input_event"]
+[connection signal="body_entered" from="BedDoor3/Area2D" to="BedDoor3/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="BedDoor4" to="BedDoor4" method="_on_body_entered"]
+[connection signal="input_event" from="BedDoor4" to="BedDoor4" method="_on_input_event"]
+[connection signal="body_entered" from="BedDoor4/Area2D" to="BedDoor4/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Balcony" to="Balcony" method="_on_body_entered"]
+[connection signal="input_event" from="Balcony" to="Balcony" method="_on_input_event"]
+[connection signal="body_entered" from="Balcony/Area2D" to="Balcony/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="DownStairs" to="DownStairs" method="_on_body_entered"]

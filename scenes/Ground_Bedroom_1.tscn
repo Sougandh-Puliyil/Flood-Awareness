@@ -1971,4 +1971,7 @@ color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("16_v1y04")
 metadata/_edit_use_anchors_ = true
 
+[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_entered" from="Door2" to="Door2" method="_on_body_entered"]
+
 [editable path="Player"]
