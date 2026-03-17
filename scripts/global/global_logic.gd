@@ -47,6 +47,7 @@ func reset_game_state():
 	TimerManager.reset_timer()
 	print("Global Logic: Game state has been fully reset for a new player.")
 # --- Water Level logic ---
+# ------------
 var max_height: float = -336  # Total pixels the water should rise
 var total_time_ground_fill: float = 40    # Total duration of the flood in seconds (15s)
 var flood_start_time: float = 20.0 # Delay before rising starts

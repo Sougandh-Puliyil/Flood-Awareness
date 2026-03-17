@@ -140,3 +140,42 @@ func _string_to_seconds(time_string: String) -> int:
 	if parts.size() == 2:
 		return (parts[0].to_int() * 60) + parts[1].to_int()
 	return 0
+
+# -------------- Feedback Reporting -------------
+
+func get_item_feedback_report() -> Dictionary:
+	var correct_picked = []
+	var missed_items = []
+	var incorrect_items = []
+	
+	# 1. Identify what was actually picked up vs what is required
+	# We look at the session_log for "Correct item ADDED" events
+	var actually_held = []
+	for entry in Global_Logic.session_log:
+		if entry["action"].begins_with("Correct item ADDED"):
+			var item = entry["action"].get_slice(": ", 1)
+			if not actually_held.has(item):
+				actually_held.append(item)
+		elif entry["action"].begins_with("Correct item REMOVED"):
+			var item = entry["action"].get_slice(": ", 1)
+			actually_held.erase(item)
+			
+	# 2. Categorize items
+	for item in required_items:
+		if actually_held.has(item):
+			correct_picked.append(item)
+		else:
+			missed_items.append(item)
+			
+	# 3. Find 'Incorrect' (non-essential) items currently in log
+	for entry in Global_Logic.session_log:
+		if entry["action"].begins_with("Picked up a non-essential"):
+			var item = entry["action"].get_slice(": ", 1)
+			if not incorrect_items.has(item):
+				incorrect_items.append(item)
+	
+	return {
+		"correct": correct_picked,
+		"missed": missed_items,
+		"wrong": incorrect_items
+	}
