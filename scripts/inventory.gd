@@ -9,7 +9,8 @@ var items: Array[ItemData] = []
 func _ready():
 	get_tree().node_added.connect(_on_node_added)
 func _on_node_added(node):
-	if node == get_tree().current_scene:
+	var curr = get_tree().current_scene
+	if curr and node == curr:
 		call_deferred("restore_drops")
 func has_item(id:String) -> bool:
 	for item in items:
@@ -84,7 +85,9 @@ func drop_item(index:int, player):
 	drop.add_child(collision)
 
 	# add to current room
-	get_tree().current_scene.add_child(drop)
+	var current = get_tree().current_scene
+	if current:
+		current.add_child(drop)
 
 	# place at player
 	drop.global_position = player.global_position
@@ -98,8 +101,14 @@ func drop_item(index:int, player):
 
 	emit_signal("inventory_updated")
 func restore_drops():
-	var scene_name = get_tree().current_scene.name
-
+	# Get a reference to the scene safely
+	var current = get_tree().current_scene
+	
+	if not current:
+		return
+		
+	var scene_name = current.name
+	
 	for data in dropped_items:
 
 		if data.scene != scene_name:

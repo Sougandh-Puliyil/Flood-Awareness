@@ -60,17 +60,20 @@ var torch_activated_raw_time: int = 0 # Stores the raw seconds for logic checks
 var formatted_rescue_time: String= ""
 # Call when the torch is turned ON
 func record_torch_activation():
-	# 1. Get the current time from your TimerManager
+	# Get the current time from your TimerManager
 	var current_time = TimerManager.get_elapsed_time()
 	
-	# 2.Note the torch activation time
+	# Note the torch activation time
 	torch_activated_raw_time = current_time
 	
-	# 3. Format it into a readable string for your UI/Logs
+	#	Announce player reached balcony
+	Global_Logic.balcony_reached = true
+	
+	# Format it into a readable string for your UI/Logs
 	rescue_time = torch_activated_raw_time+15
 	formatted_rescue_time= _format_seconds(torch_activated_raw_time)
 	
-	# 4. Log the event in your session log
+	# Log the event in your session log
 	if has_node("/root/Global_Logic"):
 		get_node("/root/Global_Logic").record_event(formatted_rescue_time,"Torch On at Balcony", "Safe Arrival Set to: " + formatted_rescue_time)
 	
