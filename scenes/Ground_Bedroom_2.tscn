@@ -1966,6 +1966,7 @@ offset_left = -344.0
 offset_top = -36.0
 offset_right = 111.0
 offset_bottom = 304.0
+scale = Vector2(1.3200012, 1)
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("16_flomx")
 metadata/_edit_use_anchors_ = true

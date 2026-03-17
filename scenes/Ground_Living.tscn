@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://djyq1qc6kkp6l"]
 
+[ext_resource type="Script" uid="uid://bls21e4kavapv" path="res://scripts/alert_start.gd" id="1_527ww"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="1_esnyd"]
 [ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="1_lswxg"]
 [ext_resource type="Texture2D" uid="uid://k717nlnncaah" path="res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png" id="2_6xvi4"]
@@ -2178,6 +2179,7 @@ shader = ExtResource("1_lswxg")
 
 [node name="Ground_Living" type="Node2D" unique_id=47868988]
 position = Vector2(-38, 219)
+script = ExtResource("1_527ww")
 
 [node name="Player" parent="." unique_id=1725910629 instance=ExtResource("1_esnyd")]
 z_index = 3
@@ -2300,9 +2302,9 @@ scale = Vector2(0.22, 0.22)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1914564294]
 material = SubResource("ShaderMaterial_527ww")
-offset_left = -380.0
+offset_left = -472.0
 offset_top = 117.0
-offset_right = 75.0
+offset_right = 152.29498
 offset_bottom = 457.0
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("2_r2gas")

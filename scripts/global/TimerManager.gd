@@ -9,8 +9,20 @@ var is_running: bool = false
 var alert_target_time: int = 0  # Stores the random second the alert will appear
 var alert_box: ColorRect        # The visual rectangle
 var alert_label: Label          # The text inside the rectangle
+# TimerManager.gd
+var initialized := false
 
-func _ready():
+func setup_once():
+	if initialized:
+		return
+	initialized = true
+
+	_setup_alert_ui()
+	_readyrr()
+
+
+
+func _readyrr():
 	randomize()
 	alert_target_time = randi_range(5, 10)
 	# Create and configure the timer
@@ -24,7 +36,7 @@ func _ready():
 	
 
 #	Calling for Pop up
-	_setup_alert_ui()
+	
 
 func _on_timer_timeout():
 	elapsed_time += 1
@@ -91,3 +103,4 @@ func _setup_alert_ui():
 	alert_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	alert_label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	alert_box.add_child(alert_label)
+	WaterManager.start_rise() #starting water rise

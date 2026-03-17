@@ -2053,10 +2053,10 @@ position = Vector2(0, 19)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1246001286]
 material = SubResource("ShaderMaterial_ke588")
-offset_left = -321.0
-offset_top = 117.0
-offset_right = 134.0
-offset_bottom = 457.0
+offset_left = -360.99997
+offset_right = 94.00003
+offset_bottom = 340.0
+scale = Vector2(1.1599988, 1)
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("17_a3jn6")
 metadata/_edit_use_anchors_ = true
