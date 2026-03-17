@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="8_srgyy"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="9_i56gf"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="9_oiq0a"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="10_3qv0a"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
 [ext_resource type="PackedScene" uid="uid://c26ogaaf4d606" path="res://scenes/rain.tscn" id="11_qnn56"]
 [ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://scripts/balconytrigger.gd" id="12_dl05h"]
@@ -2412,6 +2413,9 @@ z_index = 1
 position = Vector2(15.000002, -24.000004)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_3qv0a")
+
+[node name="DoorLabel" parent="TileMap/BalcDoor/Area2D/CollisionShape2D" unique_id=180456681 instance=ExtResource("10_3qv0a")]
+label_text = "Upstairs Hall"
 
 [node name="balcDoor" type="Area2D" parent="TileMap" unique_id=1923888964]
 position = Vector2(581, 318)

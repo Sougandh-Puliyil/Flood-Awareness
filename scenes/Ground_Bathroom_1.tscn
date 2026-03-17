@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dsilqpt3evln" path="res://art/pixelinterior_BA_v1.0/cabinets_BA.png" id="12_gnn8f"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="13_jyuvu"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="13_x0ypd"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="14_r0gp0"]
 [ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="16_lox8o"]
 [ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="17_a3jn6"]
 
@@ -2009,6 +2010,7 @@ size = Vector2(31.5, 47.5)
 shader = ExtResource("16_lox8o")
 
 [node name="Ground_Bathroom_1" type="Node2D" unique_id=233459917]
+position = Vector2(2, -2)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=289293775]
 position = Vector2(-106.000015, -150)
@@ -2039,6 +2041,9 @@ shape = SubResource("RectangleShape2D_vgaah")
 [node name="Bathdoor" type="CollisionShape2D" parent="Door1" unique_id=710884379]
 position = Vector2(-31, 10)
 
+[node name="DoorLabel" parent="Door1" unique_id=180456681 instance=ExtResource("14_r0gp0")]
+label_text = "Bedroom"
+
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("13_jyuvu")]
 z_index = 3
 position = Vector2(27, -155)
@@ -2048,9 +2053,9 @@ position = Vector2(0, 19)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1246001286]
 material = SubResource("ShaderMaterial_ke588")
-offset_left = -380.0
+offset_left = -321.0
 offset_top = 117.0
-offset_right = 75.0
+offset_right = 134.0
 offset_bottom = 457.0
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("17_a3jn6")

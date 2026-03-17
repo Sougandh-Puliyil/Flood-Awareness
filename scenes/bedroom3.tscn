@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="20_u3gv0"]
 [ext_resource type="PackedScene" uid="uid://bf8o17ldxyl7k" path="res://scenes/WaterBottle.tscn" id="21_5are8"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="21_dioxu"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="21_mwrx5"]
 [ext_resource type="PackedScene" uid="uid://bmvpx235e4kwp" path="res://scenes/Phone.tscn" id="22_us20n"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
@@ -11990,6 +11991,9 @@ position = Vector2(541, 659)
 scale = Vector2(4, 4)
 room_name = "upperFloor"
 entry_name = "bedroomD3"
+
+[node name="DoorLabel" parent="BedD3/Sprite2D" parent_id_path=PackedInt32Array(771510446, 708255774) index="0" unique_id=180456681 instance=ExtResource("21_mwrx5")]
+label_text = "Upstairs Hall"
 
 [node name="CollisionShape2D" parent="BedD3" index="1" unique_id=1845919978]
 position = Vector2(15.199997, -25.087494)

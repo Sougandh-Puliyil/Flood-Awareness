@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="12_k1jr4"]
 [ext_resource type="Texture2D" uid="uid://d4ayxd0qtqgeg" path="res://art/pixelinterior_LRK_v1.1/cabinets_LRK.png" id="12_ktc20"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="12_umms5"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="14_k1cyo"]
 [ext_resource type="Texture2D" uid="uid://cwel66rkusjwy" path="res://assets/Ghostpixxells_pixelfood/04_bowl.png" id="15_88wuv"]
 [ext_resource type="Texture2D" uid="uid://dpgmsywiaxjwb" path="res://assets/Ghostpixxells_pixelfood/03_dish_pile.png" id="15_bs8bs"]
 [ext_resource type="PackedScene" uid="uid://bsuj8a5ucx5y5" path="res://scenes/food_1.tscn" id="16_acu1m"]
@@ -2633,6 +2634,7 @@ size = Vector2(28, 26)
 shader = ExtResource("18_3fy06")
 
 [node name="Kitchen" type="Node2D" unique_id=1594383965]
+position = Vector2(35, 191)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1657532730]
 position = Vector2(-149, -59)
@@ -2669,6 +2671,9 @@ shape = SubResource("RectangleShape2D_vpxcu")
 
 [node name="Kitch" type="CollisionShape2D" parent="Door1" unique_id=1971940367]
 position = Vector2(-37, 11)
+
+[node name="DoorLabel" parent="Door1" unique_id=180456681 instance=ExtResource("14_k1cyo")]
+label_text = "Living Room"
 
 [node name="Food2" type="Area2D" parent="." unique_id=675726767]
 position = Vector2(-129, 0)

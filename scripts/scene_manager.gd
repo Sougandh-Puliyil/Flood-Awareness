@@ -11,8 +11,9 @@ var scenes: Dictionary={
 	"bedroom2":"res://scenes/Ground_Bedroom_2.tscn",
 	"Gbathroom1":"res://scenes/Ground_Bathroom_1.tscn",
 	"Gbathroom2":"res://scenes/Ground_Bathroom_2.tscn",
-	"Living":"res://scenes/Ground_Living.tscn"
-	#"outdoor":"WE HAVE NOT DEFINED YET"
+	"Living":"res://scenes/Ground_Living.tscn",
+	"Tutorial":"res://scenes/tutorial.tscn",
+	"Tut_bath":"res://scenes/tutorial_bathroom.tscn"
 }
 
 # helper: search for a node entry case-insensitively

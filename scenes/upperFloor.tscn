@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dx77xytb5eex4" path="res://assets/cabinets_LRK.png" id="3_ixmio"]
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="4_snk3i"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="8_yvdv1"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="9_f035a"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_sqwav"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_ac8ao"]
 [ext_resource type="PackedScene" uid="uid://d2kjkxfy81ufj" path="res://scenes/torch.tscn" id="12_f035a"]
@@ -2838,6 +2839,7 @@ size = Vector2(30, 48)
 size = Vector2(153, 78)
 
 [node name="UpperFloor" type="Node2D" unique_id=1492530650]
+position = Vector2(-357, -208)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=862411]
 format = 2
@@ -2892,6 +2894,9 @@ texture = ExtResource("3_i2vuv")
 region_enabled = true
 region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
 
+[node name="BathDoorLabel" parent="BathDoor/Sprite2D" unique_id=180456681 instance=ExtResource("9_f035a")]
+label_text = "Bathroom"
+
 [node name="BDoor" type="Area2D" parent="BathDoor" unique_id=821684294]
 position = Vector2(15.2, -84.00001)
 scale = Vector2(0.99999994, 0.99999994)
@@ -2910,6 +2915,9 @@ position = Vector2(15, -24)
 texture = ExtResource("3_i2vuv")
 region_enabled = true
 region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
+
+[node name="Room3DoorLabel" parent="BedDoor3/Sprite2D" unique_id=570023986 instance=ExtResource("9_f035a")]
+label_text = "Bedroom"
 
 [node name="bedroomD3" type="Area2D" parent="BedDoor3" unique_id=1723063755]
 position = Vector2(14.800011, -83.6)
@@ -2944,6 +2952,9 @@ position = Vector2(15, -24)
 texture = ExtResource("3_i2vuv")
 region_enabled = true
 region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
+
+[node name="Room4DoorLabel" parent="BedDoor4/Sprite2D" unique_id=1192645537 instance=ExtResource("9_f035a")]
+label_text = "Bedroom"
 
 [node name="bedroomD4" type="Area2D" parent="BedDoor4" unique_id=733446733]
 position = Vector2(13.199999, -82.40001)
@@ -2983,6 +2994,9 @@ texture = ExtResource("3_i2vuv")
 region_enabled = true
 region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
 
+[node name="BalcDoorLabel" parent="Balcony/Sprite2D" unique_id=1640271111 instance=ExtResource("9_f035a")]
+label_text = "Balcony"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balcony" unique_id=803569148]
 position = Vector2(15, -24)
 shape = SubResource("RectangleShape2D_f035a")
@@ -3008,7 +3022,7 @@ metadata/_edit_group_ = true
 position = Vector2(0, -50)
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("8_yvdv1")]
-position = Vector2(-436.99997, -151.00005)
+position = Vector2(-39, -156.99998)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("10_sqwav")
 
@@ -3024,6 +3038,9 @@ shape = SubResource("RectangleShape2D_sqwav")
 
 [node name="Stairs" type="CollisionShape2D" parent="DownStairs" unique_id=1043144821]
 position = Vector2(2, 79)
+
+[node name="DownStairsLabel" parent="DownStairs" unique_id=1091155283 instance=ExtResource("9_f035a")]
+scale = Vector2(2.1999989, 2.1999989)
 
 [node name="Torch" parent="." unique_id=316296084 instance=ExtResource("12_f035a")]
 position = Vector2(-400, -254)

@@ -15,8 +15,8 @@ func _ready():
 		var drop = Area2D.new()
 		drop.set_script(load("res://collectible.gd"))
 
-		drop.item = data.item
-		drop.item_id = ""
+		drop.drop_id = data.id
+		drop.item_id = data.item.item_id
 
 		var sprite = Sprite2D.new()
 		sprite.texture = data.item.icon

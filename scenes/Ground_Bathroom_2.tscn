@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dsilqpt3evln" path="res://art/pixelinterior_BA_v1.0/cabinets_BA.png" id="12_ke8cv"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="13_nrhm0"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="13_rtig5"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="14_76v3c"]
 [ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="16_jnuw8"]
 [ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="17_yjq2o"]
 
@@ -2035,6 +2036,9 @@ shape = SubResource("RectangleShape2D_spwqu")
 
 [node name="Bathdoor" type="CollisionShape2D" parent="Door1" unique_id=1638721446]
 position = Vector2(-35, 10)
+
+[node name="DoorLabel" parent="Door1" unique_id=180456681 instance=ExtResource("14_76v3c")]
+label_text = "Bedroom"
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("13_rtig5")]
 z_index = 3

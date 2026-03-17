@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_6ity2"]
 [ext_resource type="Texture2D" uid="uid://70w4hkdnoiip" path="res://assets/Collectibles/Choose/vector-illustration-hand-sanitizer-bottle-260nw-2653964653-removebg-preview.png" id="1_eut25"]
-[ext_resource type="Resource" uid="uid://d02goetirn1fp" path="res://data/Sanitizer.tres" id="2_o8l4h"]
+[ext_resource type="Resource" uid="uid://d02goetirn1fp" path="res://assets/Collectibles_final/Sanitizer.tres" id="2_o8l4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5335"]
 size = Vector2(20, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ity2"]
+radius = 224.00223
 
 [node name="Area2D" type="Area2D" unique_id=1185945861]
 script = ExtResource("1_6ity2")
@@ -20,3 +23,8 @@ texture = ExtResource("1_eut25")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1635207062]
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_u5335")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1861141792]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=247072884]
+shape = SubResource("CircleShape2D_6ity2")
