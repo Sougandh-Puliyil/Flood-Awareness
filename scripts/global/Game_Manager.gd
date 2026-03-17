@@ -4,8 +4,7 @@ extends Node
 var right_item_count: int = 0
 
 # The "Master List" of what counts as a correct item
-var required_items = ["FirstAid", "File", "Food_collectible","torch","Phone","Sanitizer
-","WaterBottle"]
+var required_items = ["FirstAid", "File", "Food_collectible","torch","Phone","Sanitizer","WaterBottle"]
 
 # --- 1. FUNCTION FOR ADDING ---
 func collect_item(item_name: String):

@@ -29,6 +29,8 @@ Inventory="*uid://bgpeho3nwex5j"
 InventoryToggle="*uid://d42nlfrpwi2f"
 InventoryUi="*uid://c8m6wvg6wwocg"
 DropManager="*uid://4qsfuvgy7aot"
+DatabaseManager="*uid://dtuba5c15ue2u"
+AuthManager="*uid://cmgl45pq7gyav"
 
 [dotnet]
 
