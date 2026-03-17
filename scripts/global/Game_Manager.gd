@@ -98,7 +98,7 @@ var final_safety_score: float = 0.0
 var risk_level_string: String = ""
 
 func calculate_metrics():
-	# 1. Finding RT (Response Time)
+	# Finding RT (Response Time)
 	response_time = 300
 	for entry in Global_Logic.session_log:
 		if entry["action"].begins_with("Correct item ADDED") or entry["action"].begins_with("Picked up a non-essential"):
@@ -106,21 +106,24 @@ func calculate_metrics():
 			response_time = clamp (float(first_item_time - TimerManager.alert_target_time),0.0,300.0)
 			break # Stop at the first one found
 
-	# 2. Finding ED (Exposure Duration)
+	# Finding ED (Exposure Duration)
 	if rescue_time > 20: # 20s is when water starts
 		exposure_duration = clamp(float( rescue_time - 20),0.0, 600.0)
-	# 3. Finding item_collection_score 
+	# Finding item_collection_score 
 	item_collection_score=float( right_item_count)/float(total_safe_item_count) 
-	# 4. NORMALIZATION (Turning raw values into 0.0 to 1.0)
+	# NORMALIZATION (Turning raw values into 0.0 to 1.0)
 	norm_rt = 1.0 - (response_time / 300.0)
 	norm_ed = 1.0 - (exposure_duration / 600.0)
 	norm_items = clamp(float(item_collection_score), 0.0, 1.0)
-	# 4. Overall Safety Index Calculation 
+	# Overall Safety Index Calculation 
 	final_safety_score = (norm_rt * 0.30) + (norm_items * 0.45) + (norm_ed * 0.25)
 	final_safety_score=snapped(final_safety_score,0.01)
 	print(final_safety_score)
-	# 5. RISK LEVEL MAPPING
+	# RISK LEVEL MAPPING
 	risk_level_string = _map_score_to_risk(final_safety_score)
+	# --- SAVE TO DB ---
+	DatabaseManager.save_score(Global_Logic.player_username, final_safety_score)
+	print("Final Safety Index saved to database.")
 	
 	print("Final Safety Index: ", final_safety_score * 100, "% (", risk_level_string, ")")
 

@@ -24,6 +24,7 @@ func set_username(entered_name: String):
 
 # ---Session Clearing while logout
 func reset_game_state():
+	player_username = "Guest"
 	# Reset Floats/Ints
 	current_water_height = 0.0
 	water_level = 0.0
@@ -99,7 +100,9 @@ func trigger_game_over():
 	TimerManager.stop_timer()
 	
 	# Configure the Game Over UI via TimerManager
-	TimerManager.alert_box.color = Color(0.15, 0.15, 0.15, 0.95) # Dark, serious background
+	var panel_style = TimerManager.alert_box.get_theme_stylebox("panel") as StyleBoxFlat
+	if panel_style:
+		panel_style.bg_color = Color(0.15, 0.15, 0.15, 0.95) # Dark, serious gray/black
 	#TimerManager.alert_box.border_color = Color(1, 0, 0) # Red border if you use a NinePatch or similar, otherwise just color
 	
 	# Update Label Text with a professional Game Over message
