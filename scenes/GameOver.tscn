@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcdfqx5efoll7"]
 
-[node name="Score" type="Node2D" unique_id=1453403997]
+[node name="GameOver" type="Node2D" unique_id=1453403997]
 
 [node name="Control" type="Control" parent="." unique_id=1248744160]
 layout_mode = 3

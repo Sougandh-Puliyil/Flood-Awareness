@@ -37,6 +37,10 @@ func reset_game_state():
 	# Reset Arrays
 	session_log.clear()
 	
+	# Resets the alert box
+	if TimerManager.alert_box:
+		TimerManager.alert_box.visible = false # Clean slate for next player
+	
 	# Reset Meta data 
 	if has_meta("flood_started"):
 		remove_meta("flood_started")
@@ -95,6 +99,8 @@ func get_collected_items_text():
 	
 # ---- Game Over Trigger Function ----
 func trigger_game_over():
+	if game_over_triggered:
+		return
 	game_over_triggered = true
 	
 	# Stop the clock
@@ -108,16 +114,28 @@ func trigger_game_over():
 	
 	# Update Label Text with a professional Game Over message
 	TimerManager.alert_label.text = "🚨 EVACUATION FAILED 🚨\n\nWater levels have reached critical height.\nRedirecting to Results..."
-	
 	# Make it visible
 	TimerManager.set_process(false)
 	TimerManager.alert_box.visible = true
+	
+	# Calculate metrics immediately so DB is updated
+	if has_node("/root/Game_Manager"):
+		get_node("/root/Game_Manager").calculate_metrics()
+	
 	
 	print("Game Over triggered. Redirecting in 4 seconds...")
 
 	# Wait for 4 seconds
 	await get_tree().create_timer(4.0).timeout
 	
-	# 4. Redirect to the score/results scene
-	get_tree().change_scene_to_file("res://scenes/score.tscn")
+	# HIDE the popup so it doesn't cover the GameOver screen
+	TimerManager.alert_box.visible = false
+	
+	# Change to the intermediate GameOver scene
+	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+	
+	# Wait 4s in GameOver, then move to Feedback ---
+	await get_tree().create_timer(4.0).timeout
+	
+	get_tree().change_scene_to_file("res://ui/feedback_card.tscn")
 	
