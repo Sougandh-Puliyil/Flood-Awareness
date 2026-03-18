@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://df4lvyxfx64ks" path="res://assets/floor_wood_planks.png" id="2_fiukk"]
 [ext_resource type="Texture2D" uid="uid://b5b2vic8wldf5" path="res://assets/floorswalls_LRK.png" id="3_uqyj1"]
 [ext_resource type="Script" uid="uid://b26nxpd1rm4cw" path="res://scripts/tutorial.gd" id="4_4kmhl"]
+[ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="5_gbqnl"]
+[ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="6_gbqnl"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="7_ckvwl"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="7_nlqja"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jh7ng"]
 texture = ExtResource("2_fiukk")
@@ -262,7 +266,11 @@ texture = ExtResource("3_uqyj1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_chjcb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlqja"]
+size = Vector2(30, 48)
+
 [node name="Tutorial" type="Node2D" unique_id=883383689]
+scale = Vector2(1, 0.9936508)
 script = ExtResource("4_4kmhl")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1977990700]
@@ -289,6 +297,7 @@ tile_set = SubResource("TileSet_3aqmq")
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("1_py1tg")]
 position = Vector2(621, 181)
 scale = Vector2(3, 3)
+script = ExtResource("5_gbqnl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1649871005]
 
@@ -313,27 +322,32 @@ offset_bottom = 396.0
 
 [node name="Instruction" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=1196646507]
 layout_mode = 2
-text = "Use the arrow keys to move:"
+text = ".Use the arrow keys to move:"
 
 [node name="Up" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=1464097161]
 layout_mode = 2
-text = "↑ Up Arrow = Move Forward"
+text = ".↑ Up Arrow = Move Forward"
 
 [node name="Down" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=668891306]
 layout_mode = 2
-text = "↓ Down Arrow = Move Backward"
+text = ".↓ Down Arrow = Move Backward"
 
 [node name="Right" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=971694577]
 layout_mode = 2
-text = "→ Right Arrow = Move Right"
+text = ".→ Right Arrow = Move Right"
 
 [node name="Left" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=1380836507]
 layout_mode = 2
-text = "← Left Arrow = Move Left"
+text = ".← Left Arrow = Move Left"
 
 [node name="inventory" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=1496685524]
 layout_mode = 2
-text = "Press button I=open inventory"
+text = ".Press button I=open inventory"
+
+[node name="Door" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=329921408]
+layout_mode = 2
+text = ".Walk Into a door to Go to the next 
+room"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=105320164]
 layout_mode = 0
@@ -361,7 +375,7 @@ layout_mode = 0
 offset_left = -12.0
 offset_top = 171.0
 offset_right = 295.0
-offset_bottom = 390.0
+offset_bottom = 469.0
 pivot_offset = Vector2(143, 2)
 color = Color(0.18461773, 0.54370695, 0.71589434, 0.7529412)
 
@@ -379,3 +393,32 @@ theme_override_colors/font_color = Color(0.05882353, 0.2509804, 0.9019608, 1)
 theme_override_font_sizes/font_size = 23
 text = "Tutorial – Mode"
 uppercase = true
+
+[node name="Tudoor" type="Area2D" parent="." unique_id=1147964071]
+position = Vector2(725, 473.00323)
+scale = Vector2(2.5702167, 2.5702167)
+
+[node name="TutorialDoor" parent="." unique_id=771510446 instance=ExtResource("6_gbqnl")]
+position = Vector2(807, 652.7828)
+scale = Vector2(2.5702167, 2.5702167)
+room_name = "Tut_bath"
+entry_name = "Tudoor"
+
+[node name="DoorLabel" parent="TutorialDoor/Sprite2D" parent_id_path=PackedInt32Array(771510446, 708255774) index="0" unique_id=180456681 instance=ExtResource("7_nlqja")]
+label_text = "Tutorial next Room"
+
+[node name="Area2D" type="Area2D" parent="TutorialDoor" unique_id=461501779]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("7_ckvwl")
+room_name = "Tut_bath"
+entry_name = "Tudoor"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialDoor/Area2D" unique_id=84557707]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_nlqja")
+
+[connection signal="body_entered" from="TutorialDoor/Area2D" to="TutorialDoor/Area2D" method="_on_body_entered"]
+
+[editable path="TutorialDoor"]

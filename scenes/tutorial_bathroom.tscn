@@ -1,25 +1,28 @@
-[gd_scene format=4 uid="uid://dhhdrwdglyic8"]
+[gd_scene format=4 uid="uid://dcxbobg872c48"]
 
-[ext_resource type="Texture2D" uid="uid://k717nlnncaah" path="res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png" id="1_sk8oi"]
-[ext_resource type="Texture2D" uid="uid://0sv5lfl1vqn8" path="res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png" id="2_fhwqr"]
-[ext_resource type="Texture2D" uid="uid://boevjrs03efyc" path="res://art/pixelinterior_BA_v1.0/fixtures_BA.png" id="3_lq4r3"]
-[ext_resource type="Texture2D" uid="uid://51x46nh8qwkk" path="res://art/pixelinterior_BA_v1.0/textiles_BA.png" id="4_ukl0y"]
-[ext_resource type="Texture2D" uid="uid://q5p6j730ylap" path="res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png" id="5_ai10c"]
-[ext_resource type="Texture2D" uid="uid://cx2u6gnovk1m3" path="res://art/pixelinterior_BR_v1.1/wardrobes_BR.png" id="6_het0v"]
-[ext_resource type="Texture2D" uid="uid://boeoeu7rw0jlk" path="res://art/pixelinterior_BR_v1.1/beds_BR.png" id="7_g4s2l"]
-[ext_resource type="Texture2D" uid="uid://b8kgp5b8cp11g" path="res://art/pixelinterior_BR_v1.1/decorations_BR.png" id="8_3di10"]
-[ext_resource type="Texture2D" uid="uid://hvraamjt35an" path="res://art/pixelinterior_LRK_v1.1/livingroom_LRK.png" id="9_1ph64"]
-[ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="10_1i3nt"]
-[ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="11_e8y7f"]
-[ext_resource type="Texture2D" uid="uid://dsilqpt3evln" path="res://art/pixelinterior_BA_v1.0/cabinets_BA.png" id="12_ln7ll"]
-[ext_resource type="Texture2D" uid="uid://dlbwefyktiffi" path="res://assets/doorswindowsstairs_LRK.png" id="13_bjofa"]
-[ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="14_pbbhy"]
-[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="15_5wh4j"]
-[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="15_lv615"]
-[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="15_oaj58"]
+[ext_resource type="Texture2D" uid="uid://k717nlnncaah" path="res://art/kenney_retro-textures-1/PNG/wall_brick_sand_center.png" id="1_cmtwq"]
+[ext_resource type="Script" uid="uid://b26nxpd1rm4cw" path="res://scripts/tutorial.gd" id="1_tgeq2"]
+[ext_resource type="Texture2D" uid="uid://0sv5lfl1vqn8" path="res://art/kenney_retro-textures-1/PNG/floor_tiles_sand_large.png" id="2_kr43q"]
+[ext_resource type="Texture2D" uid="uid://boevjrs03efyc" path="res://art/pixelinterior_BA_v1.0/fixtures_BA.png" id="3_nc1iw"]
+[ext_resource type="Texture2D" uid="uid://51x46nh8qwkk" path="res://art/pixelinterior_BA_v1.0/textiles_BA.png" id="4_tgeq2"]
+[ext_resource type="Texture2D" uid="uid://q5p6j730ylap" path="res://art/kenney_retro-textures-1/PNG/window_square_divided_lit.png" id="5_jsf8m"]
+[ext_resource type="Texture2D" uid="uid://cx2u6gnovk1m3" path="res://art/pixelinterior_BR_v1.1/wardrobes_BR.png" id="6_xptqw"]
+[ext_resource type="Texture2D" uid="uid://boeoeu7rw0jlk" path="res://art/pixelinterior_BR_v1.1/beds_BR.png" id="7_p5cvy"]
+[ext_resource type="Texture2D" uid="uid://b8kgp5b8cp11g" path="res://art/pixelinterior_BR_v1.1/decorations_BR.png" id="8_4rnq4"]
+[ext_resource type="Texture2D" uid="uid://hvraamjt35an" path="res://art/pixelinterior_LRK_v1.1/livingroom_LRK.png" id="9_hhu76"]
+[ext_resource type="Texture2D" uid="uid://danc3663efm" path="res://art/pixelinterior_LRK_v1.1/doorswindowsstairs_LRK.png" id="10_n4y6o"]
+[ext_resource type="Texture2D" uid="uid://vsr4ldpsiak6" path="res://art/pixelinterior_LRK_v1.1/floorswalls_LRK.png" id="11_3tp85"]
+[ext_resource type="Texture2D" uid="uid://dsilqpt3evln" path="res://art/pixelinterior_BA_v1.0/cabinets_BA.png" id="12_ea6ed"]
+[ext_resource type="Texture2D" uid="uid://dlbwefyktiffi" path="res://assets/doorswindowsstairs_LRK.png" id="13_0pvle"]
+[ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="14_ra4k6"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="15_um8g1"]
+[ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="16_7d3u8"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="16_jsf8m"]
+[ext_resource type="PackedScene" uid="uid://bj8mw0ce1ykti" path="res://scenes/FirstAid.tscn" id="17_nc1iw"]
+[ext_resource type="PackedScene" uid="uid://dm62784ly7i6y" path="res://scenes/Sanitizer.tscn" id="18_tgeq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfwhe"]
-texture = ExtResource("1_sk8oi")
+texture = ExtResource("1_cmtwq")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
@@ -86,7 +89,7 @@ texture = ExtResource("1_sk8oi")
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtmbr"]
-texture = ExtResource("2_fhwqr")
+texture = ExtResource("2_kr43q")
 0:0/0 = 0
 0:1/0 = 0
 0:2/0 = 0
@@ -105,7 +108,7 @@ texture = ExtResource("2_fhwqr")
 3:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w845t"]
-texture = ExtResource("3_lq4r3")
+texture = ExtResource("3_nc1iw")
 7:0/0 = 0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
@@ -161,7 +164,7 @@ texture = ExtResource("3_lq4r3")
 7:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l3ywl"]
-texture = ExtResource("4_ukl0y")
+texture = ExtResource("4_tgeq2")
 4:1/0 = 0
 5:1/0 = 0
 10:1/0 = 0
@@ -246,12 +249,12 @@ texture = ExtResource("4_ukl0y")
 9:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2xk"]
-texture = ExtResource("5_ai10c")
+texture = ExtResource("5_jsf8m")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi2v1"]
-texture = ExtResource("6_het0v")
+texture = ExtResource("6_xptqw")
 margins = Vector2i(13, 0)
 0:0/0 = 0
 1:0/0 = 0
@@ -715,7 +718,7 @@ margins = Vector2i(13, 0)
 19:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7f8h"]
-texture = ExtResource("7_g4s2l")
+texture = ExtResource("7_p5cvy")
 1:1/0 = 0
 2:1/0 = 0
 2:2/0 = 0
@@ -818,7 +821,7 @@ texture = ExtResource("7_g4s2l")
 13:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05ptu"]
-texture = ExtResource("8_3di10")
+texture = ExtResource("8_4rnq4")
 1:1/0 = 0
 2:1/0 = 0
 2:2/0 = 0
@@ -901,7 +904,7 @@ texture = ExtResource("8_3di10")
 2:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tpn7"]
-texture = ExtResource("9_1ph64")
+texture = ExtResource("9_hhu76")
 9:1/0 = 0
 10:1/0 = 0
 12:1/0 = 0
@@ -1290,7 +1293,7 @@ texture = ExtResource("9_1ph64")
 24:24/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xe0sl"]
-texture = ExtResource("10_1i3nt")
+texture = ExtResource("10_n4y6o")
 27:0/0 = 0
 28:0/0 = 0
 33:0/0 = 0
@@ -1731,7 +1734,7 @@ texture = ExtResource("10_1i3nt")
 25:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8p21"]
-texture = ExtResource("11_e8y7f")
+texture = ExtResource("11_3tp85")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1958,7 +1961,7 @@ texture = ExtResource("11_e8y7f")
 13:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fm38m"]
-texture = ExtResource("12_ln7ll")
+texture = ExtResource("12_ea6ed")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
@@ -2004,7 +2007,7 @@ sources/10 = SubResource("TileSetAtlasSource_w845t")
 sources/11 = SubResource("TileSetAtlasSource_l3ywl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pbbhy"]
-texture = ExtResource("13_bjofa")
+texture = ExtResource("13_0pvle")
 27:0/0 = 0
 28:0/0 = 0
 33:0/0 = 0
@@ -2451,7 +2454,8 @@ sources/0 = SubResource("TileSetAtlasSource_pbbhy")
 size = Vector2(30, 48)
 
 [node name="Ground_Bathroom_1" type="Node2D" unique_id=233459917]
-position = Vector2(-3, 24)
+position = Vector2(-51, 91)
+script = ExtResource("1_tgeq2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=289293775]
 position = Vector2(-35, -158.00002)
@@ -2473,23 +2477,23 @@ layer_2/name = "Layer2"
 tile_map_data = PackedByteArray("AAD9//3/AAAIAAIAAAD8//3/AAAHAAIAAAD8//z/AAAHAAEAAAD9//z/AAAIAAEAAAD9//7/AAAIAAMAAAD8//7/AAAHAAMAAAA=")
 tile_set = SubResource("TileSet_5wh4j")
 
-[node name="bathdoor" type="Area2D" parent="." unique_id=1161897426]
-position = Vector2(-49, -99)
+[node name="Tudoor" type="Area2D" parent="." unique_id=1161897426]
+position = Vector2(-46, -146)
 
-[node name="bathDoor" parent="." unique_id=771510446 instance=ExtResource("14_pbbhy")]
+[node name="bathDoor" parent="." unique_id=771510446 instance=ExtResource("14_ra4k6")]
 position = Vector2(-64, -42)
 scale = Vector2(1, 1)
-room_name = "upperFloor"
-entry_name = "BDoor"
+room_name = "Tutorial"
+entry_name = "Tudoor"
 
-[node name="DoorLabel" parent="bathDoor/Sprite2D" parent_id_path=PackedInt32Array(771510446, 708255774) index="0" unique_id=180456681 instance=ExtResource("15_oaj58")]
-label_text = "Upstairs Hall"
+[node name="DoorLabel" parent="bathDoor/Sprite2D" parent_id_path=PackedInt32Array(771510446, 708255774) index="0" unique_id=180456681 instance=ExtResource("16_jsf8m")]
+label_text = "Tutorial Page"
 
 [node name="Area2D" type="Area2D" parent="bathDoor" unique_id=1239990530]
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("15_lv615")
-room_name = "upperFloor"
-entry_name = "BDoor"
+script = ExtResource("15_um8g1")
+room_name = "Tutorial"
+entry_name = "Tudoor"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bathDoor/Area2D" unique_id=2029832265]
 z_index = 1
@@ -2497,8 +2501,111 @@ position = Vector2(15.000002, -24.000004)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_oaj58")
 
-[node name="Player" parent="." unique_id=1314570691 instance=ExtResource("15_5wh4j")]
+[node name="Player" parent="." unique_id=1314570691 instance=ExtResource("16_7d3u8")]
 position = Vector2(-50, -131)
+
+[node name="Firstaid" parent="." unique_id=183748409 instance=ExtResource("17_nc1iw")]
+position = Vector2(-25.000004, -221)
+scale = Vector2(0.39999753, 0.39999753)
+
+[node name="Sanitizer" parent="." unique_id=1185945861 instance=ExtResource("18_tgeq2")]
+position = Vector2(-10, -221)
+scale = Vector2(0.19999997, 0.19999997)
+
+[node name="Control" type="Control" parent="." unique_id=146986804]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.99999
+offset_top = -279.0
+offset_right = 76.0
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0015088, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1826410813]
+layout_mode = 0
+offset_left = -16.999992
+offset_top = 51.0
+offset_right = 254.0
+offset_bottom = 315.0
+scale = Vector2(0.39999664, 0.39999664)
+
+[node name="Instruction" type="Label" parent="Control/VBoxContainer" unique_id=385354322]
+layout_mode = 2
+text = ".Use the arrow keys to move:"
+
+[node name="Up" type="Label" parent="Control/VBoxContainer" unique_id=1477708896]
+layout_mode = 2
+text = ".↑ Up Arrow = Move Forward"
+
+[node name="Down" type="Label" parent="Control/VBoxContainer" unique_id=862357303]
+layout_mode = 2
+text = ".↓ Down Arrow = Move Backward"
+
+[node name="Right" type="Label" parent="Control/VBoxContainer" unique_id=2124928964]
+layout_mode = 2
+text = ".→ Right Arrow = Move Right"
+
+[node name="Left" type="Label" parent="Control/VBoxContainer" unique_id=216848176]
+layout_mode = 2
+text = ".← Left Arrow = Move Left"
+
+[node name="inventory" type="Label" parent="Control/VBoxContainer" unique_id=1932683561]
+layout_mode = 2
+text = ".Press button I=open inventory"
+
+[node name="Door" type="Label" parent="Control/VBoxContainer" unique_id=976614083]
+layout_mode = 2
+text = ".Walk Into a door to Go to the next 
+room"
+
+[node name="Item" type="Label" parent="Control/VBoxContainer" unique_id=506082123]
+layout_mode = 2
+text = ".Click an Item after going near to it
+ to pick it up"
+
+[node name="Bg" type="ColorRect" parent="Control" unique_id=845898655]
+z_index = -1
+layout_mode = 0
+offset_left = -97.0
+offset_top = 39.039993
+offset_right = 210.0
+offset_bottom = 337.03998
+scale = Vector2(0.47999665, 0.47999665)
+pivot_offset = Vector2(143, 2)
+color = Color(0.18461773, 0.54370695, 0.71589434, 0.7529412)
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control" unique_id=353101408]
+layout_mode = 0
+offset_left = -340.0
+offset_top = -8.0
+offset_right = -263.0
+offset_bottom = 23.0
+scale = Vector2(0.6000012, 0.6000012)
+
+[node name="BackButton" type="Button" parent="Control/VBoxContainer3" unique_id=1836792323]
+layout_mode = 2
+text = "Back"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=954952949]
+z_index = 1
+layout_mode = 0
+offset_left = -16.999992
+offset_top = 3.0
+offset_right = 231.0
+offset_bottom = 35.0
+scale = Vector2(0.6, 0.60534745)
+
+[node name="Title" type="Label" parent="Control/VBoxContainer2" unique_id=1838630006]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05882353, 0.2509804, 0.9019608, 1)
+theme_override_font_sizes/font_size = 23
+text = "Tutorial – Mode"
+uppercase = true
 
 [connection signal="body_entered" from="bathDoor/Area2D" to="bathDoor/Area2D" method="_on_body_entered"]
 

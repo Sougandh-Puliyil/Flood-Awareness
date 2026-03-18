@@ -37,6 +37,10 @@ func reset_game_state():
 	# Reset Arrays
 	session_log.clear()
 	
+	# Resets the alert box
+	if TimerManager.alert_box:
+		TimerManager.alert_box.visible = false # Clean slate for next player
+	
 	# Reset Meta data 
 	if has_meta("flood_started"):
 		remove_meta("flood_started")
@@ -47,7 +51,11 @@ func reset_game_state():
 	TimerManager.reset_timer()
 	print("Global Logic: Game state has been fully reset for a new player.")
 # --- Water Level logic ---
+<<<<<<< HEAD
 # ----- Ground Floor --------
+=======
+# ------------
+>>>>>>> main
 var max_height: float = -336  # Total pixels the water should rise
 var total_time_ground_fill: float = 40    # Total duration of the flood in seconds (15s)
 var flood_start_time: float = 20.0 # Delay before rising starts
@@ -115,7 +123,11 @@ func _handle_flood_physics(elapsed: float, start_time: float, delta: float):
 		water_current_speed = (max_height * power_factor / total_time_ground_fill) * pow(t / total_time_ground_fill, power_factor - 1.0)
 		current_water_height += water_current_speed * delta
 # ---- Game Over Trigger Function ----
+<<<<<<< HEAD
 func trigger_game_over(reason: String = ""):
+=======
+func trigger_game_over():
+>>>>>>> main
 	if game_over_triggered:
 		return
 	game_over_triggered = true
@@ -130,20 +142,42 @@ func trigger_game_over(reason: String = ""):
 	#TimerManager.alert_box.border_color = Color(1, 0, 0) # Red border if you use a NinePatch or similar, otherwise just color
 	
 	# Update Label Text with a professional Game Over message
+<<<<<<< HEAD
 	if reason != "":
 		TimerManager.alert_label.text = "🚨 GAME OVER 🚨\n\n" + reason + "\nRedirecting..."
 	else:
 		TimerManager.alert_label.text = "🚨 EVACUATION FAILED 🚨\n\nWater levels reached critical height."
 	
+=======
+	TimerManager.alert_label.text = "🚨 EVACUATION FAILED 🚨\n\nWater levels have reached critical height.\nRedirecting to Results..."
+>>>>>>> main
 	# Make it visible
 	TimerManager.set_process(false)
 	TimerManager.alert_box.visible = true
+	
+	# Calculate metrics immediately so DB is updated
+	if has_node("/root/Game_Manager"):
+		get_node("/root/Game_Manager").calculate_metrics()
+	
 	
 	print("Game Over triggered. Redirecting in 4 seconds...")
 
 	# Wait for 4 seconds
 	await get_tree().create_timer(4.0).timeout
 	
+<<<<<<< HEAD
 	# 4. Redirect to the score/results scene
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+=======
+	# HIDE the popup so it doesn't cover the GameOver screen
+	TimerManager.alert_box.visible = false
+	
+	# Change to the intermediate GameOver scene
+	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+	
+	# Wait 4s in GameOver, then move to Feedback ---
+	await get_tree().create_timer(4.0).timeout
+	
+	get_tree().change_scene_to_file("res://ui/feedback_card.tscn")
+>>>>>>> main
 	

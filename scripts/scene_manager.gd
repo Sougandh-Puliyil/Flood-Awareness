@@ -11,8 +11,9 @@ var scenes: Dictionary={
 	"bedroom2":"res://scenes/Ground_Bedroom_2.tscn",
 	"Gbathroom1":"res://scenes/Ground_Bathroom_1.tscn",
 	"Gbathroom2":"res://scenes/Ground_Bathroom_2.tscn",
-	"Living":"res://scenes/Ground_Living.tscn"
-	#"outdoor":"NOT DEFINED YET"
+	"Living":"res://scenes/Ground_Living.tscn",
+	"Tutorial":"res://scenes/tutorial.tscn",
+	"Tut_bath":"res://scenes/tutorial_bathroom.tscn"
 }
 
 # helper: search for a node entry case-insensitively
@@ -40,7 +41,7 @@ func _search_node_case_insensitive(node: Node, lower_name: String) -> Node:
 	return null
 func transition_to_scene(room:String):
 	var scene_path: String = scenes.get(room)
-
+	
 	if scene_path != null:
 		await get_tree().create_timer(0.25).timeout
 		get_tree().change_scene_to_file(scene_path)

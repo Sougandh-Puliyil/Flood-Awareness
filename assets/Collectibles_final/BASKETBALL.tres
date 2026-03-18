@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_j33nb")
-item_name = "bask"
+item_name = "basketball"
 icon = ExtResource("1_2u6wx")
 item_id = "Baskball"
 world_scale = Vector2(0.05, 0.05)

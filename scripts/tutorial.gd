@@ -1,10 +1,16 @@
 extends Node2D
 
 const MAIN_MENU_SCENE := "res://ui/MainMenu.tscn"
+var back_button: Button
 
-@onready var back_button: Button = $CanvasLayer/Control/VBoxContainer3/BackButton
+func _ready():
+	var scene = get_tree().current_scene
 
-func _ready() -> void:
+	if scene.scene_file_path == "res://scenes/tutorial.tscn":
+		back_button = $CanvasLayer/Control/VBoxContainer3/BackButton
+	else:
+		back_button = $Control/VBoxContainer3/BackButton
+
 	back_button.pressed.connect(_on_back_pressed)
 
 func _on_back_pressed() -> void:
