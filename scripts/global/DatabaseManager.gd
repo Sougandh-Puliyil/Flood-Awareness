@@ -37,3 +37,22 @@ func get_user_history(username: String):
 	             ORDER BY Timestamp DESC
 				 LIMIT 5;"
 	return db.select_rows(query, [username])
+
+func get_user_score(username: String) -> float:
+	var score = 0.0
+	
+	# We JOIN the two tables on the user_id column
+	var query = "SELECT s.Score FROM score_records s " + \
+				"JOIN Users u ON s.user_id = u.user_id " + \
+				"WHERE u.userName = '" + username + "' " + \
+				"ORDER BY s.Timestamp DESC LIMIT 1"
+	
+	db.query(query)
+	
+	if db.query_result.size() > 0:
+		score = db.query_result[0]["Score"]
+		print("DB: Fetched score for ", username, ": ", score)
+	else:
+		print("DB: No score found for ", username)
+		
+	return score
