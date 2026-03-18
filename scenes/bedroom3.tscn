@@ -19,8 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://bcsuwg8ssl4w7" path="res://art/GandalfHardcore Character Asset Pack/Male Clothing/PantPurpleInverse.png" id="17_kdqkn"]
 [ext_resource type="Texture2D" uid="uid://cmuu3ngbrkgf5" path="res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5.png" id="18_p0p7x"]
 [ext_resource type="Texture2D" uid="uid://bf8e86jsq5ydm" path="res://art/GandalfHardcore Character Asset Pack/Male Hair/Male Hair5 Inverse.png" id="19_20bct"]
-[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="20_u3gv0"]
+[ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="20_u3gv0"]
 [ext_resource type="PackedScene" uid="uid://bf8o17ldxyl7k" path="res://scenes/WaterBottle.tscn" id="21_5are8"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="21_dioxu"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="21_mwrx5"]
 [ext_resource type="PackedScene" uid="uid://bmvpx235e4kwp" path="res://scenes/Phone.tscn" id="22_us20n"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
@@ -11912,6 +11914,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxnf1"]
 size = Vector2(51, 97.125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwrx5"]
+size = Vector2(30, 48)
+
 [node name="main" type="Node2D" unique_id=869319662]
 
 [node name="upperFloor" type="TileMap" parent="." unique_id=1019231593]
@@ -11954,7 +11959,7 @@ tile_map_data = PackedByteArray("AAAEAPT/AAAGAAMAAAAEAPX/AAAGAAQAAAD6//T/AAAGAAM
 tile_set = SubResource("TileSet_e3kcx")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=781753931]
-position = Vector2(604, 443)
+position = Vector2(602, 351)
 script = ExtResource("11_u3gv0")
 
 [node name="Body" type="AnimatedSprite2D" parent="Player" unique_id=1524233226]
@@ -11987,13 +11992,35 @@ scale = Vector2(4, 4)
 room_name = "upperFloor"
 entry_name = "bedroomD3"
 
-[node name="bedD3" type="Area2D" parent="." unique_id=1843539560]
-position = Vector2(602, 441)
+[node name="DoorLabel" parent="BedD3/Sprite2D" parent_id_path=PackedInt32Array(771510446, 708255774) index="0" unique_id=180456681 instance=ExtResource("21_mwrx5")]
+label_text = "Upstairs Hall"
 
-[node name="Area2D" parent="." unique_id=1640276193 instance=ExtResource("21_5are8")]
+[node name="CollisionShape2D" parent="BedD3" index="1" unique_id=1845919978]
+position = Vector2(15.199997, -25.087494)
+
+[node name="Area2D" type="Area2D" parent="BedD3" unique_id=1585280403]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("21_dioxu")
+room_name = "upperFloor"
+entry_name = "bedroomD3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedD3/Area2D" unique_id=475584805]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_mwrx5")
+
+[node name="bedD3" type="Area2D" parent="." unique_id=1843539560]
+position = Vector2(606, 366)
+
+[node name="Bottle" parent="." unique_id=1640276193 instance=ExtResource("21_5are8")]
 position = Vector2(920, 518)
 scale = Vector2(1.2, 1.2)
 
-[node name="Area2D2" parent="." unique_id=600016296 instance=ExtResource("22_us20n")]
+[node name="Phone" parent="." unique_id=600016296 instance=ExtResource("22_us20n")]
 position = Vector2(968, 523)
 scale = Vector2(0.4, 0.4)
+
+[connection signal="body_entered" from="BedD3/Area2D" to="BedD3/Area2D" method="_on_body_entered"]
+
+[editable path="BedD3"]

@@ -55,10 +55,11 @@ func drop_item(index:int, player):
 	print("DROP FUNCTION CALLED")
 	if index < 0 or index >= items.size():
 		return
-
+	
 	var item = items[index]
 	items.remove_at(index)
 	Game_Manager.remove_item(item.item_id)
+	Inventory.collected_items.erase(item.item_id)
 	print("Dropping:", item.item_name)
 
 	# -------- CREATE COLLECTIBLE --------
@@ -68,7 +69,7 @@ func drop_item(index:int, player):
 	drop.set_script(load("res://scripts/collectible.gd")) # adjust path if needed
 
 	drop.item = item
-	drop.item_id = ""
+	drop.item_id = item.item_id
 
 	# sprite (VISIBLE ITEM)
 	var sprite = Sprite2D.new()
@@ -82,16 +83,41 @@ func drop_item(index:int, player):
 	shape.radius = 20
 	collision.shape = shape
 	drop.add_child(collision)
+	
+	
+	
+	
+	var interaction = Area2D.new()
+	interaction.name = "InteractionArea"
 
+	var collision2 = CollisionShape2D.new()
+	var shape2 = CircleShape2D.new()
+	shape2.radius = 80   # BIG range
+	collision2.shape = shape2
+
+	interaction.add_child(collision2)
+	drop.add_child(interaction)
+	
+	interaction.body_entered.connect(drop._on_body_entered)
+	interaction.body_exited.connect(drop._on_body_exited)
+	
+	
+	
+	
+	
 	# add to current room
 	get_tree().current_scene.add_child(drop)
 
 	# place at player
 	drop.global_position = player.global_position
+	var drop_id = str(Time.get_ticks_msec())
+	drop.drop_id = drop_id
+	
 	dropped_items.append({
-	"item": item,
-	"position": drop.global_position,
-	"scene": get_tree().current_scene.name
+		"id": drop_id,
+		"item": item,
+		"position": drop.global_position,
+		"scene": get_tree().current_scene.name
 })
 	print("DROPS SAVED:", dropped_items)
 	print("Dropped at:", drop.global_position)
@@ -110,7 +136,8 @@ func restore_drops():
 		drop.set_script(load("res://scripts/collectible.gd"))
 
 		drop.item = data.item
-		drop.item_id = ""
+		drop.item_id = data.item.item_id
+		drop.drop_id = data.id
 
 		var sprite = Sprite2D.new()
 		sprite.texture = data.item.icon
@@ -122,6 +149,32 @@ func restore_drops():
 		shape.radius = 20
 		collision.shape = shape
 		drop.add_child(collision)
+		
+		
+		
+		var interaction = Area2D.new()
+		interaction.name = "InteractionArea"
 
+		var collision2 = CollisionShape2D.new()
+		var shape2 = CircleShape2D.new()
+		shape2.radius = 80   # BIG range
+		collision2.shape = shape2
+
+		interaction.add_child(collision2)
+		drop.add_child(interaction)
+		interaction.body_entered.connect(drop._on_body_entered)
+		interaction.body_exited.connect(drop._on_body_exited)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		get_tree().current_scene.add_child(drop)
 		drop.global_position = data.position

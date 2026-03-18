@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dcfj0u6vcnjiu"]
+
+[ext_resource type="Script" uid="uid://chjbr1syf5tl2" path="res://scripts/Door_Label.gd" id="1_iklw3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iklw3"]
+font_size = 10
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cc46l"]
+radius = 77.00649
+
+[node name="DoorLabel" type="Node2D" unique_id=180456681]
+script = ExtResource("1_iklw3")
+
+[node name="Label" type="Label" parent="." unique_id=2040243763]
+offset_left = -22.0
+offset_top = -6.0
+offset_right = 18.0
+offset_bottom = 17.0
+scale = Vector2(0.55999976, 0.55999976)
+label_settings = SubResource("LabelSettings_iklw3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1105310871]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=746753582]
+shape = SubResource("CircleShape2D_cc46l")

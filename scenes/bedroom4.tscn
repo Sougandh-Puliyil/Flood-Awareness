@@ -10,8 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dkusnsqxxt7oa" path="res://assets/decorations_BR.png" id="7_ksqid"]
 [ext_resource type="Texture2D" uid="uid://ulay48cso4ph" path="res://assets/livingroom_LRK.png" id="8_onm5g"]
 [ext_resource type="Texture2D" uid="uid://cjno3om54gk4g" path="res://assets/decorations_LRK.png" id="9_ibclb"]
-[ext_resource type="PackedScene" uid="uid://bod6a30b0up5p" path="res://scenes/Door/Door.tscn" id="11_b8ijm"]
+[ext_resource type="PackedScene" uid="uid://fp6dh4wecju" path="res://scenes/Door/Door.tscn" id="11_b8ijm"]
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="12_dfswu"]
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="12_hsbb0"]
+[ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="12_qwvt3"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="13_r0xdg"]
 [ext_resource type="PackedScene" uid="uid://d07a0olble3ji" path="res://scenes/IronBox.tscn" id="14_umhkr"]
 
@@ -11033,6 +11035,9 @@ sources/0 = SubResource("TileSetAtlasSource_q0aob")
 sources/1 = SubResource("TileSetAtlasSource_wkcl3")
 sources/2 = SubResource("TileSetAtlasSource_5jkw5")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwvt3"]
+size = Vector2(30, 48)
+
 [node name="main" type="Node2D" unique_id=869319662]
 
 [node name="upperFloor" type="TileMap" parent="." unique_id=1019231593]
@@ -11078,14 +11083,36 @@ scale = Vector2(4, 4)
 room_name = "upperFloor"
 entry_name = "bedroomD4"
 
+[node name="DoorLabel" parent="BedD4/Sprite2D" parent_id_path=PackedInt32Array(771510446, 708255774) index="0" unique_id=180456681 instance=ExtResource("12_qwvt3")]
+label_text = "Upstairs Hall"
+
+[node name="CollisionShape2D" parent="BedD4" index="1" unique_id=1845919978]
+position = Vector2(15.199997, -23.625)
+
+[node name="Area2D" type="Area2D" parent="BedD4" unique_id=823720034]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("12_hsbb0")
+room_name = "upperFloor"
+entry_name = "bedroomD4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedD4/Area2D" unique_id=1706676754]
+z_index = 1
+position = Vector2(15.000002, -24.000004)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_qwvt3")
+
 [node name="bedD4" type="Area2D" parent="." unique_id=684804553]
-position = Vector2(581, 423)
+position = Vector2(594, 357)
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("12_dfswu")]
-position = Vector2(589, 445)
+position = Vector2(591, 357.00003)
 scale = Vector2(3, 3)
 script = ExtResource("13_r0xdg")
 
-[node name="Area2D" parent="." unique_id=1392212767 instance=ExtResource("14_umhkr")]
+[node name="Ironbox" parent="." unique_id=1392212767 instance=ExtResource("14_umhkr")]
 position = Vector2(944, 531)
 scale = Vector2(2.535, 2.535)
+
+[connection signal="body_entered" from="BedD4/Area2D" to="BedD4/Area2D" method="_on_body_entered"]
+
+[editable path="BedD4"]
