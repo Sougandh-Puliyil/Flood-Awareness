@@ -4,8 +4,7 @@ extends Node
 var right_item_count: int = 0
 
 # The "Master List" of what counts as a correct item
-var required_items = ["FirstAid", "File", "Food_collectible","torch","Phone","Sanitizer
-","WaterBottle"]
+var required_items = ["FirstAid", "File", "Food_collectible","torch","Phone","Sanitizer","WaterBottle"]
 
 # --- 1. FUNCTION FOR ADDING ---
 func collect_item(item_name: String):
@@ -99,7 +98,7 @@ var final_safety_score: float = 0.0
 var risk_level_string: String = ""
 
 func calculate_metrics():
-	# 1. Finding RT (Response Time)
+	# Finding RT (Response Time)
 	response_time = 300
 	for entry in Global_Logic.session_log:
 		if entry["action"].begins_with("Correct item ADDED") or entry["action"].begins_with("Picked up a non-essential"):
@@ -107,21 +106,24 @@ func calculate_metrics():
 			response_time = clamp (float(first_item_time - TimerManager.alert_target_time),0.0,300.0)
 			break # Stop at the first one found
 
-	# 2. Finding ED (Exposure Duration)
+	# Finding ED (Exposure Duration)
 	if rescue_time > 20: # 20s is when water starts
 		exposure_duration = clamp(float( rescue_time - 20),0.0, 600.0)
-	# 3. Finding item_collection_score 
+	# Finding item_collection_score 
 	item_collection_score=float( right_item_count)/float(total_safe_item_count) 
-	# 4. NORMALIZATION (Turning raw values into 0.0 to 1.0)
+	# NORMALIZATION (Turning raw values into 0.0 to 1.0)
 	norm_rt = 1.0 - (response_time / 300.0)
 	norm_ed = 1.0 - (exposure_duration / 600.0)
 	norm_items = clamp(float(item_collection_score), 0.0, 1.0)
-	# 4. Overall Safety Index Calculation 
+	# Overall Safety Index Calculation 
 	final_safety_score = (norm_rt * 0.30) + (norm_items * 0.45) + (norm_ed * 0.25)
 	final_safety_score=snapped(final_safety_score,0.01)
 	print(final_safety_score)
-	# 5. RISK LEVEL MAPPING
+	# RISK LEVEL MAPPING
 	risk_level_string = _map_score_to_risk(final_safety_score)
+	# --- SAVE TO DB ---
+	DatabaseManager.save_score(Global_Logic.player_username, final_safety_score)
+	print("Final Safety Index saved to database.")
 	
 	print("Final Safety Index: ", final_safety_score * 100, "% (", risk_level_string, ")")
 
@@ -138,3 +140,42 @@ func _string_to_seconds(time_string: String) -> int:
 	if parts.size() == 2:
 		return (parts[0].to_int() * 60) + parts[1].to_int()
 	return 0
+
+# -------------- Feedback Reporting -------------
+
+func get_item_feedback_report() -> Dictionary:
+	var correct_picked = []
+	var missed_items = []
+	var incorrect_items = []
+	
+	# 1. Identify what was actually picked up vs what is required
+	# We look at the session_log for "Correct item ADDED" events
+	var actually_held = []
+	for entry in Global_Logic.session_log:
+		if entry["action"].begins_with("Correct item ADDED"):
+			var item = entry["action"].get_slice(": ", 1)
+			if not actually_held.has(item):
+				actually_held.append(item)
+		elif entry["action"].begins_with("Correct item REMOVED"):
+			var item = entry["action"].get_slice(": ", 1)
+			actually_held.erase(item)
+			
+	# 2. Categorize items
+	for item in required_items:
+		if actually_held.has(item):
+			correct_picked.append(item)
+		else:
+			missed_items.append(item)
+			
+	# 3. Find 'Incorrect' (non-essential) items currently in log
+	for entry in Global_Logic.session_log:
+		if entry["action"].begins_with("Picked up a non-essential"):
+			var item = entry["action"].get_slice(": ", 1)
+			if not incorrect_items.has(item):
+				incorrect_items.append(item)
+	
+	return {
+		"correct": correct_picked,
+		"missed": missed_items,
+		"wrong": incorrect_items
+	}

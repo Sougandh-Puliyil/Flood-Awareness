@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bcdfqx5efoll7"]
+
+[node name="GameOver" type="Node2D" unique_id=1453403997]
+
+[node name="Control" type="Control" parent="." unique_id=1248744160]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=694825051]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 80.0
+offset_right = 1009.0
+offset_bottom = 614.0
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=1100649629]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 193.0
+offset_right = 597.0
+offset_bottom = 276.0
+theme_override_font_sizes/font_size = 60
+text = "Game Over"

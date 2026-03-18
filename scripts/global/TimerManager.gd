@@ -2,12 +2,12 @@ extends Node
 # Global Timer Manager - Handles persistent timing across all scenes
 
 var elapsed_time: int = 0
-var max_time: int = 20  # 20 minutes in seconds
+var max_time: int = 900  # 15 minutes in seconds
 var timer: Timer
 var is_running: bool = false
 
 var alert_target_time: int = 0  # Stores the random second the alert will appear
-var alert_box: ColorRect        # The visual rectangle
+var alert_box: Panel        # The visual rectangle
 var alert_label: Label          # The text inside the rectangle
 
 func _ready():
@@ -40,7 +40,7 @@ func _on_timer_timeout():
 	if elapsed_time >= max_time:
 		timer.stop()
 		is_running = false
-		print("TimerManager: Timer reached 20 minutes - timer stopped")
+		print("TimerManager: Timer reached 15 minutes - timer stopped")
 
 func get_elapsed_time() -> int: #Returns elapsed time in seconds
 	return elapsed_time
@@ -74,16 +74,31 @@ func _setup_alert_ui():
 	var canvas = CanvasLayer.new()
 	canvas.layer = 100 
 	add_child(canvas)
-
+	# CenterContainer automatically centers its child
+	var center = CenterContainer.new()
+	canvas.add_child(center)
+	
 	# Create the Background Box
-	alert_box = ColorRect.new()
-	alert_box.color = Color(0.8, 0.1, 0.1, 0.9) # Emergency Red
+	alert_box = Panel.new()
 	alert_box.custom_minimum_size = Vector2(500, 100)
-	alert_box.pivot_offset = Vector2(500, 100) / 2
-	alert_box.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	alert_box.visible = false # Keep it hidden until the time comes
 	canvas.add_child(alert_box)
+	# Create a StyleBoxFlat to style the Panel
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.8, 0.1, 0.1, 0.9)  # Emergency Red
+	var radius = 20
+	style.corner_radius_top_left = radius
+	style.corner_radius_top_right = radius
+	style.corner_radius_bottom_left = radius
+	style.corner_radius_bottom_right = radius
 
+	# Apply the style to the panel
+	alert_box.add_theme_stylebox_override("panel", style)
+	# Center the alert_box on screen
+	#alert_box.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	#alert_box.pivot_offset = alert_box.custom_minimum_size / 2
+
+	
 	# Create the Label
 	alert_label = Label.new()
 	alert_label.text = "⚠️ EMERGENCY: FLOOD WARNING!"
@@ -91,3 +106,16 @@ func _setup_alert_ui():
 	alert_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	alert_label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	alert_box.add_child(alert_label)
+	
+	## Center the alert_box
+#
+	#alert_box.anchor_left = 0.5
+	#alert_box.anchor_top = 0.5
+	#alert_box.anchor_right = 0.5
+	#alert_box.anchor_bottom = 0.5
+	#alert_label.margin_left = 0
+	#alert_label.margin_top = 0
+	#alert_label.margin_right = 0
+	#alert_label.margin_bottom = 0
+#
+	##alert_box.pivot_offset = Vector2(500, 100) / 2)

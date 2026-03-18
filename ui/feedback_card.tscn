@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dnxjhp1fcab0s"]
+
+[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://ui/feedback.gd" id="1_jsird"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ti106"]
+content_margin_left = 9.0
+content_margin_top = 3.0
+content_margin_right = 9.0
+content_margin_bottom = 3.0
+bg_color = Color(0.40392157, 0.6745098, 0.13333334, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="feedback_card" type="Control" unique_id=592436742]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jsird")
+
+[node name="Panel" type="Panel" parent="." unique_id=1563790418]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 656.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=788929332]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 1170.0
+offset_bottom = 663.0
+
+[node name="Title" type="Label" parent="Panel/VBoxContainer" unique_id=604885768]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "MISSION REPORT"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Panel/VBoxContainer" unique_id=906499257]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
+[node name="RiskLabel" type="Label" parent="Panel/VBoxContainer" unique_id=388300532]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1717923521]
+layout_mode = 2
+
+[node name="FeedbackDetails" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=9928724]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 23
+justification_flags = 161
+
+[node name="NewGameButton" type="Button" parent="Panel" unique_id=1242077344]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 0
+offset_left = 995.0
+offset_top = 23.0
+offset_right = 1130.0
+offset_bottom = 59.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_ti106")
+text = "New Game"
