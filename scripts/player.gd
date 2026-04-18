@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+var game_over=false
 var speed=100
 func _ready():
 	add_to_group("player")
@@ -8,21 +8,25 @@ var player_state
 var last_dir=1
 
 func _physics_process(delta:):
-	var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
+	if(game_over!=true):
+		var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	
-	if direction.x == 0 and direction.y == 0:
-		player_state= "Idle"
-	elif direction.x != 0 or direction.y != 0:
-		player_state = "Walking"
+		if direction.x == 0 and direction.y == 0:
+			player_state= "Idle"
+		elif direction.x != 0 or direction.y != 0:
+			player_state = "Walking"
 	
-	velocity = direction * speed
-	move_and_slide()
-	play_anim(direction)
+		velocity = direction * speed
+		move_and_slide()
+		play_anim(direction)
 
 func teleport(to_pos: Vector2) -> void:
 	global_position = to_pos
 	velocity = Vector2.ZERO
-
+func stop_move():
+	game_over=true
+	
+	
 func play_anim(dir):
 	if player_state=="Idle":
 		if last_dir==-1:

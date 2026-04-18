@@ -18,10 +18,10 @@ func add_user(username: String):
 	
 # Saving score into the database
 func save_score(username: String, score: float):
-	# We get the current real-world time for the Timestamp column
+	# get the current real-world time for the Timestamp column
 	var timestamp = Time.get_datetime_string_from_system()
 	
-	# 2. We use a subquery to find the user_id based on the userName
+	# use a subquery to find the user_id based on the userName
 	var query = "INSERT INTO score_records (user_id, Score, Timestamp) 
 	             VALUES ((SELECT user_id FROM Users WHERE userName = ?), ?, ?);"
 	
@@ -31,7 +31,7 @@ func save_score(username: String, score: float):
 	print("Database: Saved score %f for user %s" % [score, username])
 
 func get_user_history(username: String):
-	# Useful for your Scoreboard to show a user's past attempts
+	# Scoreboard to show a user's past attempts
 	var query = "SELECT Score, Timestamp FROM score_records 
 	             WHERE user_id = (SELECT user_id FROM Users WHERE userName = ?) 
 	             ORDER BY Timestamp DESC
@@ -40,8 +40,6 @@ func get_user_history(username: String):
 
 func get_user_score(username: String) -> float:
 	var score = 0.0
-	
-	# We JOIN the two tables on the user_id column
 	var query = "SELECT s.Score FROM score_records s " + \
 				"JOIN Users u ON s.user_id = u.user_id " + \
 				"WHERE u.userName = '" + username + "' " + \

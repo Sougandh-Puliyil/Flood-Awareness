@@ -1,6 +1,6 @@
 extends Node
 
-# ---Sign Up Logic -----
+#Sign Up Logic
 func signup(username: String) -> Dictionary:
 	username = username.strip_edges()
 
@@ -13,7 +13,7 @@ func signup(username: String) -> Dictionary:
 	DatabaseManager.add_user(username)
 	return {"success": true, "message": "Account created"}
 
-# ---Login Logic -----
+#Login Logic
 func login(username: String) -> Dictionary:
 	username = username.strip_edges()
 
@@ -26,7 +26,7 @@ func login(username: String) -> Dictionary:
 
 	return {"success": false, "message": "User not found"}
 
-# ---LogOut Logic -----
+# LogOut Logic 
 func logout():
 	Global_Logic.reset_game_state()
 	return {"success": true, "message": "Logged out successfully"}
