@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="12_qwvt3"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="13_r0xdg"]
 [ext_resource type="PackedScene" uid="uid://d07a0olble3ji" path="res://scenes/IronBox.tscn" id="14_umhkr"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="17_oq4ff"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="18_sg4tv"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
 tile_size = Vector2i(40, 40)
@@ -11038,6 +11040,9 @@ sources/2 = SubResource("TileSetAtlasSource_5jkw5")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwvt3"]
 size = Vector2(30, 48)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mfeea"]
+shader = ExtResource("17_oq4ff")
+
 [node name="main" type="Node2D" unique_id=869319662]
 
 [node name="upperFloor" type="TileMap" parent="." unique_id=1019231593]
@@ -11112,6 +11117,18 @@ script = ExtResource("13_r0xdg")
 [node name="Ironbox" parent="." unique_id=1392212767 instance=ExtResource("14_umhkr")]
 position = Vector2(944, 531)
 scale = Vector2(2.535, 2.535)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1079266725]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_mfeea")
+offset_left = 8.0
+offset_top = 681.0
+offset_right = 463.0
+offset_bottom = 1021.0
+scale = Vector2(2.5200024, 3.1600006)
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("18_sg4tv")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="BedD4/Area2D" to="BedD4/Area2D" method="_on_body_entered"]
 

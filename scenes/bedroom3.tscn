@@ -24,6 +24,8 @@
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="21_dioxu"]
 [ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="21_mwrx5"]
 [ext_resource type="PackedScene" uid="uid://bmvpx235e4kwp" path="res://scenes/Phone.tscn" id="22_us20n"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="25_5wqyc"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="26_1jpg6"]
 
 [sub_resource type="TileSet" id="TileSet_u1t5l"]
 tile_size = Vector2i(40, 40)
@@ -11917,6 +11919,9 @@ size = Vector2(51, 97.125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mwrx5"]
 size = Vector2(30, 48)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85m7r"]
+shader = ExtResource("25_5wqyc")
+
 [node name="main" type="Node2D" unique_id=869319662]
 
 [node name="upperFloor" type="TileMap" parent="." unique_id=1019231593]
@@ -12020,6 +12025,18 @@ scale = Vector2(1.2, 1.2)
 [node name="Phone" parent="." unique_id=600016296 instance=ExtResource("22_us20n")]
 position = Vector2(968, 523)
 scale = Vector2(0.4, 0.4)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1335064754]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_85m7r")
+offset_left = 1.0
+offset_top = 665.0
+offset_right = 456.0
+offset_bottom = 1005.0
+scale = Vector2(2.5200024, 3.1600006)
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("26_1jpg6")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="BedD3/Area2D" to="BedD3/Area2D" method="_on_body_entered"]
 

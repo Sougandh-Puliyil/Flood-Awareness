@@ -24,4 +24,23 @@ func _process(delta):
 		start_y -= 50   # start a bit higher
 		end_y -= 50     # also stop higher
 
-	position.y = lerp(start_y, end_y, WaterManager.water_progress)
+	var progress = WaterManager.water_progress
+
+	var scene_name = get_tree().current_scene.name
+	var upper_floor_scenes = [
+		"UpperFloor",
+		"Bedroom3",
+		"Bedroom4",
+		"Balcony",
+		"Upper_Bathroom"
+	]
+
+# --- Delay only for upper floor ---
+	if scene_name in upper_floor_scenes:
+		if Global_Logic.flood_stage == 2:
+			var delay_factor = 0.3  # tweak this (0.1–0.4 works well)
+			progress = clamp((progress - delay_factor) / (1.0 - delay_factor), 0.0, 1.0)
+		else:
+			progress = 0.0
+
+	position.y = lerp(start_y, end_y, progress)

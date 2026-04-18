@@ -12,6 +12,8 @@
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_sqwav"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="11_ac8ao"]
 [ext_resource type="PackedScene" uid="uid://d2kjkxfy81ufj" path="res://scenes/torch.tscn" id="12_f035a"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="13_7l1dj"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="14_mp8a1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_vhubc")
@@ -2838,6 +2840,9 @@ size = Vector2(30, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqwav"]
 size = Vector2(153, 78)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_retsj"]
+shader = ExtResource("13_7l1dj")
+
 [node name="UpperFloor" type="Node2D" unique_id=1492530650]
 position = Vector2(-357, -208)
 
@@ -3045,6 +3050,18 @@ scale = Vector2(2.1999989, 2.1999989)
 [node name="Torch" parent="." unique_id=316296084 instance=ExtResource("12_f035a")]
 position = Vector2(-400, -254)
 scale = Vector2(0.475, 0.475)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1469256579]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_retsj")
+offset_left = -576.00006
+offset_top = 379.99997
+offset_right = -121.00006
+offset_bottom = 720.0
+scale = Vector2(2.5200024, 3.1600006)
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("14_mp8a1")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="BathDoor" to="BathDoor" method="_on_body_entered"]
 [connection signal="input_event" from="BathDoor" to="BathDoor" method="_on_input_event"]

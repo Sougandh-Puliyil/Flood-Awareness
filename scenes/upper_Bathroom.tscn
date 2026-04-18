@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://bvyrkiy12e1sl" path="res://scenes/player.tscn" id="15_5wh4j"]
 [ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="15_lv615"]
 [ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="15_oaj58"]
+[ext_resource type="Shader" uid="uid://rccb481qn06i" path="res://road.gdshader" id="18_b8lvf"]
+[ext_resource type="Script" uid="uid://uqum4n4yh8gv" path="res://color_rect.gd" id="19_d0kv1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfwhe"]
 texture = ExtResource("1_sk8oi")
@@ -2450,6 +2452,9 @@ sources/0 = SubResource("TileSetAtlasSource_pbbhy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaj58"]
 size = Vector2(30, 48)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m87sl"]
+shader = ExtResource("18_b8lvf")
+
 [node name="Ground_Bathroom_1" type="Node2D" unique_id=233459917]
 position = Vector2(-3, 24)
 
@@ -2499,6 +2504,18 @@ shape = SubResource("RectangleShape2D_oaj58")
 
 [node name="Player" parent="." unique_id=1314570691 instance=ExtResource("15_5wh4j")]
 position = Vector2(-50, -131)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1494222999]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_m87sl")
+offset_left = -528.0
+offset_top = 21.999939
+offset_right = -73.0
+offset_bottom = 361.99994
+scale = Vector2(2.5200024, 3.1600006)
+color = Color(0.11207495, 0.43917835, 1, 0.5)
+script = ExtResource("19_d0kv1")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="bathDoor/Area2D" to="bathDoor/Area2D" method="_on_body_entered"]
 
