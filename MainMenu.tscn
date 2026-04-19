@@ -1,12 +1,16 @@
-[gd_scene format=3 uid="uid://cv74w5igteoxc"]
+[gd_scene format=3 uid="uid://dhimjygxmc3lh"]
 
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://ui/main_menu.gd" id="1_afec1"]
 [ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="1_u7cqb"]
 [ext_resource type="Script" uid="uid://bp4pk2scio4r5" path="res://ui/texture_rect_2.gd" id="2_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://c6l5esi2msg01" path="res://ui/asset/startttt.png" id="3_cqjrg"]
 [ext_resource type="Script" uid="uid://fpmppg6yjfds" path="res://ui/start.gd" id="4_cqjrg"]
+[ext_resource type="Script" path="res://quit.gd" id="4_iwfq2"]
 [ext_resource type="Script" uid="uid://egrovh1ytx4n" path="res://ui/settings.gd" id="5_7r1g0"]
+[ext_resource type="Texture2D" uid="uid://bqoiktw1758oy" path="res://ui/asset/quit.png" id="5_e2xy7"]
+[ext_resource type="Script" uid="uid://j0dk1sqj1aon" path="res://ui/setting.gd" id="6_7r1g0"]
 [ext_resource type="Texture2D" uid="uid://cb4o62qn4h5va" path="res://ui/asset/menu.png" id="7_fimr5"]
+[ext_resource type="Texture2D" uid="uid://dnln81ess1tgs" path="res://ui/asset/download.png" id="9_u7cqb"]
 
 [node name="Control" type="Control" unique_id=677829265]
 layout_mode = 3
@@ -40,9 +44,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -448.0
-offset_top = -62.0
+offset_top = -23.0
 offset_right = 628.0
-offset_bottom = 75.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
@@ -50,17 +54,15 @@ uppercase = true
 script = ExtResource("2_eiy7p")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1802481196]
-layout_direction = 1
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -301.0
-offset_top = -291.0
-offset_right = 199.0
-offset_bottom = -121.0
+offset_left = -71.5
+offset_top = -170.0
+offset_right = 71.5
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -75,8 +77,15 @@ text = "Start"
 icon = ExtResource("3_cqjrg")
 script = ExtResource("4_cqjrg")
 
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1481574777]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+icon = ExtResource("5_e2xy7")
+script = ExtResource("4_iwfq2")
+
 [node name="menu" type="Button" parent="VBoxContainer" unique_id=1171643339]
-custom_minimum_size = Vector2(500, 50)
+custom_minimum_size = Vector2(500, 40)
 layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 8
@@ -86,5 +95,20 @@ text = "Menu"
 icon = ExtResource("7_fimr5")
 script = ExtResource("5_7r1g0")
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1351146068]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -208.0
+offset_bottom = 88.0
+grow_horizontal = 0
+
+[node name="Setting" type="Button" parent="VBoxContainer2" unique_id=2082100497]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+icon = ExtResource("9_u7cqb")
+script = ExtResource("6_7r1g0")
+
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/menu" to="." method="_on_menu_pressed"]

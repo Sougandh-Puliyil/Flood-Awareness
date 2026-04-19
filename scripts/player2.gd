@@ -28,6 +28,8 @@ func teleport(to_pos: Vector2) -> void:
 
 func stop_move():
 	game_over=true
+	await get_tree().create_timer(7.5).timeout
+	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 func play_anim(dir):
 	if player_state=="Idle":
 		if last_dir==-1:
