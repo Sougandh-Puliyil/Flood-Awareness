@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c50t307grqq1"]
+
+[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://ui/asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_co2cy"]
+[ext_resource type="Script" uid="uid://cfl873tr5ttf1" path="res://login2.gd" id="2_woyo1"]
+
+[node name="Control" type="Control" unique_id=35342282]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1522489403]
+layout_mode = 0
+offset_right = 1162.0
+offset_bottom = 660.0
+texture = ExtResource("1_co2cy")
+expand_mode = 1
+
+[node name="username" type="LineEdit" parent="." unique_id=1276333691]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 372.0
+offset_right = 973.0
+offset_bottom = 431.0
+placeholder_text = "enter the username"
+alignment = 1
+
+[node name="LOG IN" type="Button" parent="." unique_id=275627326]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 491.0
+offset_right = 785.0
+offset_bottom = 527.0
+text = "LOG IN"
+script = ExtResource("2_woyo1")
+
+[connection signal="pressed" from="LOG IN" to="LOG IN" method="_on_pressed"]
