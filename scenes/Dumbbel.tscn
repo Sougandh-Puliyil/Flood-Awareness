@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d4d6ilkj7ox4i"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_6whnr"]
+[ext_resource type="Resource" uid="uid://cgqueqn8n80pd" path="res://assets/Collectibles_final/DUmbbel.tres" id="2_2dtag"]
+[ext_resource type="Texture2D" uid="uid://dnvil78tx7w8s" path="res://assets/Collectibles/No Choose/pixel-art-illustration-barbell-pixelated-600nw-2494523027-removebg-preview.png" id="3_qkhjp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hywlq"]
+size = Vector2(40, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6whnr"]
+radius = 166.04819
+
+[node name="Area2D" type="Area2D" unique_id=700114706]
+script = ExtResource("1_6whnr")
+item = ExtResource("2_2dtag")
+item_id = "Dumbbel"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=804295849]
+scale = Vector2(0.107, 0.107)
+texture = ExtResource("3_qkhjp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=443944997]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_hywlq")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1989285276]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=820719734]
+shape = SubResource("CircleShape2D_6whnr")

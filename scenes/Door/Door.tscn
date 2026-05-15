@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://fp6dh4wecju"]
+
+[ext_resource type="Script" uid="uid://dxbupgojcnsfo" path="res://scripts/door.gd" id="1_oqvy1"]
+[ext_resource type="Texture2D" uid="uid://dlbwefyktiffi" path="res://assets/doorswindowsstairs_LRK.png" id="2_rkomo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edy6u"]
+size = Vector2(29.600006, 44.7125)
+
+[node name="Door" type="Area2D" unique_id=771510446]
+z_index = 1
+scale = Vector2(2.5, 2.5)
+collision_mask = 2
+script = ExtResource("1_oqvy1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=708255774]
+position = Vector2(15, -24)
+texture = ExtResource("2_rkomo")
+region_enabled = true
+region_rect = Rect2(113.028946, 15.489304, 30.171066, 48.748917)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845919978]
+position = Vector2(15.199998, -25.243748)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_edy6u")
+debug_color = Color(0.6862745, 0.49019608, 0.31764707, 0.07450981)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

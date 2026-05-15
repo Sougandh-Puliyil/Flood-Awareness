@@ -1,0 +1,5 @@
+.godot/
+.import/
+export_presets.cfg
+addons/godot-sqlite/bin/*.dll
+addons/godot-sqlite/bin/~*

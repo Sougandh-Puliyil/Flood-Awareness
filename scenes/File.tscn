@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://rhfhhu47yo8b"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_lnq5m"]
+[ext_resource type="Resource" uid="uid://c3i1fict2p3yh" path="res://assets/Collectibles_final/File.tres" id="2_jxjd4"]
+[ext_resource type="Texture2D" uid="uid://cscggahr6gee8" path="res://assets/Collectibles/Choose/pixel-art-illustration-folder-icon-pixelated-folder-folder-office-icon-landmark_1038602-564-removebg-preview.png" id="3_sd0gq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75lk5"]
+size = Vector2(21, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnq5m"]
+radius = 67.02985
+
+[node name="Area2D" type="Area2D" unique_id=989562620]
+script = ExtResource("1_lnq5m")
+item = ExtResource("2_jxjd4")
+item_id = "File"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1558047005]
+position = Vector2(-2.3841858e-07, -4.7683716e-07)
+scale = Vector2(0.053607218, 0.053607218)
+texture = ExtResource("3_sd0gq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1246930720]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_75lk5")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1477567592]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=892683770]
+shape = SubResource("CircleShape2D_lnq5m")

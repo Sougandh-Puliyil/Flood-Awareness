@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d07a0olble3ji"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_tt6c7"]
+[ext_resource type="Resource" uid="uid://bi6833ihvrlkg" path="res://assets/Collectibles_final/Ironbox.tres" id="2_13e5g"]
+[ext_resource type="Texture2D" uid="uid://dhxxcplm1yg10" path="res://assets/Collectibles/No Choose/hot-iron-laundry-game-pixel-art-illustration-vector-removebg-preview.png" id="3_pegji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mf56"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cqth5"]
+radius = 73.02739
+
+[node name="Area2D" type="Area2D" unique_id=1392212767]
+script = ExtResource("1_tt6c7")
+item = ExtResource("2_13e5g")
+item_id = "Ironbox"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=614517255]
+position = Vector2(-0.2500019, -0.25)
+scale = Vector2(0.041, 0.041)
+texture = ExtResource("3_pegji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=277243331]
+shape = SubResource("RectangleShape2D_3mf56")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1384366548]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1040039141]
+shape = SubResource("CircleShape2D_cqth5")

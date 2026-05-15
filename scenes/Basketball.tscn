@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b7b0avg47nfpf"]
+
+[ext_resource type="Script" uid="uid://bed77qd17nm" path="res://scripts/collectible.gd" id="1_e7jqt"]
+[ext_resource type="Resource" uid="uid://cnvwnqbuqk76k" path="res://assets/Collectibles_final/BASKETBALL.tres" id="2_o1q74"]
+[ext_resource type="Texture2D" uid="uid://cuqksaqm54ssi" path="res://assets/Collectibles/No Choose/colorful-simple-vector-flat-pixel-art-illustration-red-basketball-ball-simple-vector-flat-pixel-art-illustration-red-245224005-removebg-preview.png" id="3_jpj6h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fj0c"]
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7jqt"]
+radius = 244.00204
+
+[node name="Area2D" type="Area2D" unique_id=1893941895]
+script = ExtResource("1_e7jqt")
+item = ExtResource("2_o1q74")
+item_id = "Baskball"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970715705]
+scale = Vector2(0.184, 0.184)
+texture = ExtResource("3_jpj6h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494882304]
+shape = SubResource("CircleShape2D_0fj0c")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=547691563]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=765650056]
+shape = SubResource("CircleShape2D_e7jqt")

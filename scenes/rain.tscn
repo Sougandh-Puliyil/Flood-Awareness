@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c26ogaaf4d606"]
+
+[ext_resource type="Script" uid="uid://my15v5q0nisx" path="res://scripts/Rain.gd" id="1_tchf5"]
+
+[node name="Rain" type="Node2D" unique_id=711994084]
+script = ExtResource("1_tchf5")
+drop_count = 100
+drop_color = Color(0, 0.22352941, 0.8039216, 1)
