@@ -1,29 +1,12 @@
 extends Node2D
 
-@onready var score_list = $VBoxContainer/ScoreList
+@onready var score_list = $VBoxContainer/scorelist
+@onready var highest_score = $VBoxContainer/highestScore
 
 func _ready():
-	display_scores()
-
-func display_scores():
-	var scores = load_scores()
-
-	for s in scores:
-		var label = Label.new()
-		label.text = str(s)
-		score_list.add_child(label)
-
-func load_scores():
-	var scores = []
-
-	if FileAccess.file_exists("user://scores.save"):
-		var file = FileAccess.open("user://scores.save", FileAccess.READ)
-
-		while not file.eof_reached():
-			var line = file.get_line()
-			if line != "":
-				scores.append(int(line))
-
-		file.close()
-
-	return scores
+	#display_scores()
+	var high_score = DatabaseManager.get_highest_score(Global_Logic.player_username)
+	var recent_scores = DatabaseManager.get_user_history(Global_Logic.player_username)
+	# Update Labels
+	highest_score.text = str(high_score)
+	score_list.text = str(recent_scores)

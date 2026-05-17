@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://ui/main_menu.gd" id="1_afec1"]
 [ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="1_u7cqb"]
-[ext_resource type="Script" uid="uid://bp4pk2scio4r5" path="res://ui/texture_rect_2.gd" id="2_eiy7p"]
+[ext_resource type="Script" uid="uid://bp4pk2scio4r5" path="res://texture_rect_2.gd" id="2_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://c6l5esi2msg01" path="res://ui/asset/startttt.png" id="3_cqjrg"]
-[ext_resource type="Script" uid="uid://fpmppg6yjfds" path="res://ui/start.gd" id="4_cqjrg"]
-[ext_resource type="Script" uid="uid://egrovh1ytx4n" path="res://ui/settings.gd" id="5_7r1g0"]
+[ext_resource type="Script" uid="uid://fpmppg6yjfds" path="res://start.gd" id="4_cqjrg"]
+[ext_resource type="Script" uid="uid://egrovh1ytx4n" path="res://settings.gd" id="5_7r1g0"]
 [ext_resource type="Texture2D" uid="uid://cb4o62qn4h5va" path="res://ui/asset/menu.png" id="7_fimr5"]
+[ext_resource type="Texture2D" uid="uid://d1iiicbtbdq4" path="res://ui/asset/Player@2x.png" id="player_icon"]
 
 [node name="Control" type="Control" unique_id=677829265]
 layout_mode = 3
@@ -86,5 +87,48 @@ text = "Menu"
 icon = ExtResource("7_fimr5")
 script = ExtResource("5_7r1g0")
 
+[node name="ProfileSection" type="VBoxContainer" parent="." unique_id=1010738736]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 200.0
+grow_horizontal = 0
+
+[node name="ProfileIconButton" type="TextureButton" parent="ProfileSection" unique_id=609339548]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 70)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("player_icon")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ProfileDropdown" type="PanelContainer" parent="ProfileSection" unique_id=1826646751]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="ProfileSection/ProfileDropdown" unique_id=428302322]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="UsernameLabel" type="Label" parent="ProfileSection/ProfileDropdown/VBox" unique_id=1796996559]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Player Name"
+horizontal_alignment = 1
+
+[node name="LogoutButton" type="Button" parent="ProfileSection/ProfileDropdown/VBox" unique_id=1307736902]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Logout"
+
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="ProfileSection/ProfileIconButton" to="." method="_on_profile_icon_pressed"]
+[connection signal="pressed" from="ProfileSection/ProfileDropdown/VBox/LogoutButton" to="." method="_on_logout_pressed"]

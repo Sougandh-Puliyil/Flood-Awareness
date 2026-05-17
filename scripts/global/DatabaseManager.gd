@@ -54,3 +54,24 @@ func get_user_score(username: String) -> float:
 		print("DB: No score found for ", username)
 		
 	return score
+
+func get_highest_score(username: String) -> float:
+	var high_score: float = 0.0
+	
+	# SQL Query: Join tables to find the MAX score associated with the specific username
+	var query = """
+		SELECT MAX(s.Score) as max_score 
+		FROM score_records s
+		JOIN Users u ON s.user_id = u.user_id
+		WHERE u.userName = ?
+	"""
+
+	var result = db.query_with_bindings(query, [username])
+	
+	if result and db.query_result.size() > 0:
+		var row = db.query_result[0]
+		# Handle cases where the user exists but has no score records (returns null)
+		if row["max_score"] != null:
+			high_score = float(row["max_score"])
+	
+	return high_score

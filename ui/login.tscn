@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c50t307grqq1"]
 
-[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://ui/asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_co2cy"]
-[ext_resource type="Script" uid="uid://cfl873tr5ttf1" path="res://login2.gd" id="2_woyo1"]
+[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_co2cy"]
+[ext_resource type="Script" uid="uid://cfl873tr5ttf1" path="res://ui/login2.gd" id="2_woyo1"]
 
 [node name="Control" type="Control" unique_id=35342282]
 layout_mode = 3
@@ -35,5 +35,12 @@ offset_right = 785.0
 offset_bottom = 527.0
 text = "LOG IN"
 script = ExtResource("2_woyo1")
+
+[node name="status" type="Label" parent="." unique_id=1235858887]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 324.0
+offset_right = 715.0
+offset_bottom = 368.0
 
 [connection signal="pressed" from="LOG IN" to="LOG IN" method="_on_pressed"]
