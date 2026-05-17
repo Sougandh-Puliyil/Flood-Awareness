@@ -1,6 +1,6 @@
 extends Button
-@onready var line_edit = $"username"
-@onready var label = $"status"
+@onready var line_edit = $"../username"
+@onready var label = $"../status"
 func _ready():
 	connect("mouse_entered", _on_mouse_entered)
 	connect("mouse_exited", _on_mouse_exited)

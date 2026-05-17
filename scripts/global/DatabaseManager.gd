@@ -9,8 +9,8 @@ func _ready():
 
 func username_exists(username: String) -> bool:
 	var query = "SELECT userName FROM Users WHERE userName = ?;"
-	var result = db.select_rows(query, [username])
-	return result.size() > 0
+	db.query_with_bindings(query, [username])
+	return db.query_result.size() > 0
 
 func add_user(username: String):
 	var query = "INSERT INTO Users (username) VALUES (?);"
