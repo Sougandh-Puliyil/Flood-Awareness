@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://cijn630gam577"]
 
-[ext_resource type="Script" uid="uid://b07s46ghcn5on" path="res://ui/screcard.gd" id="1_fl53e"]
-[ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="1_itpj3"]
-[ext_resource type="Script" uid="uid://cqojsnexd73qw" path="res://ui/back.gd" id="2_jtvem"]
+[ext_resource type="Script" uid="uid://b07s46ghcn5on" path="res://ui/screcard.gd" id="1_1o2k1"]
+[ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="2_8glve"]
+[ext_resource type="Script" uid="uid://cqojsnexd73qw" path="res://back.gd" id="3_6iatd"]
 
 [node name="scorecard" type="Node2D" unique_id=1000014385]
-script = ExtResource("1_fl53e")
+script = ExtResource("1_1o2k1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=411424174]
 offset_left = 3.0
 offset_top = 6.0
 offset_right = 1161.0
 offset_bottom = 641.0
-texture = ExtResource("1_itpj3")
+texture = ExtResource("2_8glve")
 expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=653813252]
@@ -38,6 +38,6 @@ offset_top = 583.0
 offset_right = 720.0
 offset_bottom = 620.0
 text = "BACK"
-script = ExtResource("2_jtvem")
+script = ExtResource("3_6iatd")
 
 [connection signal="pressed" from="back" to="back" method="_on_pressed"]

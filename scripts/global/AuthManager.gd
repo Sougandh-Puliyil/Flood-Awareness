@@ -5,26 +5,26 @@ func signup(username: String) -> Dictionary:
 	username = username.strip_edges()
 
 	if username == "":
-		return {"success": false, "message": "Enter a username"}
+		return {"success": false, "reason": "empty", "message": "Please enter a valid username!"}
 
 	if DatabaseManager.username_exists(username):
-		return {"success": false, "message": "Username already taken"}
+		return {"success": false, "reason": "duplicate", "message": "Username already exists"}
 
 	DatabaseManager.add_user(username)
-	return {"success": true, "message": "Account created"}
+	return {"success": true, "reason": "success", "message": "Account created"}
 
 #Login Logic
 func login(username: String) -> Dictionary:
 	username = username.strip_edges()
 
 	if username == "":
-		return {"success": false, "message": "Enter a username"}
+		return {"success": false, "reason": "empty", "message": "Please enter a valid username!"}
 
 	if DatabaseManager.username_exists(username):
 		Global_Logic.set_username(username)
-		return {"success": true, "message": "Login successful"}
+		return {"success": true, "reason": "success", "message": "Login successful"}
 
-	return {"success": false, "message": "User not found"}
+	return {"success": false, "reason": "absent", "message": "User not found"}
 
 # LogOut Logic 
 func logout():

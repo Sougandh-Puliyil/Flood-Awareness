@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b07s46ghcn5on" path="res://ui/screcard.gd" id="1_fl53e"]
 [ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="1_itpj3"]
-[ext_resource type="Script" uid="uid://cqojsnexd73qw" path="res://ui/back.gd" id="2_jtvem"]
+[ext_resource type="Script" uid="uid://cqojsnexd73qw" path="res://back.gd" id="2_jtvem"]
 
 [node name="scorecard" type="Node2D" unique_id=1000014385]
 script = ExtResource("1_fl53e")
@@ -22,14 +22,25 @@ offset_top = 234.0
 offset_right = 1147.0
 offset_bottom = 629.0
 
-[node name="title" type="Label" parent="VBoxContainer" unique_id=1512718920]
+[node name="title1" type="Label" parent="VBoxContainer" unique_id=1512718920]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "PREVIOUS SCORE"
+text = "HIGHEST SCORE"
 horizontal_alignment = 1
 
-[node name="scorelist" type="VBoxContainer" parent="VBoxContainer" unique_id=1545902732]
+[node name="highestScore" type="Label" parent="VBoxContainer" unique_id=1558787294]
+custom_minimum_size = Vector2(20, 20)
 layout_direction = 2
+layout_mode = 2
+
+[node name="title2" type="Label" parent="VBoxContainer" unique_id=580860583]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "RECENT SCORES"
+horizontal_alignment = 1
+
+[node name="scorelist" type="Label" parent="VBoxContainer" unique_id=69296585]
+custom_minimum_size = Vector2(20, 150)
 layout_mode = 2
 
 [node name="back" type="Button" parent="." unique_id=355031435]

@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Flood-Awareness"
-run/main_scene="uid://cv74w5igteoxc"
+run/main_scene="uid://cwbxffnxhblq0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -29,6 +29,9 @@ Inventory="*uid://bgpeho3nwex5j"
 InventoryToggle="*uid://d42nlfrpwi2f"
 InventoryUi="*uid://c8m6wvg6wwocg"
 DropManager="*uid://4qsfuvgy7aot"
+WaterManager="*uid://bktnkt3qin8uv"
+DatabaseManager="*uid://dtuba5c15ue2u"
+AuthorizationManager="*uid://cmgl45pq7gyav"
 
 [dotnet]
 
