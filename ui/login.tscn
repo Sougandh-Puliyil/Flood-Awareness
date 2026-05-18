@@ -3,6 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_co2cy"]
 [ext_resource type="Script" uid="uid://cfl873tr5ttf1" path="res://ui/login2.gd" id="2_woyo1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co2cy"]
+bg_color = Color(0.9125, 0.8497656, 0.8497656, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woyo1"]
+bg_color = Color(0.684375, 0.22242187, 0.22242187, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
 [node name="Control" type="Control" unique_id=35342282]
 layout_mode = 3
 anchors_preset = 15
@@ -20,27 +38,36 @@ expand_mode = 1
 
 [node name="username" type="LineEdit" parent="." unique_id=1276333691]
 layout_mode = 0
-offset_left = 202.0
-offset_top = 372.0
-offset_right = 973.0
-offset_bottom = 431.0
-placeholder_text = "enter the username"
+offset_left = 231.0
+offset_top = 391.0
+offset_right = 898.0
+offset_bottom = 445.0
+theme_override_colors/font_color = Color(0.068750024, 0.057578143, 0.057578143, 1)
+theme_override_colors/font_placeholder_color = Color(0.024999976, 0.0071874936, 0.0071874936, 0.6)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_co2cy")
+placeholder_text = "Enter the username"
 alignment = 1
 
 [node name="LOG IN" type="Button" parent="." unique_id=275627326]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 491.0
-offset_right = 785.0
-offset_bottom = 527.0
+offset_left = 454.0
+offset_top = 464.0
+offset_right = 673.0
+offset_bottom = 504.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_woyo1")
 text = "LOG IN"
 script = ExtResource("2_woyo1")
 
 [node name="status" type="Label" parent="." unique_id=1235858887]
 layout_mode = 0
-offset_left = 388.0
-offset_top = 324.0
-offset_right = 715.0
-offset_bottom = 368.0
+offset_left = 401.0
+offset_top = 337.0
+offset_right = 728.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(0.8156863, 0.14509805, 0.14509805, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
 
 [connection signal="pressed" from="LOG IN" to="LOG IN" method="_on_pressed"]

@@ -1,7 +1,21 @@
 [gd_scene format=3 uid="uid://dsv3gc88jdo8s"]
 
-[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://ui/asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_a5xj2"]
+[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_a5xj2"]
 [ext_resource type="Script" uid="uid://b14qo6o6le6jj" path="res://ui/signup2.gd" id="2_73olw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5xj2"]
+bg_color = Color(0.871875, 0.6913696, 0.59941405, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73olw"]
+bg_color = Color(0.038437497, 0.17048629, 0.25625002, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Control" type="Control" unique_id=1780031188]
 layout_mode = 3
@@ -20,25 +34,35 @@ expand_mode = 1
 
 [node name="username" type="LineEdit" parent="." unique_id=2003324672]
 layout_mode = 0
-offset_left = 187.0
-offset_top = 414.0
-offset_right = 985.0
-offset_bottom = 465.0
-placeholder_text = "create a username"
+offset_left = 197.0
+offset_top = 405.0
+offset_right = 865.0
+offset_bottom = 464.0
+theme_override_colors/font_color = Color(0.0625, 0.026953124, 0.026953124, 1)
+theme_override_colors/font_placeholder_color = Color(0.021875024, 6.835971e-05, 6.835971e-05, 0.6)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_a5xj2")
+placeholder_text = "Create a Username"
 alignment = 1
 
 [node name="SIGN UP" type="Button" parent="." unique_id=636738554]
 layout_mode = 0
-offset_left = 483.0
+offset_left = 453.0
 offset_top = 493.0
-offset_right = 637.0
+offset_right = 607.0
 offset_bottom = 550.0
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_73olw")
 text = "SIGN UP"
 script = ExtResource("2_73olw")
 
 [node name="status" type="Label" parent="." unique_id=116318886]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 368.0
+offset_top = 316.0
+offset_right = 727.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(0.76875, 0.124921896, 0.124921896, 1)
+theme_override_font_sizes/font_size = 18
 
 [connection signal="pressed" from="SIGN UP" to="SIGN UP" method="_on_pressed"]
