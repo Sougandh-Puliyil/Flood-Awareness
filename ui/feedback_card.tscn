@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnxjhp1fcab0s"]
 
-[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://ui/feedback.gd" id="1_jsird"]
+[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://feedback.gd" id="1_jsird"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_MainBox"]
 bg_color = Color(0.12549, 0.45098, 0.50196, 1)
