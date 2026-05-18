@@ -21,6 +21,13 @@ corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2kq1"]
+bg_color = Color(0.74509805, 0.80784315, 0.7996079, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Control" type="Control" unique_id=35342282]
 layout_mode = 3
 anchors_preset = 15
@@ -70,4 +77,15 @@ theme_override_colors/font_color = Color(0.8156863, 0.14509805, 0.14509805, 1)
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 
+[node name="Home" type="Button" parent="." unique_id=12423396]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 148.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.037500024, 0.022734389, 0.022734389, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_i2kq1")
+text = "HOME"
+
 [connection signal="pressed" from="LOG IN" to="LOG IN" method="_on_pressed"]
+[connection signal="pressed" from="Home" to="LOG IN" method="_on_home_pressed"]

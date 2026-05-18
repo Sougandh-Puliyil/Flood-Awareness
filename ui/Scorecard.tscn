@@ -4,6 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://cid0xa8esk6if" path="res://ui/asset/front.png" id="1_itpj3"]
 [ext_resource type="Script" uid="uid://cqojsnexd73qw" path="res://back.gd" id="2_jtvem"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fje2s"]
+bg_color = Color(0.60625, 0.5645703, 0.5645703, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gend1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_670vd"]
+bg_color = Color(0.734375, 0.6196289, 0.6196289, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjcxa"]
+bg_color = Color(0.73333335, 0.61960787, 0.61960787, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxjbh"]
+bg_color = Color(0.09019608, 0.28627452, 0.28627452, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="scorecard" type="Node2D" unique_id=1000014385]
 script = ExtResource("1_fl53e")
 
@@ -21,33 +43,49 @@ offset_left = 23.0
 offset_top = 234.0
 offset_right = 1147.0
 offset_bottom = 629.0
+theme_override_constants/separation = 0
 
 [node name="title1" type="Label" parent="VBoxContainer" unique_id=1512718920]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.028124988, 0.022851553, 0.022851553, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fje2s")
 text = "HIGHEST SCORE"
 horizontal_alignment = 1
 
 [node name="highestScore" type="Label" parent="VBoxContainer" unique_id=1558787294]
-custom_minimum_size = Vector2(20, 20)
+custom_minimum_size = Vector2(30, 60)
 layout_direction = 2
 layout_mode = 2
+theme_override_colors/font_color = Color(0.043137256, 0.019607844, 0.019607844, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_gend1")
+horizontal_alignment = 1
 
 [node name="title2" type="Label" parent="VBoxContainer" unique_id=580860583]
 layout_mode = 2
-theme_override_font_sizes/font_size = 27
+theme_override_colors/font_color = Color(0.059374988, 0.04286132, 0.04286132, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_670vd")
 text = "RECENT SCORES"
 horizontal_alignment = 1
 
 [node name="scorelist" type="Label" parent="VBoxContainer" unique_id=69296585]
-custom_minimum_size = Vector2(20, 150)
+custom_minimum_size = Vector2(20, 180)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.028124988, 0.02390624, 0.02390624, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_hjcxa")
+horizontal_alignment = 1
 
 [node name="back" type="Button" parent="." unique_id=355031435]
-offset_left = 423.0
-offset_top = 583.0
-offset_right = 720.0
-offset_bottom = 620.0
+offset_left = 415.0
+offset_top = 575.0
+offset_right = 715.0
+offset_bottom = 628.0
+theme_override_colors/font_color = Color(0.9625, 0.9384375, 0.9384375, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_pxjbh")
 text = "BACK"
 script = ExtResource("2_jtvem")
 

@@ -45,10 +45,10 @@ script = ExtResource("1_twsf6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=38029983]
 layout_mode = 0
-offset_left = 6.0
-offset_top = -12.0
-offset_right = 1151.0
-offset_bottom = 663.0
+offset_left = 3.0
+offset_top = -10.0
+offset_right = 1148.0
+offset_bottom = 665.0
 texture = ExtResource("1_6j0s0")
 expand_mode = 1
 
@@ -154,3 +154,4 @@ text = "Close"
 [connection signal="pressed" from="log in" to="log in" method="_on_pressed"]
 [connection signal="pressed" from="sign up" to="sign up" method="_on_pressed"]
 [connection signal="pressed" from="InfoButton" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="AboutPopup/MarginContainer/VBox/ButtonMargin/CloseButton" to="." method="_on_close_button_pressed"]
