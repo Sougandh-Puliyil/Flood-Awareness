@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cwbxffnxhblq0"]
 
-[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://ui/asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_6j0s0"]
+[ext_resource type="Texture2D" uid="uid://cx1hw8i81qewy" path="res://asset/file_0000000047d871faac63c1aa8439ea32.png" id="1_6j0s0"]
 [ext_resource type="Script" uid="uid://cp13j74y75qgx" path="res://log_in.gd" id="2_c7om3"]
-[ext_resource type="Script" uid="uid://bjcrhvi7ysde6" path="res://ui/sign_up.gd" id="3_twsf6"]
+[ext_resource type="Script" uid="uid://bjcrhvi7ysde6" path="res://sign_up.gd" id="3_twsf6"]
 
 [node name="Control" type="Control" unique_id=103583830]
 layout_mode = 3

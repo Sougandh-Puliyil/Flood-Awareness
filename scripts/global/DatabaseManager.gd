@@ -36,7 +36,8 @@ func get_user_history(username: String):
 	             WHERE user_id = (SELECT user_id FROM Users WHERE userName = ?) 
 	             ORDER BY Timestamp DESC
 				 LIMIT 5;"
-	return db.select_rows(query, [username])
+	if db.query_result.size() <1:
+		return db.select_rows(query, [username])
 
 func get_user_score(username: String) -> float:
 	var score = 0.0
