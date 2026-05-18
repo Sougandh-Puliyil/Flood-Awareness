@@ -23,6 +23,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_youui"]
+bg_color = Color(0.61875, 0.088945314, 0.088945314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Control" type="Control" unique_id=677829265]
 layout_mode = 3
 anchors_preset = 15
@@ -141,7 +148,9 @@ horizontal_alignment = 1
 
 [node name="LogoutButton" type="Button" parent="ProfileSection/ProfileDropdown/VBox" unique_id=1307736902]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 25)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_youui")
 text = "Logout"
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
