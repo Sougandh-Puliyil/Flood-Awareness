@@ -33,6 +33,10 @@ WaterManager="*uid://bktnkt3qin8uv"
 DatabaseManager="*uid://dtuba5c15ue2u"
 AuthorizationManager="*uid://cmgl45pq7gyav"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="Flood-Awareness"
