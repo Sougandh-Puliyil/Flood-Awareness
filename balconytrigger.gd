@@ -50,8 +50,9 @@ func check_torch():
 		show_rescue_popup()
 
 		await(get_tree().create_timer(3.5).timeout)
-
-		show_score_popup()
+		
+		get_tree().change_scene_to_file("res://ui/feedback_card.tscn")
+		#show_score_popup()
 
 	else:
 		show_message("❌ No Torch Found\n🧭 Explore the map and collect it first")
@@ -74,31 +75,39 @@ func disable_player():
 func show_rescue_popup():
 
 	popup_rescue.visible = true
-
+	var panel_node = popup_rescue.get_node("Panel") as Panel
+	if panel_node:
+		var custom_style = StyleBoxFlat.new()
+		custom_style.bg_color = Color(0.11, 0.245, 0.509, 1.0) # Your vibrant blue shade
+		custom_style.set_corner_radius_all(16)        # Applies the rounded corners
+		
+		# Inject the custom style resource onto the panel override tree
+		panel_node.add_theme_stylebox_override("panel", custom_style)
+		
 	popup_rescue.get_node("Panel/Label").text = \
 		"🚁 RESCUE SUCCESSFUL 🚁\n\n" + \
 		"Emergency team has located you.\n" + \
 		"Stay safe survivor!"
 
 
-func show_score_popup():
-
-	Game_Manager.calculate_metrics()
-
-	popup_score.visible = true
-	popup_rescue.visible = false
-
-	var score_text = "🏆 FINAL SAFETY SCORE\n\n"
-	score_text += str(Game_Manager.final_safety_score * 100) + "%"
-
-	popup_score.get_node("Panel/ScoreLabel").text = score_text
-
-	var meaning_text = "📊 RISK STATUS\n\n"
-	meaning_text += str(Game_Manager.risk_level_string)
-
-	popup_score.get_node("Panel/MeaningLabel").text = meaning_text
-
-	var items_text = "🎒 COLLECTED ITEMS\n\n"
-	items_text += Global_Logic.get_collected_items_text()
-
-	popup_score.get_node("Panel/ItemsLabel").text = items_text
+#func show_score_popup():
+#
+	#Game_Manager.calculate_metrics()
+#
+	#popup_score.visible = true
+	#popup_rescue.visible = false
+#
+	#var score_text = "🏆 FINAL SAFETY SCORE\n\n"
+	#score_text += str(Game_Manager.final_safety_score * 100) + "%"
+#
+	#popup_score.get_node("Panel/ScoreLabel").text = score_text
+#
+	#var meaning_text = "📊 RISK STATUS\n\n"
+	#meaning_text += str(Game_Manager.risk_level_string)
+#
+	#popup_score.get_node("Panel/MeaningLabel").text = meaning_text
+#
+	#var items_text = "🎒 COLLECTED ITEMS\n\n"
+	#items_text += Global_Logic.get_collected_items_text()
+#
+	#popup_score.get_node("Panel/ItemsLabel").text = items_text

@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="10_3qv0a"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
 [ext_resource type="PackedScene" uid="uid://c26ogaaf4d606" path="res://scenes/rain.tscn" id="11_qnn56"]
-[ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://scripts/balconytrigger.gd" id="12_dl05h"]
+[ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://balconytrigger.gd" id="12_dl05h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_6ngso")
@@ -2371,8 +2371,12 @@ size = Vector2(424.75, 331.5)
 [sub_resource type="LabelSettings" id="LabelSettings_dl05h"]
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qv0a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smtdr"]
 bg_color = Color(0.11372549, 0.06666667, 0.99607843, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_oiq0a"]
 font_size = 31
@@ -2456,11 +2460,13 @@ position = Vector2(910.375, 440.75)
 shape = SubResource("RectangleShape2D_dl05h")
 
 [node name="MessageLabel" type="Label" parent="." unique_id=1605959725]
-offset_left = 563.0
-offset_top = 320.0
-offset_right = 603.0
-offset_bottom = 343.0
+offset_left = 544.0
+offset_top = 341.0
+offset_right = 619.0
+offset_bottom = 364.0
+theme_override_font_sizes/font_size = 37
 label_settings = SubResource("LabelSettings_dl05h")
+horizontal_alignment = 1
 
 [node name="PopupRescue" type="Control" parent="." unique_id=817680282]
 visible = false
@@ -2480,16 +2486,17 @@ offset_left = 466.0
 offset_top = -61.0
 offset_right = 1156.0
 offset_bottom = 292.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_3qv0a")
+theme_override_styles/panel = SubResource("StyleBoxFlat_smtdr")
 
 [node name="Label" type="Label" parent="PopupRescue/Panel" unique_id=904612258]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 44.0
-offset_right = 562.0
-offset_bottom = 173.0
-text = "YOU HAVE BEEN RESCUED!!"
+offset_left = 139.0
+offset_top = 129.0
+offset_right = 580.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 18
 label_settings = SubResource("LabelSettings_oiq0a")
+horizontal_alignment = 1
 
 [node name="PopupScore" type="Control" parent="." unique_id=934018137]
 visible = false
