@@ -266,6 +266,13 @@ texture = ExtResource("3_uqyj1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_chjcb")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckvwl"]
+bg_color = Color(0.21875, 0.14218749, 0.14218749, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlqja"]
 size = Vector2(30, 48)
 
@@ -350,14 +357,21 @@ text = ".Walk Into a door to Go to the next
 room"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=105320164]
-layout_mode = 0
-offset_left = -15.0
-offset_top = 4.0
-offset_right = 62.0
-offset_bottom = 35.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.013
+anchor_top = 0.006
+anchor_right = -0.013
+anchor_bottom = 0.006
+offset_left = -0.024000168
+offset_top = 0.11199999
+offset_right = 76.976
+offset_bottom = 31.112
 
 [node name="BackButton" type="Button" parent="CanvasLayer/Control/VBoxContainer3" unique_id=1911364141]
+custom_minimum_size = Vector2(20, 30)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ckvwl")
 text = "Back"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1348335072]

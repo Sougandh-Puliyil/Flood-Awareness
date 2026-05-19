@@ -25,3 +25,7 @@ func _on_pressed() -> void:
 		label.text = "Please sign up"
 	else:       # Valid User
 		get_tree().change_scene_to_file("res://ui/MainMenu.tscn")
+
+
+func _on_home_pressed() -> void:
+	get_tree().change_scene_to_file("res://ui/frontpage.tscn")
