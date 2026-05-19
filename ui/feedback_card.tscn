@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnxjhp1fcab0s"]
 
-[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://ui/feedback.gd" id="1_jsird"]
+[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://feedback.gd" id="1_jsird"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_MainBox"]
 bg_color = Color(0.12549, 0.45098, 0.50196, 1)
@@ -102,19 +102,19 @@ text = "VIEW FEEDBACK"
 
 [node name="DetailedView" type="VBoxContainer" parent="CenterContainer/MainPanel/MarginContainer/VBox_Master" unique_id=1332120141]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="MissedLabel" type="Label" parent="CenterContainer/MainPanel/MarginContainer/VBox_Master/DetailedView" unique_id=478470773]
 layout_mode = 2
-text = "Missed Essentials:"
+theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [node name="MissedList" type="RichTextLabel" parent="CenterContainer/MainPanel/MarginContainer/VBox_Master/DetailedView" unique_id=1787086788]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "[center]- Item List -[/center]"
 

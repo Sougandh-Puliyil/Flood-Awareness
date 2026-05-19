@@ -97,7 +97,7 @@ func _on_view_feedback_pressed():
 
 func _on_new_game_pressed():
 
-	Global_Logic.reset_game_state()
+	Global_Logic.state_reset_for_new_game()
 
 	# Hide persistent alert if active
 	if TimerManager.alert_box:
