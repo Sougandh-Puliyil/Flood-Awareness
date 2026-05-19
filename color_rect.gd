@@ -24,7 +24,7 @@ func _process(delta):
 		start_y -= 50   # start a bit higher
 		end_y -= 50     # also stop higher
 
-	var progress = WaterManager.water_progress
+	var progress = WaterManager.ground_progress
 
 	var scene_name = get_tree().current_scene.name
 	var upper_floor_scenes = [
@@ -34,13 +34,25 @@ func _process(delta):
 		"Balcony",
 		"Upper_Bathroom"
 	]
-
+	if scene_name in upper_floor_scenes:
+		progress = WaterManager.upper_progress
 # --- Delay only for upper floor ---
 	if scene_name in upper_floor_scenes:
-		if Global_Logic.flood_stage == 2:
-			var delay_factor = 0.3  # tweak this (0.1–0.4 works well)
-			progress = clamp((progress - delay_factor) / (1.0 - delay_factor), 0.0, 1.0)
-		else:
-			progress = 0.0
+
+	# Hide flood completely before stage 2 starts
+		if Global_Logic.flood_stage != 2:
+			visible = false
+			return
+
+	# Wait until the delay time finishes
+		var elapsed = TimerManager.get_elapsed_time()
+		var flood_start = Global_Logic.upper_floor_start_time + Global_Logic.upper_floor_delay
+
+		if elapsed < flood_start:
+			visible = false
+			return
+
+	# Flood is now active upstairs
+		visible = true
 
 	position.y = lerp(start_y, end_y, progress)
