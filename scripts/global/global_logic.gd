@@ -114,17 +114,19 @@ func state_reset_for_new_game():
 	TimerManager.reset_timer()
 	print("Global Logic: Game state tracking cleared for a matching session rerun.")
 
+func get_collected_items_text():
+	var text = "" 
+	for i in session_log:
+		text += i["time"] + " - " + i["action"] + "\n" 
+		return text
 
-
-var max_height: float = -336  
-var total_time_ground_fill: float = 40    
-var flood_start_time: float = 20.0 
+#var max_height: float = -336  
+#var total_time_ground_fill: float = 40    
+#var flood_start_time: float = 20.0 
 var current_water_height: float = 0.0 
-var game_over_triggered: bool = false
-var player_reached_upper_floor: bool = false
-
-
-	print("Global Logic: Game state fully reset.")
+#var game_over_triggered: bool = false
+#var player_reached_upper_floor: bool = false
+#print("Global Logic: Game state fully reset.")
 
 
 # =========================
