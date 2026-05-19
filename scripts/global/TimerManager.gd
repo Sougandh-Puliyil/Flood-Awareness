@@ -103,6 +103,7 @@ func _setup_alert_ui():
 	style.corner_radius_top_right = radius
 	style.corner_radius_bottom_left = radius
 	style.corner_radius_bottom_right = radius
+	
 
 
 	alert_box.add_theme_stylebox_override("panel", style)

@@ -4,6 +4,20 @@
 [ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://tutorial_mode.gd" id="2_4qoh7"]
 [ext_resource type="Script" uid="uid://beybblgg6wr8m" path="res://interactive_mode.gd" id="3_5gx03"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjmkn"]
+bg_color = Color(0.8666667, 0.72156864, 0.32941177, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ksjt"]
+bg_color = Color(0.23921569, 0.54901963, 0.2509804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Control" type="Control" unique_id=849453812]
 layout_mode = 3
 anchors_preset = 15
@@ -37,7 +51,9 @@ grow_vertical = 2
 [node name="TutorialMode" type="Button" parent="VBoxContainer" unique_id=1415904990]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.103124976, 0.08088865, 0.08088865, 1)
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_bjmkn")
 text = "TUTORIAL MODE"
 icon_alignment = 1
 script = ExtResource("2_4qoh7")
@@ -45,7 +61,9 @@ script = ExtResource("2_4qoh7")
 [node name="InteractiveMode" type="Button" parent="VBoxContainer" unique_id=169676385]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.034375012, 0.029326182, 0.029326182, 1)
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_2ksjt")
 text = "NEW GAME"
 script = ExtResource("3_5gx03")
 
