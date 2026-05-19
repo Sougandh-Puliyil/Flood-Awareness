@@ -48,6 +48,35 @@ func reset_game_state():
 	TimerManager.reset_timer()
 	print("Global Logic: Game state has been fully reset for a new player.")
 
+func state_reset_for_new_game():
+
+	current_water_height = 0.0
+	water_level = 0.0
+	water_current_speed = 0.0
+	
+
+	game_over_triggered = false
+	player_reached_upper_floor = false
+	
+
+	session_log.clear()
+	
+
+	if TimerManager.alert_box:
+		TimerManager.alert_box.visible = false 
+	
+
+	if has_meta("flood_started"):
+		remove_meta("flood_started")
+		
+
+	TimerManager.stop_timer() 
+
+	TimerManager.reset_timer()
+	print("Global Logic: Game state has been fully reset for a new player.")
+
+
+
 var max_height: float = -336  
 var total_time_ground_fill: float = 40    
 var flood_start_time: float = 20.0 
@@ -151,7 +180,7 @@ func trigger_game_over(reason: String = ""):
 	await get_tree().create_timer(4.0).timeout
 	
 
-	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 func _check_upper_floor_status():
 	var upper_floor_scene_names = [
 		"UpperFloor",

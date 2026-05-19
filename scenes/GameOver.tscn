@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bcdfqx5efoll7"]
 
+[ext_resource type="Script" uid="uid://csta1wyaqmntu" path="res://scenes/game_over_scene.gd" id="1_script"]
+
 [node name="GameOver" type="Node2D" unique_id=1453403997]
+script = ExtResource("1_script")
 
 [node name="Control" type="Control" parent="." unique_id=1248744160]
 layout_mode = 3
@@ -10,10 +13,9 @@ offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Control" unique_id=694825051]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 9.0
-offset_right = 1148.0
-offset_bottom = 658.0
+offset_top = -1.0
+offset_right = 1156.0
+offset_bottom = 663.0
 
 [node name="Label" type="Label" parent="Control/Panel" unique_id=1100649629]
 layout_mode = 0
