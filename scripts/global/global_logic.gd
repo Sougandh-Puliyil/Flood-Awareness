@@ -49,31 +49,33 @@ func reset_game_state():
 	print("Global Logic: Game state has been fully reset for a new player.")
 
 func state_reset_for_new_game():
-
 	current_water_height = 0.0
 	water_level = 0.0
 	water_current_speed = 0.0
 	
-
 	game_over_triggered = false
 	player_reached_upper_floor = false
 	
-
+	# These three lines reset the simulation state back to day one / ground floor tracking.
+	flood_stage = 1               
+	balcony_reached = false       
+	upper_floor_start_time = 0.0  
+	# ============================
+	
+	if has_node("/root/WaterManager"):
+		WaterManager.water_progress = 0.0
+		
 	session_log.clear()
 	
-
 	if TimerManager.alert_box:
 		TimerManager.alert_box.visible = false 
 	
-
 	if has_meta("flood_started"):
 		remove_meta("flood_started")
 		
-
 	TimerManager.stop_timer() 
-
 	TimerManager.reset_timer()
-	print("Global Logic: Game state has been fully reset for a new player.")
+	print("Global Logic: Game state tracking cleared for a matching session rerun.")
 
 
 
