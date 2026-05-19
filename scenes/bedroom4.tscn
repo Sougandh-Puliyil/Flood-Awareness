@@ -11043,7 +11043,7 @@ size = Vector2(30, 48)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mfeea"]
 shader = ExtResource("17_oq4ff")
 
-[node name="main" type="Node2D" unique_id=869319662]
+[node name="Bedroom4" type="Node2D" unique_id=869319662]
 
 [node name="upperFloor" type="TileMap" parent="." unique_id=1019231593]
 position = Vector2(0, 1)
