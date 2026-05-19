@@ -83,6 +83,46 @@ func reset_game_state():
 
 	TimerManager.stop_timer()
 	TimerManager.reset_timer()
+	print("Global Logic: Game state has been fully reset for a new player.")
+
+func state_reset_for_new_game():
+	current_water_height = 0.0
+	water_level = 0.0
+	water_current_speed = 0.0
+	
+	game_over_triggered = false
+	player_reached_upper_floor = false
+	
+	# These three lines reset the simulation state back to day one / ground floor tracking.
+	flood_stage = 1               
+	balcony_reached = false       
+	upper_floor_start_time = 0.0  
+	# ============================
+	
+	if has_node("/root/WaterManager"):
+		WaterManager.water_progress = 0.0
+		
+	session_log.clear()
+	
+	if TimerManager.alert_box:
+		TimerManager.alert_box.visible = false 
+	
+	if has_meta("flood_started"):
+		remove_meta("flood_started")
+		
+	TimerManager.stop_timer() 
+	TimerManager.reset_timer()
+	print("Global Logic: Game state tracking cleared for a matching session rerun.")
+
+
+
+var max_height: float = -336  
+var total_time_ground_fill: float = 40    
+var flood_start_time: float = 20.0 
+var current_water_height: float = 0.0 
+var game_over_triggered: bool = false
+var player_reached_upper_floor: bool = false
+
 
 	print("Global Logic: Game state fully reset.")
 
@@ -231,13 +271,9 @@ func trigger_game_over(reason: String = ""):
 		get_node("/root/Game_Manager").calculate_metrics()
 
 	await get_tree().create_timer(4.0).timeout
-	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	
 
-
-# =========================
-# FLOOR DETECTION (SAFE)
-# =========================
-
+	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 func _check_upper_floor_status():
 
 	var current_scene = get_tree().current_scene
