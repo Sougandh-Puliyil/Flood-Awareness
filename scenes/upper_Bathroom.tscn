@@ -2455,7 +2455,7 @@ size = Vector2(30, 48)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m87sl"]
 shader = ExtResource("18_b8lvf")
 
-[node name="Ground_Bathroom_1" type="Node2D" unique_id=233459917]
+[node name="Upper_Bathroom" type="Node2D" unique_id=233459917]
 position = Vector2(-3, 24)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=289293775]
@@ -2511,7 +2511,7 @@ material = SubResource("ShaderMaterial_m87sl")
 offset_left = -528.0
 offset_top = 21.999939
 offset_right = -73.0
-offset_bottom = 361.99994
+offset_bottom = 515.6549
 scale = Vector2(2.5200024, 3.1600006)
 color = Color(0.11207495, 0.43917835, 1, 0.5)
 script = ExtResource("19_d0kv1")
