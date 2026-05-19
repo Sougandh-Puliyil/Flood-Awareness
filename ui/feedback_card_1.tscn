@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqhraya71rfnl"]
 
-[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://feedback.gd" id="1_jsird"]
+[ext_resource type="Script" uid="uid://1bug0lvqj0cj" path="res://ui/feedback.gd" id="1_i4xgk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_MainBox"]
 bg_color = Color(0.12549, 0.45098, 0.50196, 1)
@@ -24,7 +24,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="FeedbackCard" type="CanvasLayer" unique_id=1288690139]
-script = ExtResource("1_jsird")
+script = ExtResource("1_i4xgk")
 
 [node name="BackgroundDimmer" type="ColorRect" parent="." unique_id=1774535920]
 anchors_preset = 15

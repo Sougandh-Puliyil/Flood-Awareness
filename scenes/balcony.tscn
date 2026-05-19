@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dcfj0u6vcnjiu" path="res://scenes/door_label.tscn" id="10_3qv0a"]
 [ext_resource type="Script" uid="uid://bu2hut2exway5" path="res://scripts/player2.gd" id="10_iuwhd"]
 [ext_resource type="PackedScene" uid="uid://c26ogaaf4d606" path="res://scenes/rain.tscn" id="11_qnn56"]
-[ext_resource type="Script" uid="uid://chdi642gro1kq" path="res://scripts/balconytrigger.gd" id="12_dl05h"]
+[ext_resource type="Script" path="res://balconytrigger.gd" id="14_3qv0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ix1p"]
 texture = ExtResource("1_6ngso")
@@ -2432,7 +2432,7 @@ scale = Vector2(1.96, 1.96)
 drop_color = Color(0.026174778, 0.44751817, 0.40811956, 1)
 
 [node name="BalconyTrigger" type="Area2D" parent="." unique_id=2017610770 node_paths=PackedStringArray("popup_rescue", "popup_score", "player")]
-script = ExtResource("12_dl05h")
+script = ExtResource("14_3qv0a")
 popup_rescue = NodePath("../PopupRescue")
 popup_score = NodePath("../PopupScore")
 player = NodePath("../TileMap/Player")
