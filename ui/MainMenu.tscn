@@ -9,6 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://cb4o62qn4h5va" path="res://ui/asset/menu.png" id="7_fimr5"]
 [ext_resource type="Texture2D" uid="uid://d1iiicbtbdq4" path="res://ui/asset/Player@2x.png" id="player_icon"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwsby"]
+bg_color = Color(0.093017586, 0.39687502, 0.17467932, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvwf2"]
+bg_color = Color(0.171875, 0.10151367, 0.10151367, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_youui"]
+bg_color = Color(0.61875, 0.088945314, 0.088945314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Control" type="Control" unique_id=677829265]
 layout_mode = 3
 anchors_preset = 15
@@ -58,31 +79,33 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -301.0
-offset_top = -291.0
-offset_right = 199.0
-offset_bottom = -121.0
+offset_left = -276.0
+offset_top = -280.0
+offset_right = 234.0
+offset_bottom = -110.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="start" type="Button" parent="VBoxContainer" unique_id=940502647]
-custom_minimum_size = Vector2(500, 40)
+custom_minimum_size = Vector2(510, 60)
 layout_direction = 4
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 10
 theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwsby")
 text = "Start"
 icon = ExtResource("3_cqjrg")
 script = ExtResource("4_cqjrg")
 
 [node name="menu" type="Button" parent="VBoxContainer" unique_id=1171643339]
-custom_minimum_size = Vector2(500, 50)
+custom_minimum_size = Vector2(510, 60)
 layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 10
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvwf2")
 text = "Menu"
 icon = ExtResource("7_fimr5")
 script = ExtResource("5_7r1g0")
@@ -125,7 +148,9 @@ horizontal_alignment = 1
 
 [node name="LogoutButton" type="Button" parent="ProfileSection/ProfileDropdown/VBox" unique_id=1307736902]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 25)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_youui")
 text = "Logout"
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]

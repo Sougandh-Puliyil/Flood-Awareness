@@ -1,8 +1,11 @@
 extends Node
 
+
 var water_progress := 0.0   # 0 = bottom, 1 = top
 var rise_speed := 0.0    # small value now (per second)
 var initialized := false
+var ground_progress := 0.0
+var upper_progress := 0.0
 func start_rise():
 	rise_speed=1
 	await get_tree().create_timer(0.65).timeout

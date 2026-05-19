@@ -8,5 +8,12 @@ func _ready():
 	var high_score = DatabaseManager.get_highest_score(Global_Logic.player_username)
 	var recent_scores = DatabaseManager.get_user_history(Global_Logic.player_username)
 	# Update Labels
-	highest_score.text = str(high_score)
-	score_list.text = str(recent_scores)
+	if not high_score:
+		highest_score.text= "Not yet !"
+	else:
+		highest_score.text = str(high_score)
+		
+	if not recent_scores:
+		score_list.text= "Not yet !"
+	else:
+		score_list.text = str(recent_scores)

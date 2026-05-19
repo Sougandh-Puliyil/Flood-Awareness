@@ -3,6 +3,7 @@ extends CanvasLayer
 # =========================
 # UI References
 # =========================
+# Using Scene Unique Names (%) for cleaner, decoupled references
 @onready var score_label = %ScoreLabel
 @onready var risk_label = %RiskLabel
 @onready var actions_log = %ActionsLog
